@@ -20,9 +20,17 @@ const singleFileUpload = async (req, res, next) => {
 }
 
 
+// const getallSingleFiles = async (req, res, next) => {
+//     try{
+//         const files = await ResearchPres.find();
+//         res.status(200).send(files);
+//     }catch(error) {
+//         res.status(400).send(error.message);
+//     }
+// }
 const getallSingleFiles = async (req, res, next) => {
     try{
-        const files = await ResearchPres.find();
+        const files = await ResearchPres.find().populate("User","name");
         res.status(200).send(files);
     }catch(error) {
         res.status(400).send(error.message);
