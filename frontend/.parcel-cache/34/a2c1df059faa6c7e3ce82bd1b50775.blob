@@ -1,0 +1,62 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+class MyButton extends _react.Component {
+    constructor(props){
+        super(props);
+        this.buttonActiveHandler = this.buttonActiveHandler.bind(this);
+        this.state = {
+            status: this.props.status,
+            info: this.props.info,
+            text: 'Reject',
+            style: 'btn btn-warning'
+        };
+    }
+    buttonActiveHandler() {
+        if (this.state.status == false) {
+            this.setState({
+                status: true
+            });
+            this.setState({
+                text: "Rejected"
+            });
+            this.setState({
+                style: "btn btn-danger"
+            });
+            console.log(this.state.info._id);
+            const Reject = {
+                status: 'Rejected'
+            };
+            _axiosDefault.default.patch("http://localhost:5000/api/update/" + this.state.info._id, Reject).then((res)=>console.log(res.data)
+            );
+        }
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "button",
+            className: this.state.style,
+            onClick: this.buttonActiveHandler,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\RejButton.jsx",
+                lineNumber: 32
+            },
+            __self: this
+        }, this.state.text));
+    }
+}
+exports.default = MyButton;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

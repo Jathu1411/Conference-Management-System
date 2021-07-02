@@ -39,7 +39,16 @@ const fileSizeFormatter = (bytes, decimal) => {
   );
 };
 
+const updateStatus = async (req,res) => {
+  const oldStatus = await ResearchPres.findById(req.params.id);
+  oldStatus.status = req.body.status
+  const newStatus = await oldStatus.save();
+  res.json(newStatus)
+
+}
+
 module.exports = {
   singleFileUpload,
   getallSingleFiles,
+  updateStatus
 };

@@ -1,0 +1,79 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _alert = require("react-bootstrap/Alert");
+var _alertDefault = parcelHelpers.interopDefault(_alert);
+class MyButton extends _react.Component {
+    constructor(props){
+        super(props);
+        this.buttonActiveHandler = this.buttonActiveHandler.bind(this);
+        this.state = {
+            status: this.props.status,
+            info: this.props.info,
+            text: 'Approve',
+            style: 'btn btn-primary'
+        };
+    }
+    buttonActiveHandler() {
+        if (this.state.status == false) {
+            this.setState({
+                status: true
+            });
+            this.setState({
+                text: "Approved"
+            });
+            this.setState({
+                style: "btn btn-success"
+            });
+            const Approve = {
+                status: 'Approved'
+            };
+            const notification = {
+                content: 'Hi ' + this.state.info.user.name + ' your Research paper have got Approved By the Reviewer!!',
+                user: this.state.info.user._id
+            };
+            console.log(notification);
+            _axiosDefault.default.patch("http://localhost:5000/api/update/" + this.state.info._id, Approve).then((res)=>console.log(res.data)
+            );
+            _axiosDefault.default.post('http://localhost:5000/api/notification', notification).then((res)=>console.log(res.data)
+            );
+            /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                class: "alert alert-success",
+                role: "alert",
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
+                    lineNumber: 32
+                },
+                __self: this
+            }, "A simple success alert\u2014check it out!");
+        }
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "button",
+            className: this.state.style,
+            onClick: this.buttonActiveHandler,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
+                lineNumber: 42
+            },
+            __self: this
+        }, this.state.text));
+    }
+}
+exports.default = MyButton;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
