@@ -12,5 +12,5 @@ const UserSchema = new Schema({
   qualification:String,
 });
 
-const user = mongoose.model("User", UserSchema);
+const user = mongoose.model("user", UserSchema);
 module.exports = user;

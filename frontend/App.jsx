@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // components
 import sampleform from './Components/Vithursan/sampleform';
+import Dashboard from './Components/Jathusanan/Dashboard' // Reviewer DashBoard
 
 
 
@@ -23,7 +24,7 @@ constructor(props) {
  render() {
     return <Router>
         <Switch>
-        <Route path='/' exact={true} component={sampleform}/>
+        <Route path='/' exact={true} component={Dashboard}/>
         </Switch>
     </Router>
    

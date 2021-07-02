@@ -30,7 +30,7 @@ status : {
   default : 'false'
 
 },
-  user: { type: mongoose.Schema.Types.ObjectId, required: false, ref: 'user'},
+   user: { type: mongoose.Schema.Types.ObjectId, required: false, ref: 'user'},
   
 });
 

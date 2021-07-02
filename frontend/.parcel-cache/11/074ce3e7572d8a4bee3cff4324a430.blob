@@ -1,0 +1,112 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _table = require("react-bootstrap/Table");
+var _tableDefault = parcelHelpers.interopDefault(_table);
+class Dashboard extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            products: []
+        };
+        this.getAll = this.getAll.bind(this);
+    }
+    componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/api/getSingleFiles").then((res)=>{
+            console.log(res.data.data);
+            this.setState({
+                products: res.data.data
+            });
+        });
+        console.log();
+    }
+    getAll() {
+        return this.state.products.map((product)=>{
+            let static;
+            return(/*#__PURE__*/ _reactDefault.default.createElement("tr", {
+                key: product._id,
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                    lineNumber: 21
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                    lineNumber: 22
+                },
+                __self: this
+            }, count++)));
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_tableDefault.default, {
+            striped: true,
+            bordered: true,
+            hover: true,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 30
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 31
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 32
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 33
+            },
+            __self: this
+        }, "#"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 34
+            },
+            __self: this
+        }, "First Name"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 35
+            },
+            __self: this
+        }, "Last Name"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 36
+            },
+            __self: this
+        }, "Username"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 39
+            },
+            __self: this
+        }, this.getAll())));
+    }
+}
+exports.default = Dashboard;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

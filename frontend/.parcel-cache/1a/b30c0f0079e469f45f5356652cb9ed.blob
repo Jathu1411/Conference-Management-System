@@ -1,0 +1,170 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class Dashboard extends _react.Component {
+    state = {
+    };
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("table", {
+            class: "table",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 6
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 7
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 8
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 9
+            },
+            __self: this
+        }, "#"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 10
+            },
+            __self: this
+        }, "First"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 11
+            },
+            __self: this
+        }, "Last"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 12
+            },
+            __self: this
+        }, "Handle"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 15
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 16
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "row",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 17
+            },
+            __self: this
+        }, "1"), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 18
+            },
+            __self: this
+        }, "Mark"), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 19
+            },
+            __self: this
+        }, "Otto"), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 20
+            },
+            __self: this
+        }, "@mdo")), /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 22
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "row",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 23
+            },
+            __self: this
+        }, "2"), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 24
+            },
+            __self: this
+        }, "Jacob"), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 25
+            },
+            __self: this
+        }, "Thornton"), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 26
+            },
+            __self: this
+        }, "@fat")), /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 28
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "row",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 29
+            },
+            __self: this
+        }, "3"), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 30
+            },
+            __self: this
+        }, "Larry"), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 31
+            },
+            __self: this
+        }, "the Bird"), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 32
+            },
+            __self: this
+        }, "@twitter")))));
+    }
+}
+exports.default = Dashboard;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -3,6 +3,8 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
 const research = require('./routes/research');
+const bodyParser = require('body-parser')
+const notification = require('./routes/notification')
 
 require("dotenv").config();
 
@@ -10,6 +12,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
@@ -35,6 +38,8 @@ app.use("/api/user", userRouter);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use('/api', research.routes);
+
+app.use('/api',notification)
 
 //error handling
 app.use((error, req, res, next) => {

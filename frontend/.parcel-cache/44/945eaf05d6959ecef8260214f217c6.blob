@@ -1,0 +1,92 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+class Dashboard extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            research: []
+        };
+    }
+    componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/api/getSingleFiles").then((response)=>{
+            this.setState({
+                research: response.data.data
+            });
+            console.log(response.data.data);
+        }).catch((error)=>console.log(error.message)
+        );
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("table", {
+            className: "table",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 24
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 25
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 26
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 27
+            },
+            __self: this
+        }, "#"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 28
+            },
+            __self: this
+        }, "First"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 29
+            },
+            __self: this
+        }, "Last"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 30
+            },
+            __self: this
+        }, "Handle"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\CMS-AF-master\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                lineNumber: 33
+            },
+            __self: this
+        })));
+    }
+}
+exports.default = Dashboard;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
