@@ -28169,7 +28169,6 @@ class Dashboard extends _react.Component {
                 __self: this
             }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
                 status: this.state.isClicked,
-                info: info,
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
                     lineNumber: 43
@@ -28310,37 +28309,25 @@ class MyButton extends _react.Component {
         super(props);
         this.buttonActiveHandler = this.buttonActiveHandler.bind(this);
         this.state = {
-            status: this.props.status,
-            info: this.props.info,
-            text: 'Approve',
-            style: 'btn btn-primary'
+            status: this.props.status
         };
     }
     buttonActiveHandler() {
-        if (this.state.status == false) {
-            this.setState({
-                status: true
-            });
-            this.setState({
-                text: "Approved"
-            });
-            this.setState({
-                style: "btn btn-success"
-            });
-            console.log(this.state.info.fileName);
-        }
+        if (this.state.status == false) this.setState({
+            status: true
+        });
     }
     render() {
         return(/*#__PURE__*/ _reactDefault.default.createElement("button", {
             type: "button",
-            className: this.state.style,
+            class: "btn btn-primary",
             onClick: this.buttonActiveHandler,
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
-                lineNumber: 26
+                lineNumber: 19
             },
             __self: this
-        }, this.state.text));
+        }, "Fuck"));
     }
 }
 exports.default = MyButton;
@@ -28352,4 +28339,4 @@ exports.default = MyButton;
 }
 },{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5UXJH":[function() {},{}]},["1j6wU","3bcJH","249SU"], "249SU", "parcelRequire0de8")
 
-//# sourceMappingURL=index.711b527e.js.map
+//# sourceMappingURL=index.HASH_REF_d35bf5c27be5a9ed503e90b2711b527e.js.map

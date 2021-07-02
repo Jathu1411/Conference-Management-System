@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
+import MyButton from "./Button";
 class Dashboard extends Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,7 @@ class Dashboard extends Component {
     this.setState( state => ({
       isClicked : !state.isClicked
     }))
+    console.log(data._id)
     
   }
   onReject(data){
@@ -34,10 +36,11 @@ class Dashboard extends Component {
         <tr key={info._id}>
         <td>{index + 1}</td>
         <td>{info.rtitle}</td>
+        <td><a href="https://www.google.lk" target="_blank" >{info.fileName}</a></td>
         <td>{info.fileName}</td>
-        <td>{info.fileName}</td>
-        <td><button type="button" class="btn btn-primary" onClick={() => this.onAccept(info)}>{this.state.isClicked ? "Approved" : "Approve"}</button></td>
-        <td><button type="button" class="btn btn-danger" onClick={() => this.onReject(info)}>Reject</button></td>
+        {/* <td><button type="button" class="btn btn-primary" onClick={() => this.onAccept(info)}>{this.state.isClicked ? "Approved" : "Approve"}</button></td>
+        <td><button type="button" class="btn btn-danger" onClick={() => this.onReject(info)}>Reject</button></td> */}
+        <td><MyButton status={this.state.isClicked} info={info}/></td>
         </tr>
 
        )

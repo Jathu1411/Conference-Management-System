@@ -28088,8 +28088,6 @@ var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _table = require("react-bootstrap/Table");
 var _tableDefault = parcelHelpers.interopDefault(_table);
-var _button = require("./Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
 class Dashboard extends _react.Component {
     constructor(props){
         super(props);
@@ -28126,56 +28124,66 @@ class Dashboard extends _react.Component {
                 key: info._id,
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                    lineNumber: 36
+                    lineNumber: 35
                 },
                 __self: this
             }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                    lineNumber: 37
+                    lineNumber: 36
                 },
                 __self: this
             }, index + 1), /*#__PURE__*/ _reactDefault.default.createElement("td", {
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                    lineNumber: 38
+                    lineNumber: 37
                 },
                 __self: this
             }, info.rtitle), /*#__PURE__*/ _reactDefault.default.createElement("td", {
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                    lineNumber: 39
-                },
-                __self: this
-            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
-                href: "https://www.google.lk",
-                target: "_blank",
-                __source: {
-                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                    lineNumber: 39
-                },
-                __self: this
-            }, info.fileName)), /*#__PURE__*/ _reactDefault.default.createElement("td", {
-                __source: {
-                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                    lineNumber: 40
+                    lineNumber: 38
                 },
                 __self: this
             }, info.fileName), /*#__PURE__*/ _reactDefault.default.createElement("td", {
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                    lineNumber: 43
+                    lineNumber: 39
                 },
                 __self: this
-            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
-                status: this.state.isClicked,
-                info: info,
+            }, info.fileName), /*#__PURE__*/ _reactDefault.default.createElement("td", {
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                    lineNumber: 43
+                    lineNumber: 40
                 },
                 __self: this
-            }))));
+            }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                type: "button",
+                class: "btn btn-primary",
+                onClick: ()=>this.onAccept(info)
+                ,
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                    lineNumber: 40
+                },
+                __self: this
+            }, this.state.isClicked ? "Approved" : "Approve")), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                    lineNumber: 41
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                type: "button",
+                class: "btn btn-danger",
+                onClick: ()=>this.onReject(info)
+                ,
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
+                    lineNumber: 41
+                },
+                __self: this
+            }, "Reject"))));
         });
     }
     render() {
@@ -28185,61 +28193,61 @@ class Dashboard extends _react.Component {
             hover: true,
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                lineNumber: 52
+                lineNumber: 50
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                lineNumber: 53
+                lineNumber: 51
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                lineNumber: 54
+                lineNumber: 52
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                lineNumber: 55
+                lineNumber: 53
             },
             __self: this
         }, "#"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                lineNumber: 56
+                lineNumber: 54
             },
             __self: this
         }, "Topic"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                lineNumber: 57
+                lineNumber: 55
             },
             __self: this
         }, "FileName"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                lineNumber: 58
+                lineNumber: 56
             },
             __self: this
         }, "Research Conductor"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                lineNumber: 59
+                lineNumber: 57
             },
             __self: this
         }, "Approve"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                lineNumber: 60
+                lineNumber: 58
             },
             __self: this
         }, "Decline"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Dashboard.jsx",
-                lineNumber: 63
+                lineNumber: 61
             },
             __self: this
         }, this.getAll())));
@@ -28252,7 +28260,7 @@ exports.default = Dashboard;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","axios":"7rA65","react-bootstrap/Table":"34yor","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./Button":"458Ut"}],"34yor":[function(require,module,exports) {
+},{"react":"3b2NM","axios":"7rA65","react-bootstrap/Table":"34yor","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"34yor":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -28294,62 +28302,6 @@ var _default = Table;
 exports.default = _default;
 module.exports = exports["default"];
 
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S"}],"458Ut":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S"}],"5UXJH":[function() {},{}]},["1j6wU","3bcJH","249SU"], "249SU", "parcelRequire0de8")
 
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-class MyButton extends _react.Component {
-    constructor(props){
-        super(props);
-        this.buttonActiveHandler = this.buttonActiveHandler.bind(this);
-        this.state = {
-            status: this.props.status,
-            info: this.props.info,
-            text: 'Approve',
-            style: 'btn btn-primary'
-        };
-    }
-    buttonActiveHandler() {
-        if (this.state.status == false) {
-            this.setState({
-                status: true
-            });
-            this.setState({
-                text: "Approved"
-            });
-            this.setState({
-                style: "btn btn-success"
-            });
-            console.log(this.state.info.fileName);
-        }
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("button", {
-            type: "button",
-            className: this.state.style,
-            onClick: this.buttonActiveHandler,
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
-                lineNumber: 26
-            },
-            __self: this
-        }, this.state.text));
-    }
-}
-exports.default = MyButton;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5UXJH":[function() {},{}]},["1j6wU","3bcJH","249SU"], "249SU", "parcelRequire0de8")
-
-//# sourceMappingURL=index.711b527e.js.map
+//# sourceMappingURL=index.HASH_REF_d35bf5c27be5a9ed503e90b2711b527e.js.map

@@ -1,0 +1,44 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class MyButton extends _react.Component {
+    constructor(props){
+        super(props);
+        this.buttonActiveHandler = this.buttonActiveHandler.bind(this);
+        this.state = {
+            info: this.props.info
+        };
+    }
+    buttonActiveHandler() {
+        let oldStatus = this.props.status;
+        this.props.status = !oldStatus ? 'active' : '';
+        this.setState({
+            info: this.props.info
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: this.state.person.status,
+            onClick: this.buttonActiveHandler,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
+                lineNumber: 20
+            },
+            __self: this
+        }, this.state.info.name));
+    }
+}
+exports.default = MyButton;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
