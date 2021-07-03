@@ -1,0 +1,114 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _navbar = require("react-bootstrap/Navbar");
+var _navbarDefault = parcelHelpers.interopDefault(_navbar);
+var _nav = require("react-bootstrap/Nav");
+var _navDefault = parcelHelpers.interopDefault(_nav);
+var _navDropdown = require("react-bootstrap/NavDropdown");
+var _navDropdownDefault = parcelHelpers.interopDefault(_navDropdown);
+const NavBar = ()=>{
+    return(/*#__PURE__*/ React.createElement(_navbarDefault.default, {
+        bg: "light",
+        expand: "lg",
+        fixed: "top",
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 6
+        },
+        __self: undefined
+    }, /*#__PURE__*/ React.createElement(Container, {
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 7
+        },
+        __self: undefined
+    }, /*#__PURE__*/ React.createElement(_navbarDefault.default.Brand, {
+        href: "#home",
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 8
+        },
+        __self: undefined
+    }, "React-Bootstrap"), /*#__PURE__*/ React.createElement(_navbarDefault.default.Toggle, {
+        "aria-controls": "basic-navbar-nav",
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 9
+        },
+        __self: undefined
+    }), /*#__PURE__*/ React.createElement(_navbarDefault.default.Collapse, {
+        id: "basic-navbar-nav",
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 10
+        },
+        __self: undefined
+    }, /*#__PURE__*/ React.createElement(_navDefault.default, {
+        className: "me-auto",
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 11
+        },
+        __self: undefined
+    }, /*#__PURE__*/ React.createElement(_navDefault.default.Link, {
+        href: "#home",
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 12
+        },
+        __self: undefined
+    }, "Home"), /*#__PURE__*/ React.createElement(_navDefault.default.Link, {
+        href: "#link",
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 13
+        },
+        __self: undefined
+    }, "Link"), /*#__PURE__*/ React.createElement(_navDropdownDefault.default, {
+        title: "Dropdown",
+        id: "basic-nav-dropdown",
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 14
+        },
+        __self: undefined
+    }, /*#__PURE__*/ React.createElement(_navDropdownDefault.default.Item, {
+        href: "#action/3.1",
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 15
+        },
+        __self: undefined
+    }, "Action"), /*#__PURE__*/ React.createElement(_navDropdownDefault.default.Item, {
+        href: "#action/3.2",
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 16
+        },
+        __self: undefined
+    }, "Another action"), /*#__PURE__*/ React.createElement(_navDropdownDefault.default.Item, {
+        href: "#action/3.3",
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 17
+        },
+        __self: undefined
+    }, "Something"), /*#__PURE__*/ React.createElement(_navDropdownDefault.default.Divider, {
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 18
+        },
+        __self: undefined
+    }), /*#__PURE__*/ React.createElement(_navDropdownDefault.default.Item, {
+        href: "#action/3.4",
+        __source: {
+            fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
+            lineNumber: 19
+        },
+        __self: undefined
+    }, "Separated link")))))));
+};
+_c = NavBar;
+exports.default = NavBar;
+var _c;
+$RefreshReg$(_c, "NavBar");

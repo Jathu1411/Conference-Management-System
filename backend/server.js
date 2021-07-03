@@ -2,9 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
-const research = require('./routes/research');
-const bodyParser = require('body-parser')
-const notification = require('./routes/notification')
+const research = require("./routes/research");
+const bodyParser = require("body-parser");
+const notification = require("./routes/notification");
+const workshop = require("./routes/workshop");
 
 require("dotenv").config();
 
@@ -35,11 +36,12 @@ const userRouter = require("./routes/user");
 //assign routes to use
 app.use("/api/user", userRouter);
 
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-app.use('/api', research.routes);
+app.use("/api", research.routes);
+app.use("/api", workshop.routes);
 
-app.use('/api',notification)
+app.use("/api", notification);
 
 //error handling
 app.use((error, req, res, next) => {

@@ -1,12 +1,16 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
+
+// components - Jathu
+import Research from './Components/Jathusanan/Research' // Reviewer DashBoard
+import NavBar from './Components/Jathusanan/NavBar'
+import DashBoard from './Components/Jathusanan/DashBoard'
+import Workshop from './Components/Jathusanan/Workshop'
 
 
 
-// components
-import sampleform from './Components/Vithursan/sampleform';
-import Dashboard from './Components/Jathusanan/Dashboard' // Reviewer DashBoard
 
 
 
@@ -25,8 +29,11 @@ constructor(props) {
 
  render() {
     return <Router>
+        <NavBar/>
         <Switch>
-        <Route path='/' exact={true} component={Dashboard}/>
+        <Route path='/' exact={true} component={DashBoard}/>
+        <Route path='/Research' exact={true} component={Research}/>
+        <Route path='/Workshop' exact={true} component={Workshop}/>
         </Switch>
     </Router>
    
