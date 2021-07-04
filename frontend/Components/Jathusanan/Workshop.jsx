@@ -65,6 +65,14 @@ class WorkShop extends Component {
 
   render() {
     return (
+      <>
+        <h3
+          style={{ marginTop: "75px", marginLeft: "390px" }}
+          className="container"
+        >
+          Review Workshop Details
+        </h3>
+      
       <Table
         striped
         bordered
@@ -87,6 +95,7 @@ class WorkShop extends Component {
         </thead>
         <tbody>{this.getAll()}</tbody>
       </Table>
+      </>
     );
   }
 }

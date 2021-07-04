@@ -34573,4 +34573,4 @@ exports.default = WorkShop;
 }
 },{"react":"3b2NM","axios":"7rA65","react-bootstrap/Table":"34yor","./Button":"458Ut","./RejButton":"2CXlM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5UXJH":[function() {},{}]},["1j6wU","3bcJH","249SU"], "249SU", "parcelRequire0de8")
 
-//# sourceMappingURL=index.711b527e.js.map
+//# sourceMappingURL=index.HASH_REF_d35bf5c27be5a9ed503e90b2711b527e.js.map

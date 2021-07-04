@@ -34465,18 +34465,7 @@ class WorkShop extends _react.Component {
         });
     }
     render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
-            style: {
-                marginTop: "75px",
-                marginLeft: "390px"
-            },
-            className: "container",
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 69
-            },
-            __self: this
-        }, "Review Workshop Details"), /*#__PURE__*/ _reactDefault.default.createElement(_tableDefault.default, {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_tableDefault.default, {
             striped: true,
             bordered: true,
             hover: true,
@@ -34486,82 +34475,82 @@ class WorkShop extends _react.Component {
             },
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 76
+                lineNumber: 69
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 83
+                lineNumber: 76
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 84
+                lineNumber: 77
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 85
+                lineNumber: 78
             },
             __self: this
         }, "#"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 86
+                lineNumber: 79
             },
             __self: this
         }, "Title"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 87
+                lineNumber: 80
             },
             __self: this
         }, "FileName"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 88
+                lineNumber: 81
             },
             __self: this
         }, "WorkShop Conductor"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 89
+                lineNumber: 82
             },
             __self: this
         }, "Venue"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 90
+                lineNumber: 83
             },
             __self: this
         }, "DateTime"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 91
+                lineNumber: 84
             },
             __self: this
         }, "Approve"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 92
+                lineNumber: 85
             },
             __self: this
         }, "Decline"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 93
+                lineNumber: 86
             },
             __self: this
         }, "Status"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 96
+                lineNumber: 89
             },
             __self: this
-        }, this.getAll()))));
+        }, this.getAll())));
     }
 }
 exports.default = WorkShop;
@@ -34573,4 +34562,4 @@ exports.default = WorkShop;
 }
 },{"react":"3b2NM","axios":"7rA65","react-bootstrap/Table":"34yor","./Button":"458Ut","./RejButton":"2CXlM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5UXJH":[function() {},{}]},["1j6wU","3bcJH","249SU"], "249SU", "parcelRequire0de8")
 
-//# sourceMappingURL=index.711b527e.js.map
+//# sourceMappingURL=index.HASH_REF_d35bf5c27be5a9ed503e90b2711b527e.js.map
