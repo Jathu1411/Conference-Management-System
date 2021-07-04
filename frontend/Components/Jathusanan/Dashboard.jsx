@@ -45,7 +45,7 @@ class DashBoard extends Component {
 
   render() {
     return (
-      <>
+      <div data-testid = 'dashboard-1'>
         <Card
           variant="success"
           style={{ marginTop: "100px", width: "500px", marginLeft: "390px" }}
@@ -82,7 +82,7 @@ class DashBoard extends Component {
             </Button>
           </Card.Body>
         </Card>
-      </>
+      </div>
     );
   }
 }

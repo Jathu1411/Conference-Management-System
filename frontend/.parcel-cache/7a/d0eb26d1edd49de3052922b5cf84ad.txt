@@ -1,4 +1,4 @@
-23499
+23500
 128C:\Users\JATHU\Desktop\working directory\frontend\node_modules\postcss-normalize-timing-functions\node_modules\postcss\README.md121436361000000000 0
 86C:\Users\JATHU\Desktop\working directory\frontend\node_modules\querystring\decode.d.ts121436361000000000 0
 136C:\Users\JATHU\Desktop\working directory\frontend\node_modules\postcss-modules\node_modules\postcss-modules-extract-imports\src\index.js121436361000000000 0
@@ -70,7 +70,7 @@
 109C:\Users\JATHU\Desktop\working directory\frontend\node_modules\postcss-svgo\node_modules\postcss-value-parser132694444916224153 1
 82C:\Users\JATHU\Desktop\working directory\frontend\node_modules\lodash\fp\pullAt.js121436361000000000 0
 72C:\Users\JATHU\Desktop\working directory\frontend\node_modules\is-number132694444943958107 1
-54C:\Users\JATHU\Desktop\working directory\frontend\dist132698564903478738 1
+54C:\Users\JATHU\Desktop\working directory\frontend\dist132698922281071412 1
 85C:\Users\JATHU\Desktop\working directory\frontend\node_modules\lodash\assignInWith.js121436361000000000 0
 130C:\Users\JATHU\Desktop\working directory\frontend\node_modules\css-modules-loader-core\node_modules\source-map\lib\mapping-list.js131369414910000000 0
 118C:\Users\JATHU\Desktop\working directory\frontend\node_modules\postcss-normalize-whitespace\node_modules\color-convert132694444919318880 1
@@ -1102,7 +1102,7 @@
 126C:\Users\JATHU\Desktop\working directory\frontend\node_modules\@parcel\node-resolver-core\node_modules\micromatch\CHANGELOG.md132694444547360069 0
 95C:\Users\JATHU\Desktop\working directory\frontend\node_modules\@popperjs\core\lib\enums.js.flow121436361000000000 0
 90C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\stable\parse-int.js121436361000000000 0
-85C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan\DashBoard.jsx132698564066989086 0
+85C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan\DashBoard.jsx132698887236283951 0
 141C:\Users\JATHU\Desktop\working directory\frontend\node_modules\@parcel\node-resolver-core\node_modules\fill-range\node_modules\extend-shallow132694444945409763 1
 114C:\Users\JATHU\Desktop\working directory\frontend\node_modules\postcss-colormin\node_modules\postcss\lib\vendor.js121436361000000000 0
 94C:\Users\JATHU\Desktop\working directory\frontend\node_modules\caniuse-lite\data\regions\IN.js121436361000000000 0
@@ -1242,7 +1242,7 @@
 95C:\Users\JATHU\Desktop\working directory\frontend\node_modules\@restart\hooks\useGlobalListener132697185818096858 1
 77C:\Users\JATHU\Desktop\working directory\frontend\node_modules\restore-cursor132694444911037033 1
 85C:\Users\JATHU\Desktop\working directory\frontend\node_modules\lodash\_assignValue.js121436361000000000 0
-71C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan132697929119431618 1
+71C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan132698948478925142 1
 123C:\Users\JATHU\Desktop\working directory\frontend\node_modules\postcss-normalize-positions\node_modules\postcss\lib\list.js121436361000000000 0
 114C:\Users\JATHU\Desktop\working directory\frontend\node_modules\postcss-merge-rules\node_modules\chalk\node_modules132694444839200341 1
 91C:\Users\JATHU\Desktop\working directory\frontend\node_modules\copy-descriptor\package.json132694444957883967 0
@@ -5175,7 +5175,7 @@
 108C:\Users\JATHU\Desktop\working directory\frontend\node_modules\postcss-svgo\node_modules\postcss\lib\list.js121436361000000000 0
 113C:\Users\JATHU\Desktop\working directory\frontend\node_modules\@babel\runtime\helpers\objectDestructuringEmpty.js121012626000000000 0
 82C:\Users\JATHU\Desktop\working directory\frontend\node_modules\set-value\README.md121436361000000000 0
-72C:\Users\JATHU\Desktop\working directory\frontend\dist\index.711b527e.js132698564902887567 0
+72C:\Users\JATHU\Desktop\working directory\frontend\dist\index.711b527e.js132698922280492847 0
 116C:\Users\JATHU\Desktop\working directory\frontend\node_modules\postcss-colormin\node_modules\postcss\lib\tokenize.js121436361000000000 0
 108C:\Users\JATHU\Desktop\working directory\frontend\node_modules\postcss-merge-longhand\dist\lib\colorMerge.js121436361000000000 0
 92C:\Users\JATHU\Desktop\working directory\frontend\node_modules\@restart\hooks\esm\index.d.ts121436361000000000 0
@@ -11865,6 +11865,7 @@
 106C:\Users\JATHU\Desktop\working directory\frontend\node_modules\@babel\compat-data\data\native-modules.json121012626000000000 0
 125C:\Users\JATHU\Desktop\working directory\frontend\node_modules\postcss-minify-font-values\node_modules\color-convert\route.js121436361000000000 0
 99C:\Users\JATHU\Desktop\working directory\frontend\node_modules\es-abstract\2020\BigInt\remainder.js121436361000000000 0
+83C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan\App.test.js132698948478925142 0
 94C:\Users\JATHU\Desktop\working directory\frontend\node_modules\bootstrap-icons\icons\table.svg121436361000000000 0
 103C:\Users\JATHU\Desktop\working directory\frontend\node_modules\postcss-calc\node_modules\chalk\index.js121436361000000000 0
 87C:\Users\JATHU\Desktop\working directory\frontend\node_modules\events\tests\subclass.js121436361000000000 0
@@ -18341,7 +18342,7 @@
 99C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\stable\typed-array\filter.js121436361000000000 0
 100C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\stable\promise\all-settled.js121436361000000000 0
 102C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\modules\es.typed-array.slice.js121436361000000000 0
-84C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan\Research.jsx132697955307783882 0
+84C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan\Research.jsx132698889825039302 0
 103C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\stable\typed-array\find-index.js121436361000000000 0
 111C:\Users\JATHU\Desktop\working directory\frontend\node_modules\@babel\highlight\node_modules\color-name\LICENSE130953959930000000 0
 94C:\Users\JATHU\Desktop\working directory\frontend\node_modules\@parcel\plugin\src\PluginAPI.js121436361000000000 0
@@ -18735,7 +18736,7 @@
 116C:\Users\JATHU\Desktop\working directory\frontend\node_modules\@babel\highlight\node_modules\color-convert\README.md121436361000000000 0
 97C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\modules\web.url.to-json.js121436361000000000 0
 94C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\internals\a-function.js121436361000000000 0
-76C:\Users\JATHU\Desktop\working directory\frontend\dist\index.711b527e.js.map132698564903189669 0
+76C:\Users\JATHU\Desktop\working directory\frontend\dist\index.711b527e.js.map132698922280921703 0
 102C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\internals\add-to-unscopables.js121436361000000000 0
 104C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\internals\advance-string-index.js121436361000000000 0
 103C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\internals\array-buffer-native.js121436361000000000 0
@@ -18974,7 +18975,7 @@
 106C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\features\object\get-prototype-of.js121436361000000000 0
 102C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\es\array\virtual\copy-within.js121436361000000000 0
 99C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\features\object\is-frozen.js121436361000000000 0
-77C:\Users\JATHU\Desktop\working directory\frontend\dist\index.bb68603a.css.map132698564902814801 0
+77C:\Users\JATHU\Desktop\working directory\frontend\dist\index.bb68603a.css.map132698922280452964 0
 99C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\features\object\is-sealed.js121436361000000000 0
 92C:\Users\JATHU\Desktop\working directory\frontend\node_modules\core-js\features\object\is.js121436361000000000 0
 94C:\Users\JATHU\Desktop\working directory\frontend\node_modules\caniuse-lite\data\regions\MP.js121436361000000000 0
@@ -23484,10 +23485,10 @@
 77C:\Users\JATHU\Desktop\working directory\frontend\node_modules\.bin\which.ps1132694444975362041 0
 72C:\Users\JATHU\Desktop\working directory\frontend\dist\index.33c6b965.js132692784640000000 0
 77C:\Users\JATHU\Desktop\working directory\frontend\dist\index.a0cdc154.css.map132667023720000000 0
-73C:\Users\JATHU\Desktop\working directory\frontend\dist\index.bb68603a.css132698564902615307 0
+73C:\Users\JATHU\Desktop\working directory\frontend\dist\index.bb68603a.css132698922280258370 0
 72C:\Users\JATHU\Desktop\working directory\frontend\dist\index.f825be1d.js132667023720000000 0
 76C:\Users\JATHU\Desktop\working directory\frontend\dist\index.f825be1d.js.map132667023720000000 0
-65C:\Users\JATHU\Desktop\working directory\frontend\dist\index.html132698564902562532 0
+65C:\Users\JATHU\Desktop\working directory\frontend\dist\index.html132698922280228436 0
 68C:\Users\JATHU\Desktop\working directory\frontend\Components\Praveen132667023720000000 1
 70C:\Users\JATHU\Desktop\working directory\frontend\Components\Shanghavi132667023720000000 1
 70C:\Users\JATHU\Desktop\working directory\frontend\Components\Vithursan132667023720000000 1
@@ -23495,6 +23496,6 @@
 85C:\Users\JATHU\Desktop\working directory\frontend\Components\Shanghavi\leaderDoli.txt132667023720000000 0
 77C:\Users\JATHU\Desktop\working directory\frontend\Components\Praveen\ayya.txt132667023720000000 0
 78C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan\Images132697734986813707 1
-82C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan\NavBar.jsx132698007732353685 0
-84C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan\Workshop.jsx132697848063584324 0
+82C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan\NavBar.jsx132698567053117214 0
+84C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan\Workshop.jsx132698922276078161 0
 91C:\Users\JATHU\Desktop\working directory\frontend\Components\Jathusanan\Images\Workshop.jpg132697734988396698 0
