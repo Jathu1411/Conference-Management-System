@@ -4,34 +4,31 @@ const Schema = mongoose.Schema;
 
 const ResearchSchema = new Schema({
   rtitle: {
-    type : String,
-    required : true
-
+    type: String,
+    required: true,
   },
   fileName: {
     type: String,
-    required: true
-},
-filePath: {
+    required: true,
+  },
+  filePath: {
     type: String,
-    required: true
-},
-fileType: {
+    required: true,
+  },
+  fileType: {
     type: String,
-    required: true
-},
-fileSize: {
+    required: true,
+  },
+  fileSize: {
     type: String,
-    required: true
-},
-status : {
-  type : String,
-  required : true,
-  default : 'false'
-
-},
-   user: { type: mongoose.Schema.Types.ObjectId, required: false, ref: 'user'},
-  
+    required: true,
+  },
+  status: {
+    type: String,
+    required: true,
+    default: "Pending",
+  },
+  user: { type: mongoose.Schema.Types.ObjectId, required: false, ref: "user" },
 });
 
 const research = mongoose.model("research", ResearchSchema);

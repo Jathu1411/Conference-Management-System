@@ -3,28 +3,33 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const WorkshopSchema = new Schema({
-  wtitle:String,
-  date:Date,
-  venue:String,
+  wtitle: String,
+  date: Date,
+  venue: String,
   fileName: {
     type: String,
-    required: true
-},
-filePath: {
+    required: true,
+  },
+  filePath: {
     type: String,
-    required: true
-},
-fileType: {
+    required: true,
+  },
+  fileType: {
     type: String,
-    required: true
-},
-fileSize: {
+    required: true,
+  },
+  fileSize: {
     type: String,
-    required: true
-},
+    required: true,
+  },
 
-  user: { type: mongoose.Schema.Types.ObjectId, required: false, ref: 'user'},
-  
+  user: { type: mongoose.Schema.Types.ObjectId, required: false, ref: "user" },
+
+  status: {
+    type: String,
+    required: false,
+    default: "pending",
+  },
 });
 
 const workshop = mongoose.model("workshop", WorkshopSchema);

@@ -21847,6 +21847,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
 var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
+var _reactToastify = require("react-toastify");
 var _reactToastifyCss = require("react-toastify/dist/ReactToastify.css");
 // components - Jathu
 var _research = require("./Components/Jathusanan/Research"); // Reviewer DashBoard
@@ -21862,22 +21863,28 @@ class App extends _reactDefault.default.Component {
         super(props);
     }
     render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
-                lineNumber: 31
+                lineNumber: 20
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
+                lineNumber: 21
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_navBarDefault.default, {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
-                lineNumber: 32
+                lineNumber: 22
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Switch, {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
-                lineNumber: 33
+                lineNumber: 23
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -21886,7 +21893,7 @@ class App extends _reactDefault.default.Component {
             component: _dashBoardDefault.default,
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
-                lineNumber: 34
+                lineNumber: 24
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -21895,7 +21902,7 @@ class App extends _reactDefault.default.Component {
             component: _researchDefault.default,
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
-                lineNumber: 35
+                lineNumber: 25
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -21904,10 +21911,16 @@ class App extends _reactDefault.default.Component {
             component: _workshopDefault.default,
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
-                lineNumber: 36
+                lineNumber: 26
             },
             __self: this
-        }))));
+        }))), /*#__PURE__*/ _reactDefault.default.createElement(_reactToastify.ToastContainer, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
+                lineNumber: 29
+            },
+            __self: this
+        })));
     }
 }
 exports.default = App;
@@ -21917,7 +21930,7 @@ exports.default = App;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","react-router-dom":"1PMSK","bootstrap/dist/css/bootstrap.min.css":"5UXJH","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-toastify/dist/ReactToastify.css":"69NP0","./Components/Jathusanan/NavBar":"6hGI9","./Components/Jathusanan/Research":"4Qfwm","./Components/Jathusanan/DashBoard":"6rhq6","./Components/Jathusanan/Workshop":"1hSkN"}],"1PMSK":[function(require,module,exports) {
+},{"react":"3b2NM","react-router-dom":"1PMSK","bootstrap/dist/css/bootstrap.min.css":"5UXJH","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-toastify":"0AT5S","react-toastify/dist/ReactToastify.css":"69NP0","./Components/Jathusanan/Research":"4Qfwm","./Components/Jathusanan/NavBar":"6hGI9","./Components/Jathusanan/DashBoard":"6rhq6","./Components/Jathusanan/Workshop":"1hSkN"}],"1PMSK":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react-router-dom.js");
 
@@ -25148,7 +25161,2890 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"592mh"}],"69NP0":[function() {},{}],"6hGI9":[function(require,module,exports) {
+},{"react-refresh/runtime":"592mh"}],"0AT5S":[function(require,module,exports) {
+'use strict';
+module.exports = require('./react-toastify.cjs.development.js');
+
+},{"./react-toastify.cjs.development.js":"6LF1R"}],"6LF1R":[function(require,module,exports) {
+'use strict';
+Object.defineProperty(exports, '__esModule', {
+    value: true
+});
+function _interopDefault(ex) {
+    return ex && typeof ex === 'object' && 'default' in ex ? ex['default'] : ex;
+}
+var React = require('react');
+var React__default = _interopDefault(React);
+var cx = _interopDefault(require('clsx'));
+var reactDom = require('react-dom');
+function _extends() {
+    _extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+function isNum(v) {
+    return typeof v === 'number' && !isNaN(v);
+}
+function isBool(v) {
+    return typeof v === 'boolean';
+}
+function isStr(v) {
+    return typeof v === 'string';
+}
+function isFn(v) {
+    return typeof v === 'function';
+}
+function parseClassName(v) {
+    return isStr(v) || isFn(v) ? v : null;
+}
+function isToastIdValid(toastId) {
+    return toastId === 0 || toastId;
+}
+function getAutoCloseDelay(toastAutoClose, containerAutoClose) {
+    return toastAutoClose === false || isNum(toastAutoClose) && toastAutoClose > 0 ? toastAutoClose : containerAutoClose;
+}
+var canUseDom = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+function canBeRendered(content) {
+    return React.isValidElement(content) || isStr(content) || isFn(content) || isNum(content);
+}
+var POSITION = {
+    TOP_LEFT: 'top-left',
+    TOP_RIGHT: 'top-right',
+    TOP_CENTER: 'top-center',
+    BOTTOM_LEFT: 'bottom-left',
+    BOTTOM_RIGHT: 'bottom-right',
+    BOTTOM_CENTER: 'bottom-center'
+};
+var TYPE = {
+    INFO: 'info',
+    SUCCESS: 'success',
+    WARNING: 'warning',
+    ERROR: 'error',
+    DEFAULT: 'default',
+    DARK: 'dark'
+};
+/**
+ * Used to collapse toast after exit animation
+ */ function collapseToast(node, done, duration) {
+    if (duration === void 0) duration = 300;
+    var height = node.scrollHeight;
+    var style = node.style;
+    requestAnimationFrame(function() {
+        style.minHeight = 'initial';
+        style.height = height + 'px';
+        style.transition = "all " + duration + "ms";
+        requestAnimationFrame(function() {
+            style.height = '0';
+            style.padding = '0';
+            style.margin = '0';
+            setTimeout(done, duration);
+        });
+    });
+}
+/**
+ * Css animation that just work.
+ * You could use animate.css for instance
+ *
+ *
+ * ```
+ * cssTransition({
+ *   enter: "animate__animated animate__bounceIn",
+ *   exit: "animate__animated animate__bounceOut"
+ * })
+ * ```
+ *
+ */ function cssTransition(_ref) {
+    var enter = _ref.enter, exit = _ref.exit, _ref$appendPosition = _ref.appendPosition, appendPosition = _ref$appendPosition === void 0 ? false : _ref$appendPosition, _ref$collapse = _ref.collapse, collapse = _ref$collapse === void 0 ? true : _ref$collapse, _ref$collapseDuration = _ref.collapseDuration, collapseDuration = _ref$collapseDuration === void 0 ? 300 : _ref$collapseDuration;
+    return function ToastTransition(_ref2) {
+        var children = _ref2.children, position = _ref2.position, preventExitTransition = _ref2.preventExitTransition, done = _ref2.done, nodeRef = _ref2.nodeRef, isIn = _ref2.isIn;
+        var enterClassName = appendPosition ? enter + "--" + position : enter;
+        var exitClassName = appendPosition ? exit + "--" + position : exit;
+        var baseClassName = React.useRef();
+        var animationStep = React.useRef(0);
+        React.useLayoutEffect(function() {
+            onEnter();
+        }, []);
+        React.useEffect(function() {
+            if (!isIn) preventExitTransition ? onExited() : onExit();
+        }, [
+            isIn
+        ]);
+        function onEnter() {
+            var node = nodeRef.current;
+            baseClassName.current = node.className;
+            node.className += " " + enterClassName;
+            node.addEventListener('animationend', onEntered);
+        }
+        function onEntered() {
+            var node = nodeRef.current;
+            node.removeEventListener('animationend', onEntered);
+            if (animationStep.current === 0) node.className = baseClassName.current;
+        }
+        function onExit() {
+            animationStep.current = 1;
+            var node = nodeRef.current;
+            node.className += " " + exitClassName;
+            node.addEventListener('animationend', onExited);
+        }
+        function onExited() {
+            var node = nodeRef.current;
+            node.removeEventListener('animationend', onExited);
+            collapse ? collapseToast(node, done, collapseDuration) : done();
+        }
+        return React__default.createElement(React__default.Fragment, null, children);
+    };
+}
+var eventManager = {
+    list: /*#__PURE__*/ new Map(),
+    emitQueue: /*#__PURE__*/ new Map(),
+    on: function on(event, callback) {
+        this.list.has(event) || this.list.set(event, []);
+        this.list.get(event).push(callback);
+        return this;
+    },
+    off: function off(event, callback) {
+        if (callback) {
+            var cb = this.list.get(event).filter(function(cb1) {
+                return cb1 !== callback;
+            });
+            this.list.set(event, cb);
+            return this;
+        }
+        this.list["delete"](event);
+        return this;
+    },
+    cancelEmit: function cancelEmit(event) {
+        var timers = this.emitQueue.get(event);
+        if (timers) {
+            timers.forEach(clearTimeout);
+            this.emitQueue["delete"](event);
+        }
+        return this;
+    },
+    /**
+   * Enqueue the event at the end of the call stack
+   * Doing so let the user call toast as follow:
+   * toast('1')
+   * toast('2')
+   * toast('3')
+   * Without setTimemout the code above will not work
+   */ emit: function emit(event) {
+        var _this = this;
+        for(var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)args[_key - 1] = arguments[_key];
+        this.list.has(event) && this.list.get(event).forEach(function(callback) {
+            var timer = setTimeout(function() {
+                // @ts-ignore
+                callback.apply(void 0, args);
+            }, 0);
+            _this.emitQueue.has(event) || _this.emitQueue.set(event, []);
+            _this.emitQueue.get(event).push(timer);
+        });
+    }
+};
+/**
+ * `useKeeper` is a helper around `useRef`.
+ *
+ * You don't need to access the `.current`property to get the value
+ * If refresh is set to true. The ref will be updated every render
+ */ function useKeeper(arg, refresh) {
+    if (refresh === void 0) refresh = false;
+    var ref = React.useRef(arg);
+    React.useEffect(function() {
+        if (refresh) ref.current = arg;
+    });
+    return ref.current;
+}
+function reducer(state, action) {
+    switch(action.type){
+        case 0:
+            return [].concat(state, [
+                action.toastId
+            ]).filter(function(id) {
+                return id !== action.staleId;
+            });
+        case 1:
+            return isToastIdValid(action.toastId) ? state.filter(function(id) {
+                return id !== action.toastId;
+            }) : [];
+    }
+}
+function useToastContainer(props) {
+    var _useReducer = React.useReducer(function(x) {
+        return x + 1;
+    }, 0), forceUpdate = _useReducer[1];
+    var _useReducer2 = React.useReducer(reducer, []), toast = _useReducer2[0], dispatch = _useReducer2[1];
+    var containerRef = React.useRef(null);
+    var toastCount = useKeeper(0);
+    var queue = useKeeper([]);
+    var collection = useKeeper({
+    });
+    var instance = useKeeper({
+        toastKey: 1,
+        displayedToast: 0,
+        props: props,
+        containerId: null,
+        isToastActive: isToastActive,
+        getToast: function getToast(id) {
+            return collection[id] || null;
+        }
+    });
+    React.useEffect(function() {
+        instance.containerId = props.containerId;
+        eventManager.cancelEmit(3).on(0, buildToast).on(1, function(toastId) {
+            return containerRef.current && removeToast(toastId);
+        }).on(5, clearWaitingQueue).emit(2, instance);
+        return function() {
+            return eventManager.emit(3, instance);
+        };
+    }, []);
+    React.useEffect(function() {
+        instance.isToastActive = isToastActive;
+        instance.displayedToast = toast.length;
+        eventManager.emit(4, toast.length, props.containerId);
+    }, [
+        toast
+    ]);
+    React.useEffect(function() {
+        instance.props = props;
+    });
+    function isToastActive(id) {
+        return toast.indexOf(id) !== -1;
+    }
+    function clearWaitingQueue(_ref) {
+        var containerId = _ref.containerId;
+        var limit = instance.props.limit;
+        if (limit && (!containerId || instance.containerId === containerId)) {
+            toastCount -= queue.length;
+            queue = [];
+        }
+    }
+    function removeToast(toastId) {
+        dispatch({
+            type: 1,
+            toastId: toastId
+        });
+    }
+    function dequeueToast() {
+        var _queue$shift = queue.shift(), toastContent = _queue$shift.toastContent, toastProps = _queue$shift.toastProps, staleId = _queue$shift.staleId;
+        appendToast(toastContent, toastProps, staleId);
+    }
+    /**
+   * check if a container is attached to the dom
+   * check for multi-container, build only if associated
+   * check for duplicate toastId if no update
+   */ function isNotValid(_ref2) {
+        var containerId = _ref2.containerId, toastId = _ref2.toastId, updateId = _ref2.updateId;
+        return !containerRef.current || instance.props.enableMultiContainer && containerId !== instance.props.containerId || collection[toastId] && updateId == null ? true : false;
+    } // this function and all the function called inside needs to rely on ref(`useKeeper`)
+    function buildToast(content, _ref3) {
+        var delay = _ref3.delay, staleId = _ref3.staleId, options = _objectWithoutPropertiesLoose(_ref3, [
+            "delay",
+            "staleId"
+        ]);
+        if (!canBeRendered(content) || isNotValid(options)) return;
+        var toastId = options.toastId, updateId = options.updateId;
+        var props1 = instance.props;
+        var closeToast = function closeToast1() {
+            return removeToast(toastId);
+        };
+        var isNotAnUpdate = options.updateId == null;
+        if (isNotAnUpdate) toastCount++;
+        var toastProps = {
+            toastId: toastId,
+            updateId: updateId,
+            isIn: false,
+            key: options.key || instance.toastKey++,
+            type: options.type,
+            closeToast: closeToast,
+            closeButton: options.closeButton,
+            rtl: props1.rtl,
+            position: options.position || props1.position,
+            transition: options.transition || props1.transition,
+            className: parseClassName(options.className || props1.toastClassName),
+            bodyClassName: parseClassName(options.bodyClassName || props1.bodyClassName),
+            style: options.style || props1.toastStyle,
+            bodyStyle: options.bodyStyle || props1.bodyStyle,
+            onClick: options.onClick || props1.onClick,
+            pauseOnHover: isBool(options.pauseOnHover) ? options.pauseOnHover : props1.pauseOnHover,
+            pauseOnFocusLoss: isBool(options.pauseOnFocusLoss) ? options.pauseOnFocusLoss : props1.pauseOnFocusLoss,
+            draggable: isBool(options.draggable) ? options.draggable : props1.draggable,
+            draggablePercent: isNum(options.draggablePercent) ? options.draggablePercent : props1.draggablePercent,
+            draggableDirection: options.draggableDirection || props1.draggableDirection,
+            closeOnClick: isBool(options.closeOnClick) ? options.closeOnClick : props1.closeOnClick,
+            progressClassName: parseClassName(options.progressClassName || props1.progressClassName),
+            progressStyle: options.progressStyle || props1.progressStyle,
+            autoClose: getAutoCloseDelay(options.autoClose, props1.autoClose),
+            hideProgressBar: isBool(options.hideProgressBar) ? options.hideProgressBar : props1.hideProgressBar,
+            progress: options.progress,
+            role: isStr(options.role) ? options.role : props1.role,
+            deleteToast: function deleteToast() {
+                removeFromCollection(toastId);
+            }
+        };
+        if (isFn(options.onOpen)) toastProps.onOpen = options.onOpen;
+        if (isFn(options.onClose)) toastProps.onClose = options.onClose; //  tweak for vertical dragging
+        if (toastProps.draggableDirection === "y" && toastProps.draggablePercent === 80) toastProps.draggablePercent *= 1.5;
+        var closeButton = props1.closeButton;
+        if (options.closeButton === false || canBeRendered(options.closeButton)) closeButton = options.closeButton;
+        else if (options.closeButton === true) closeButton = canBeRendered(props1.closeButton) ? props1.closeButton : true;
+        toastProps.closeButton = closeButton;
+        var toastContent = content;
+        if (React.isValidElement(content) && !isStr(content.type)) toastContent = React.cloneElement(content, {
+            closeToast: closeToast,
+            toastProps: toastProps
+        });
+        else if (isFn(content)) toastContent = content({
+            closeToast: closeToast,
+            toastProps: toastProps
+        });
+         // not handling limit + delay by design. Waiting for user feedback first
+        if (props1.limit && props1.limit > 0 && toastCount > props1.limit && isNotAnUpdate) queue.push({
+            toastContent: toastContent,
+            toastProps: toastProps,
+            staleId: staleId
+        });
+        else if (isNum(delay) && delay > 0) setTimeout(function() {
+            appendToast(toastContent, toastProps, staleId);
+        }, delay);
+        else appendToast(toastContent, toastProps, staleId);
+    }
+    function appendToast(content, toastProps, staleId) {
+        var toastId = toastProps.toastId;
+        if (staleId) delete collection[staleId];
+        collection[toastId] = {
+            content: content,
+            props: toastProps
+        };
+        dispatch({
+            type: 0,
+            toastId: toastId,
+            staleId: staleId
+        });
+    }
+    function removeFromCollection(toastId) {
+        delete collection[toastId];
+        var queueLen = queue.length;
+        toastCount = isToastIdValid(toastId) ? toastCount - 1 : toastCount - instance.displayedToast;
+        if (toastCount < 0) toastCount = 0;
+        if (queueLen > 0) {
+            var freeSlot = isToastIdValid(toastId) ? 1 : instance.props.limit;
+            if (queueLen === 1 || freeSlot === 1) {
+                instance.displayedToast++;
+                dequeueToast();
+            } else {
+                var toDequeue = freeSlot > queueLen ? queueLen : freeSlot;
+                instance.displayedToast = toDequeue;
+                for(var i = 0; i < toDequeue; i++)dequeueToast();
+            }
+        } else forceUpdate();
+    }
+    function getToastToRender(cb) {
+        var toastToRender = {
+        };
+        var toastList = props.newestOnTop ? Object.keys(collection).reverse() : Object.keys(collection);
+        for(var i = 0; i < toastList.length; i++){
+            var _toast = collection[toastList[i]];
+            var position = _toast.props.position;
+            toastToRender[position] || (toastToRender[position] = []);
+            toastToRender[position].push(_toast);
+        }
+        return Object.keys(toastToRender).map(function(p) {
+            return cb(p, toastToRender[p]);
+        });
+    }
+    return {
+        getToastToRender: getToastToRender,
+        collection: collection,
+        containerRef: containerRef,
+        isToastActive: isToastActive
+    };
+}
+function getX(e) {
+    return e.targetTouches && e.targetTouches.length >= 1 ? e.targetTouches[0].clientX : e.clientX;
+}
+function getY(e) {
+    return e.targetTouches && e.targetTouches.length >= 1 ? e.targetTouches[0].clientY : e.clientY;
+}
+function useToast(props) {
+    var _useState = React.useState(true), isRunning = _useState[0], setIsRunning = _useState[1];
+    var _useState2 = React.useState(false), preventExitTransition = _useState2[0], setPreventExitTransition = _useState2[1];
+    var toastRef = React.useRef(null);
+    var drag = useKeeper({
+        start: 0,
+        x: 0,
+        y: 0,
+        delta: 0,
+        removalDistance: 0,
+        canCloseOnClick: true,
+        canDrag: false,
+        boundingRect: null
+    });
+    var syncProps = useKeeper(props, true);
+    var autoClose = props.autoClose, pauseOnHover = props.pauseOnHover, closeToast = props.closeToast, onClick = props.onClick, closeOnClick = props.closeOnClick;
+    React.useEffect(function() {
+        if (isFn(props.onOpen)) props.onOpen(React.isValidElement(props.children) && props.children.props);
+        return function() {
+            if (isFn(syncProps.onClose)) syncProps.onClose(React.isValidElement(syncProps.children) && syncProps.children.props);
+        };
+    }, []);
+    React.useEffect(function() {
+        props.draggable && bindDragEvents();
+        return function() {
+            props.draggable && unbindDragEvents();
+        };
+    }, [
+        props.draggable
+    ]);
+    React.useEffect(function() {
+        props.pauseOnFocusLoss && bindFocusEvents();
+        return function() {
+            props.pauseOnFocusLoss && unbindFocusEvents();
+        };
+    }, [
+        props.pauseOnFocusLoss
+    ]);
+    function onDragStart(e) {
+        if (props.draggable) {
+            var toast = toastRef.current;
+            drag.canCloseOnClick = true;
+            drag.canDrag = true;
+            drag.boundingRect = toast.getBoundingClientRect();
+            toast.style.transition = '';
+            drag.x = getX(e.nativeEvent);
+            drag.y = getY(e.nativeEvent);
+            if (props.draggableDirection === "x") {
+                drag.start = drag.x;
+                drag.removalDistance = toast.offsetWidth * (props.draggablePercent / 100);
+            } else {
+                drag.start = drag.y;
+                drag.removalDistance = toast.offsetHeight * (props.draggablePercent / 100);
+            }
+        }
+    }
+    function onDragTransitionEnd() {
+        if (drag.boundingRect) {
+            var _drag$boundingRect = drag.boundingRect, top = _drag$boundingRect.top, bottom = _drag$boundingRect.bottom, left = _drag$boundingRect.left, right = _drag$boundingRect.right;
+            if (props.pauseOnHover && drag.x >= left && drag.x <= right && drag.y >= top && drag.y <= bottom) pauseToast();
+            else playToast();
+        }
+    }
+    function playToast() {
+        setIsRunning(true);
+    }
+    function pauseToast() {
+        setIsRunning(false);
+    }
+    function bindFocusEvents() {
+        if (!document.hasFocus()) pauseToast();
+        window.addEventListener('focus', playToast);
+        window.addEventListener('blur', pauseToast);
+    }
+    function unbindFocusEvents() {
+        window.removeEventListener('focus', playToast);
+        window.removeEventListener('blur', pauseToast);
+    }
+    function bindDragEvents() {
+        document.addEventListener('mousemove', onDragMove);
+        document.addEventListener('mouseup', onDragEnd);
+        document.addEventListener('touchmove', onDragMove);
+        document.addEventListener('touchend', onDragEnd);
+    }
+    function unbindDragEvents() {
+        document.removeEventListener('mousemove', onDragMove);
+        document.removeEventListener('mouseup', onDragEnd);
+        document.removeEventListener('touchmove', onDragMove);
+        document.removeEventListener('touchend', onDragEnd);
+    }
+    function onDragMove(e) {
+        if (drag.canDrag) {
+            e.preventDefault();
+            var toast = toastRef.current;
+            if (isRunning) pauseToast();
+            drag.x = getX(e);
+            drag.y = getY(e);
+            if (props.draggableDirection === "x") drag.delta = drag.x - drag.start;
+            else drag.delta = drag.y - drag.start;
+             // prevent false positif during a toast click
+            if (drag.start !== drag.x) drag.canCloseOnClick = false;
+            toast.style.transform = "translate" + props.draggableDirection + "(" + drag.delta + "px)";
+            toast.style.opacity = "" + (1 - Math.abs(drag.delta / drag.removalDistance));
+        }
+    }
+    function onDragEnd() {
+        var toast = toastRef.current;
+        if (drag.canDrag) {
+            drag.canDrag = false;
+            if (Math.abs(drag.delta) > drag.removalDistance) {
+                setPreventExitTransition(true);
+                props.closeToast();
+                return;
+            }
+            toast.style.transition = 'transform 0.2s, opacity 0.2s';
+            toast.style.transform = "translate" + props.draggableDirection + "(0)";
+            toast.style.opacity = '1';
+        }
+    }
+    var eventHandlers = {
+        onMouseDown: onDragStart,
+        onTouchStart: onDragStart,
+        onMouseUp: onDragTransitionEnd,
+        onTouchEnd: onDragTransitionEnd
+    };
+    if (autoClose && pauseOnHover) {
+        eventHandlers.onMouseEnter = pauseToast;
+        eventHandlers.onMouseLeave = playToast;
+    } // prevent toast from closing when user drags the toast
+    if (closeOnClick) eventHandlers.onClick = function(e) {
+        onClick && onClick(e);
+        drag.canCloseOnClick && closeToast();
+    };
+    return {
+        playToast: playToast,
+        pauseToast: pauseToast,
+        isRunning: isRunning,
+        preventExitTransition: preventExitTransition,
+        toastRef: toastRef,
+        eventHandlers: eventHandlers
+    };
+}
+function CloseButton(_ref) {
+    var closeToast = _ref.closeToast, type = _ref.type, _ref$ariaLabel = _ref.ariaLabel, ariaLabel = _ref$ariaLabel === void 0 ? 'close' : _ref$ariaLabel;
+    return React.createElement("button", {
+        className: "Toastify__close-button Toastify__close-button--" + type,
+        type: "button",
+        onClick: function onClick(e) {
+            e.stopPropagation();
+            closeToast(e);
+        },
+        "aria-label": ariaLabel
+    }, React.createElement("svg", {
+        "aria-hidden": "true",
+        viewBox: "0 0 14 16"
+    }, React.createElement("path", {
+        fillRule: "evenodd",
+        d: "M7.71 8.23l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75L1 11.98l3.75-3.75L1 4.48 2.48 3l3.75 3.75L9.98 3l1.48 1.48-3.75 3.75z"
+    })));
+}
+function ProgressBar(_ref) {
+    var _cx, _animationEvent;
+    var delay = _ref.delay, isRunning = _ref.isRunning, closeToast = _ref.closeToast, type = _ref.type, hide = _ref.hide, className = _ref.className, userStyle = _ref.style, controlledProgress = _ref.controlledProgress, progress = _ref.progress, rtl = _ref.rtl, isIn = _ref.isIn;
+    var style = _extends({
+    }, userStyle, {
+        animationDuration: delay + "ms",
+        animationPlayState: isRunning ? 'running' : 'paused',
+        opacity: hide ? 0 : 1
+    });
+    if (controlledProgress) style.transform = "scaleX(" + progress + ")";
+    var defaultClassName = cx("Toastify__progress-bar", controlledProgress ? "Toastify__progress-bar--controlled" : "Toastify__progress-bar--animated", "Toastify__progress-bar--" + type, (_cx = {
+    }, _cx["Toastify" + "__progress-bar--rtl"] = rtl, _cx));
+    var classNames = isFn(className) ? className({
+        rtl: rtl,
+        type: type,
+        defaultClassName: defaultClassName
+    }) : cx(defaultClassName, className); // 🧐 controlledProgress is derived from progress
+    // so if controlledProgress is set
+    // it means that this is also the case for progress
+    var animationEvent = (_animationEvent = {
+    }, _animationEvent[controlledProgress && progress >= 1 ? 'onTransitionEnd' : 'onAnimationEnd'] = controlledProgress && progress < 1 ? null : function() {
+        isIn && closeToast();
+    }, _animationEvent); // TODO: add aria-valuenow, aria-valuemax, aria-valuemin
+    return React.createElement("div", Object.assign({
+        role: "progressbar",
+        "aria-hidden": hide ? 'true' : 'false',
+        "aria-label": "notification timer",
+        className: classNames,
+        style: style
+    }, animationEvent));
+}
+ProgressBar.defaultProps = {
+    type: TYPE.DEFAULT,
+    hide: false
+};
+var Toast = function Toast1(props) {
+    var _cx;
+    var _useToast = useToast(props), isRunning = _useToast.isRunning, preventExitTransition = _useToast.preventExitTransition, toastRef = _useToast.toastRef, eventHandlers = _useToast.eventHandlers;
+    var closeButton = props.closeButton, children = props.children, autoClose = props.autoClose, onClick = props.onClick, type = props.type, hideProgressBar = props.hideProgressBar, closeToast = props.closeToast, Transition = props.transition, position = props.position, className = props.className, style = props.style, bodyClassName = props.bodyClassName, bodyStyle = props.bodyStyle, progressClassName = props.progressClassName, progressStyle = props.progressStyle, updateId = props.updateId, role = props.role, progress = props.progress, rtl = props.rtl, toastId = props.toastId, deleteToast = props.deleteToast, isIn = props.isIn;
+    var defaultClassName = cx("Toastify__toast", "Toastify__toast--" + type, (_cx = {
+    }, _cx["Toastify" + "__toast--rtl"] = rtl, _cx));
+    var cssClasses = isFn(className) ? className({
+        rtl: rtl,
+        position: position,
+        type: type,
+        defaultClassName: defaultClassName
+    }) : cx(defaultClassName, className);
+    var isProgressControlled = !!progress;
+    function renderCloseButton(closeButton1) {
+        if (!closeButton1) return;
+        var props1 = {
+            closeToast: closeToast,
+            type: type
+        };
+        if (isFn(closeButton1)) return closeButton1(props1);
+        if (React.isValidElement(closeButton1)) return React.cloneElement(closeButton1, props1);
+    }
+    return React.createElement(Transition, {
+        isIn: isIn,
+        done: deleteToast,
+        position: position,
+        preventExitTransition: preventExitTransition,
+        nodeRef: toastRef
+    }, React.createElement("div", Object.assign({
+        id: toastId,
+        onClick: onClick,
+        className: cssClasses
+    }, eventHandlers, {
+        style: style,
+        ref: toastRef
+    }), React.createElement("div", Object.assign({
+    }, isIn && {
+        role: role
+    }, {
+        className: isFn(bodyClassName) ? bodyClassName({
+            type: type
+        }) : cx("Toastify__toast-body", bodyClassName),
+        style: bodyStyle
+    }), children), renderCloseButton(closeButton), (autoClose || isProgressControlled) && React.createElement(ProgressBar, Object.assign({
+    }, updateId && !isProgressControlled ? {
+        key: "pb-" + updateId
+    } : {
+    }, {
+        rtl: rtl,
+        delay: autoClose,
+        isRunning: isRunning,
+        isIn: isIn,
+        closeToast: closeToast,
+        hide: hideProgressBar,
+        type: type,
+        style: progressStyle,
+        className: progressClassName,
+        controlledProgress: isProgressControlled,
+        progress: progress
+    }))));
+};
+var Bounce = /*#__PURE__*/ cssTransition({
+    enter: "Toastify--animate Toastify__bounce-enter",
+    exit: "Toastify--animate Toastify__bounce-exit",
+    appendPosition: true
+});
+var Slide = /*#__PURE__*/ cssTransition({
+    enter: "Toastify--animate Toastify__slide-enter",
+    exit: "Toastify--animate Toastify__slide-exit",
+    appendPosition: true
+});
+var Zoom = /*#__PURE__*/ cssTransition({
+    enter: "Toastify--animate Toastify__zoom-enter",
+    exit: "Toastify--animate Toastify__zoom-exit"
+});
+var Flip = /*#__PURE__*/ cssTransition({
+    enter: "Toastify--animate Toastify__flip-enter",
+    exit: "Toastify--animate Toastify__flip-exit"
+});
+var ToastContainer = function ToastContainer1(props) {
+    var _useToastContainer = useToastContainer(props), getToastToRender = _useToastContainer.getToastToRender, containerRef = _useToastContainer.containerRef, isToastActive = _useToastContainer.isToastActive;
+    var className = props.className, style = props.style, rtl = props.rtl, containerId = props.containerId;
+    function getClassName(position) {
+        var _cx;
+        var defaultClassName = cx("Toastify__toast-container", "Toastify__toast-container--" + position, (_cx = {
+        }, _cx["Toastify" + "__toast-container--rtl"] = rtl, _cx));
+        return isFn(className) ? className({
+            position: position,
+            rtl: rtl,
+            defaultClassName: defaultClassName
+        }) : cx(defaultClassName, parseClassName(className));
+    }
+    return React.createElement("div", {
+        ref: containerRef,
+        className: "Toastify",
+        id: containerId
+    }, getToastToRender(function(position, toastList) {
+        var containerStyle = toastList.length === 0 ? _extends({
+        }, style, {
+            pointerEvents: 'none'
+        }) : _extends({
+        }, style);
+        return React.createElement("div", {
+            className: getClassName(position),
+            style: containerStyle,
+            key: "container-" + position
+        }, toastList.map(function(_ref) {
+            var content = _ref.content, toastProps = _ref.props;
+            return React.createElement(Toast, Object.assign({
+            }, toastProps, {
+                isIn: isToastActive(toastProps.toastId),
+                key: "toast-" + toastProps.key,
+                closeButton: toastProps.closeButton === true ? CloseButton : toastProps.closeButton
+            }), content);
+        }));
+    }));
+};
+ToastContainer.defaultProps = {
+    position: POSITION.TOP_RIGHT,
+    transition: Bounce,
+    rtl: false,
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeButton: CloseButton,
+    pauseOnHover: true,
+    pauseOnFocusLoss: true,
+    closeOnClick: true,
+    newestOnTop: false,
+    draggable: true,
+    draggablePercent: 80,
+    draggableDirection: "x",
+    role: 'alert'
+};
+var containers = /*#__PURE__*/ new Map();
+var latestInstance;
+var containerDomNode;
+var containerConfig;
+var queue = [];
+var lazy = false;
+/**
+ * Check whether any container is currently mounted in the DOM
+ */ function isAnyContainerMounted() {
+    return containers.size > 0;
+}
+/**
+ * Get the toast by id, given it's in the DOM, otherwise returns null
+ */ function getToast(toastId, _ref) {
+    var containerId = _ref.containerId;
+    var container = containers.get(containerId || latestInstance);
+    if (!container) return null;
+    return container.getToast(toastId);
+}
+/**
+ * Generate a random toastId
+ */ function generateToastId() {
+    return Math.random().toString(36).substr(2, 9);
+}
+/**
+ * Generate a toastId or use the one provided
+ */ function getToastId(options) {
+    if (options && (isStr(options.toastId) || isNum(options.toastId))) return options.toastId;
+    return generateToastId();
+}
+/**
+ * If the container is not mounted, the toast is enqueued and
+ * the container lazy mounted
+ */ function dispatchToast(content, options) {
+    if (isAnyContainerMounted()) eventManager.emit(0, content, options);
+    else {
+        queue.push({
+            content: content,
+            options: options
+        });
+        if (lazy && canUseDom) {
+            lazy = false;
+            containerDomNode = document.createElement('div');
+            document.body.appendChild(containerDomNode);
+            reactDom.render(React.createElement(ToastContainer, Object.assign({
+            }, containerConfig)), containerDomNode);
+        }
+    }
+    return options.toastId;
+}
+/**
+ * Merge provided options with the defaults settings and generate the toastId
+ */ function mergeOptions(type, options) {
+    return _extends({
+    }, options, {
+        type: options && options.type || type,
+        toastId: getToastId(options)
+    });
+}
+var createToastByType = function createToastByType1(type) {
+    return function(content, options) {
+        return dispatchToast(content, mergeOptions(type, options));
+    };
+};
+var toast = function toast1(content, options) {
+    return dispatchToast(content, mergeOptions(TYPE.DEFAULT, options));
+};
+toast.success = /*#__PURE__*/ createToastByType(TYPE.SUCCESS);
+toast.info = /*#__PURE__*/ createToastByType(TYPE.INFO);
+toast.error = /*#__PURE__*/ createToastByType(TYPE.ERROR);
+toast.warning = /*#__PURE__*/ createToastByType(TYPE.WARNING);
+toast.dark = /*#__PURE__*/ createToastByType(TYPE.DARK);
+toast.warn = toast.warning;
+/**
+ * Remove toast programmaticaly
+ */ toast.dismiss = function(id) {
+    return eventManager.emit(1, id);
+};
+/**
+ * Clear waiting queue when limit is used
+ */ toast.clearWaitingQueue = function(params) {
+    if (params === void 0) params = {
+    };
+    return eventManager.emit(5, params);
+};
+/**
+ * return true if one container is displaying the toast
+ */ toast.isActive = function(id) {
+    var isToastActive = false;
+    containers.forEach(function(container) {
+        if (container.isToastActive && container.isToastActive(id)) isToastActive = true;
+    });
+    return isToastActive;
+};
+toast.update = function(toastId, options) {
+    if (options === void 0) options = {
+    };
+    // if you call toast and toast.update directly nothing will be displayed
+    // this is why I defered the update
+    setTimeout(function() {
+        var toast2 = getToast(toastId, options);
+        if (toast2) {
+            var oldOptions = toast2.props, oldContent = toast2.content;
+            var nextOptions = _extends({
+            }, oldOptions, options, {
+                toastId: options.toastId || toastId,
+                updateId: generateToastId()
+            });
+            if (nextOptions.toastId !== toastId) nextOptions.staleId = toastId;
+            var content = nextOptions.render || oldContent;
+            delete nextOptions.render;
+            dispatchToast(content, nextOptions);
+        }
+    }, 0);
+};
+/**
+ * Used for controlled progress bar.
+ */ toast.done = function(id) {
+    toast.update(id, {
+        progress: 1
+    });
+};
+/**
+ * Track changes. The callback get the number of toast displayed
+ *
+ */ toast.onChange = function(callback) {
+    if (isFn(callback)) eventManager.on(4, callback);
+    return function() {
+        isFn(callback) && eventManager.off(4, callback);
+    };
+};
+/**
+ * Configure the ToastContainer when lazy mounted
+ */ toast.configure = function(config) {
+    if (config === void 0) config = {
+    };
+    lazy = true;
+    containerConfig = config;
+};
+toast.POSITION = POSITION;
+toast.TYPE = TYPE;
+/**
+ * Wait until the ToastContainer is mounted to dispatch the toast
+ * and attach isActive method
+ */ eventManager.on(2, function(containerInstance) {
+    latestInstance = containerInstance.containerId || containerInstance;
+    containers.set(latestInstance, containerInstance);
+    queue.forEach(function(item) {
+        eventManager.emit(0, item.content, item.options);
+    });
+    queue = [];
+}).on(3, function(containerInstance) {
+    containers["delete"](containerInstance.containerId || containerInstance);
+    if (containers.size === 0) eventManager.off(0).off(1).off(5);
+    if (canUseDom && containerDomNode) document.body.removeChild(containerDomNode);
+});
+exports.Bounce = Bounce;
+exports.Flip = Flip;
+exports.Slide = Slide;
+exports.ToastContainer = ToastContainer;
+exports.Zoom = Zoom;
+exports.collapseToast = collapseToast;
+exports.cssTransition = cssTransition;
+exports.toast = toast;
+exports.useToast = useToast;
+exports.useToastContainer = useToastContainer;
+
+},{"react":"3b2NM","clsx":"29lTl","react-dom":"2sg1U"}],"29lTl":[function(require,module,exports) {
+function toVal(mix) {
+    var k, y, str = '';
+    if (typeof mix === 'string' || typeof mix === 'number') str += mix;
+    else if (typeof mix === 'object') {
+        if (Array.isArray(mix)) for(k = 0; k < mix.length; k++){
+            if (mix[k]) {
+                if (y = toVal(mix[k])) {
+                    str && (str += ' ');
+                    str += y;
+                }
+            }
+        }
+        else {
+            for(k in mix)if (mix[k]) {
+                str && (str += ' ');
+                str += k;
+            }
+        }
+    }
+    return str;
+}
+module.exports = function() {
+    var i = 0, tmp, x, str = '';
+    while(i < arguments.length){
+        if (tmp = arguments[i++]) {
+            if (x = toVal(tmp)) {
+                str && (str += ' ');
+                str += x;
+            }
+        }
+    }
+    return str;
+};
+
+},{}],"69NP0":[function() {},{}],"4Qfwm":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _table = require("react-bootstrap/Table");
+var _tableDefault = parcelHelpers.interopDefault(_table);
+var _button = require("./Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _rejButton = require("./RejButton");
+var _rejButtonDefault = parcelHelpers.interopDefault(_rejButton);
+class Research extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            details: [],
+            isClicked: false,
+            updateURL: "http://localhost:5000/api/update/"
+        };
+        this.getAll = this.getAll.bind(this);
+    }
+    componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/api/getSingleFiles").then((res)=>{
+            console.log(res.data.data);
+            this.setState({
+                details: res.data.data
+            });
+        });
+    }
+    getAll() {
+        return this.state.details.map((info, index)=>{
+            return(/*#__PURE__*/ _reactDefault.default.createElement("tr", {
+                key: info._id,
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                    lineNumber: 25
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                    lineNumber: 26
+                },
+                __self: this
+            }, index + 1), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                    lineNumber: 27
+                },
+                __self: this
+            }, info.rtitle), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                    lineNumber: 28
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: "http://localhost:5000/" + info.filePath,
+                target: "_blank",
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                    lineNumber: 29
+                },
+                __self: this
+            }, info.fileName)), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                    lineNumber: 33
+                },
+                __self: this
+            }, info.user.name), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                    lineNumber: 34
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+                status: this.state.isClicked,
+                updateURL: this.state.updateURL,
+                info: info,
+                content: "Hi " + info.user.name + " your Research paper have got Approved By the Reviewer!!",
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                    lineNumber: 35
+                },
+                __self: this
+            })), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                    lineNumber: 46
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_rejButtonDefault.default, {
+                status: this.state.isClicked,
+                info: info,
+                updateURL: this.state.updateURL,
+                content: "Sorry " + info.user.name + " your Research paper have got Rejected By the Reviewer!!",
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                    lineNumber: 47
+                },
+                __self: this
+            })), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                    lineNumber: 58
+                },
+                __self: this
+            }, info.status)));
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            style: {
+                marginTop: "75px",
+                marginLeft: "390px"
+            },
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                lineNumber: 67
+            },
+            __self: this
+        }, "Review Research Paper"), /*#__PURE__*/ _reactDefault.default.createElement(_tableDefault.default, {
+            striped: true,
+            bordered: true,
+            hover: true,
+            className: "container-md",
+            style: {
+                marginTop: 100
+            },
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                lineNumber: 73
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                lineNumber: 80
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                lineNumber: 81
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                lineNumber: 82
+            },
+            __self: this
+        }, "#"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                lineNumber: 83
+            },
+            __self: this
+        }, "Topic"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                lineNumber: 84
+            },
+            __self: this
+        }, "FileName"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                lineNumber: 85
+            },
+            __self: this
+        }, "Research Conductor"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                lineNumber: 86
+            },
+            __self: this
+        }, "Approve"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                lineNumber: 87
+            },
+            __self: this
+        }, "Decline"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                lineNumber: 88
+            },
+            __self: this
+        }, "Status"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
+                lineNumber: 91
+            },
+            __self: this
+        }, this.getAll()))));
+    }
+}
+exports.default = Research;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","axios":"7rA65","react-bootstrap/Table":"34yor","./Button":"458Ut","./RejButton":"2CXlM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"7rA65":[function(require,module,exports) {
+module.exports = require('./lib/axios');
+
+},{"./lib/axios":"4qfhW"}],"4qfhW":[function(require,module,exports) {
+'use strict';
+var utils = require('./utils');
+var bind = require('./helpers/bind');
+var Axios = require('./core/Axios');
+var mergeConfig = require('./core/mergeConfig');
+var defaults = require('./defaults');
+/**
+ * Create an instance of Axios
+ *
+ * @param {Object} defaultConfig The default config for the instance
+ * @return {Axios} A new instance of Axios
+ */ function createInstance(defaultConfig) {
+    var context = new Axios(defaultConfig);
+    var instance = bind(Axios.prototype.request, context);
+    // Copy axios.prototype to instance
+    utils.extend(instance, Axios.prototype, context);
+    // Copy context to instance
+    utils.extend(instance, context);
+    return instance;
+}
+// Create the default instance to be exported
+var axios = createInstance(defaults);
+// Expose Axios class to allow class inheritance
+axios.Axios = Axios;
+// Factory for creating new instances
+axios.create = function create(instanceConfig) {
+    return createInstance(mergeConfig(axios.defaults, instanceConfig));
+};
+// Expose Cancel & CancelToken
+axios.Cancel = require('./cancel/Cancel');
+axios.CancelToken = require('./cancel/CancelToken');
+axios.isCancel = require('./cancel/isCancel');
+// Expose all/spread
+axios.all = function all(promises) {
+    return Promise.all(promises);
+};
+axios.spread = require('./helpers/spread');
+// Expose isAxiosError
+axios.isAxiosError = require('./helpers/isAxiosError');
+module.exports = axios;
+// Allow use of default import syntax in TypeScript
+module.exports.default = axios;
+
+},{"./utils":"7J9rV","./helpers/bind":"78Fwk","./core/Axios":"26bz2","./core/mergeConfig":"42z1a","./defaults":"5j10E","./cancel/Cancel":"1Ql7i","./cancel/CancelToken":"hHamf","./cancel/isCancel":"3MAgn","./helpers/spread":"9FoXt","./helpers/isAxiosError":"1bzv8"}],"7J9rV":[function(require,module,exports) {
+'use strict';
+var bind = require('./helpers/bind');
+/*global toString:true*/ // utils is a library of generic helper functions non-specific to axios
+var toString = Object.prototype.toString;
+/**
+ * Determine if a value is an Array
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Array, otherwise false
+ */ function isArray(val) {
+    return toString.call(val) === '[object Array]';
+}
+/**
+ * Determine if a value is undefined
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */ function isUndefined(val) {
+    return typeof val === 'undefined';
+}
+/**
+ * Determine if a value is a Buffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Buffer, otherwise false
+ */ function isBuffer(val) {
+    return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor) && typeof val.constructor.isBuffer === 'function' && val.constructor.isBuffer(val);
+}
+/**
+ * Determine if a value is an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+ */ function isArrayBuffer(val) {
+    return toString.call(val) === '[object ArrayBuffer]';
+}
+/**
+ * Determine if a value is a FormData
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an FormData, otherwise false
+ */ function isFormData(val) {
+    return typeof FormData !== 'undefined' && val instanceof FormData;
+}
+/**
+ * Determine if a value is a view on an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+ */ function isArrayBufferView(val) {
+    var result;
+    if (typeof ArrayBuffer !== 'undefined' && ArrayBuffer.isView) result = ArrayBuffer.isView(val);
+    else result = val && val.buffer && val.buffer instanceof ArrayBuffer;
+    return result;
+}
+/**
+ * Determine if a value is a String
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a String, otherwise false
+ */ function isString(val) {
+    return typeof val === 'string';
+}
+/**
+ * Determine if a value is a Number
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Number, otherwise false
+ */ function isNumber(val) {
+    return typeof val === 'number';
+}
+/**
+ * Determine if a value is an Object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Object, otherwise false
+ */ function isObject(val) {
+    return val !== null && typeof val === 'object';
+}
+/**
+ * Determine if a value is a plain Object
+ *
+ * @param {Object} val The value to test
+ * @return {boolean} True if value is a plain Object, otherwise false
+ */ function isPlainObject(val) {
+    if (toString.call(val) !== '[object Object]') return false;
+    var prototype = Object.getPrototypeOf(val);
+    return prototype === null || prototype === Object.prototype;
+}
+/**
+ * Determine if a value is a Date
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Date, otherwise false
+ */ function isDate(val) {
+    return toString.call(val) === '[object Date]';
+}
+/**
+ * Determine if a value is a File
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a File, otherwise false
+ */ function isFile(val) {
+    return toString.call(val) === '[object File]';
+}
+/**
+ * Determine if a value is a Blob
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Blob, otherwise false
+ */ function isBlob(val) {
+    return toString.call(val) === '[object Blob]';
+}
+/**
+ * Determine if a value is a Function
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Function, otherwise false
+ */ function isFunction(val) {
+    return toString.call(val) === '[object Function]';
+}
+/**
+ * Determine if a value is a Stream
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Stream, otherwise false
+ */ function isStream(val) {
+    return isObject(val) && isFunction(val.pipe);
+}
+/**
+ * Determine if a value is a URLSearchParams object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+ */ function isURLSearchParams(val) {
+    return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+}
+/**
+ * Trim excess whitespace off the beginning and end of a string
+ *
+ * @param {String} str The String to trim
+ * @returns {String} The String freed of excess whitespace
+ */ function trim(str) {
+    return str.replace(/^\s*/, '').replace(/\s*$/, '');
+}
+/**
+ * Determine if we're running in a standard browser environment
+ *
+ * This allows axios to run in a web worker, and react-native.
+ * Both environments support XMLHttpRequest, but not fully standard globals.
+ *
+ * web workers:
+ *  typeof window -> undefined
+ *  typeof document -> undefined
+ *
+ * react-native:
+ *  navigator.product -> 'ReactNative'
+ * nativescript
+ *  navigator.product -> 'NativeScript' or 'NS'
+ */ function isStandardBrowserEnv() {
+    if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' || navigator.product === 'NativeScript' || navigator.product === 'NS')) return false;
+    return typeof window !== 'undefined' && typeof document !== 'undefined';
+}
+/**
+ * Iterate over an Array or an Object invoking a function for each item.
+ *
+ * If `obj` is an Array callback will be called passing
+ * the value, index, and complete array for each item.
+ *
+ * If 'obj' is an Object callback will be called passing
+ * the value, key, and complete object for each property.
+ *
+ * @param {Object|Array} obj The object to iterate
+ * @param {Function} fn The callback to invoke for each item
+ */ function forEach(obj, fn) {
+    // Don't bother if no value provided
+    if (obj === null || typeof obj === 'undefined') return;
+    // Force an array if not already something iterable
+    if (typeof obj !== 'object') /*eslint no-param-reassign:0*/ obj = [
+        obj
+    ];
+    if (isArray(obj)) // Iterate over array values
+    for(var i = 0, l = obj.length; i < l; i++)fn.call(null, obj[i], i, obj);
+    else {
+        // Iterate over object keys
+        for(var key in obj)if (Object.prototype.hasOwnProperty.call(obj, key)) fn.call(null, obj[key], key, obj);
+    }
+}
+/**
+ * Accepts varargs expecting each argument to be an object, then
+ * immutably merges the properties of each object and returns result.
+ *
+ * When multiple objects contain the same key the later object in
+ * the arguments list will take precedence.
+ *
+ * Example:
+ *
+ * ```js
+ * var result = merge({foo: 123}, {foo: 456});
+ * console.log(result.foo); // outputs 456
+ * ```
+ *
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */ function merge() {
+    var result = {
+    };
+    function assignValue(val, key) {
+        if (isPlainObject(result[key]) && isPlainObject(val)) result[key] = merge(result[key], val);
+        else if (isPlainObject(val)) result[key] = merge({
+        }, val);
+        else if (isArray(val)) result[key] = val.slice();
+        else result[key] = val;
+    }
+    for(var i = 0, l = arguments.length; i < l; i++)forEach(arguments[i], assignValue);
+    return result;
+}
+/**
+ * Extends object a by mutably adding to it the properties of object b.
+ *
+ * @param {Object} a The object to be extended
+ * @param {Object} b The object to copy properties from
+ * @param {Object} thisArg The object to bind function to
+ * @return {Object} The resulting value of object a
+ */ function extend(a, b, thisArg) {
+    forEach(b, function assignValue(val, key) {
+        if (thisArg && typeof val === 'function') a[key] = bind(val, thisArg);
+        else a[key] = val;
+    });
+    return a;
+}
+/**
+ * Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
+ *
+ * @param {string} content with BOM
+ * @return {string} content value without BOM
+ */ function stripBOM(content) {
+    if (content.charCodeAt(0) === 65279) content = content.slice(1);
+    return content;
+}
+module.exports = {
+    isArray: isArray,
+    isArrayBuffer: isArrayBuffer,
+    isBuffer: isBuffer,
+    isFormData: isFormData,
+    isArrayBufferView: isArrayBufferView,
+    isString: isString,
+    isNumber: isNumber,
+    isObject: isObject,
+    isPlainObject: isPlainObject,
+    isUndefined: isUndefined,
+    isDate: isDate,
+    isFile: isFile,
+    isBlob: isBlob,
+    isFunction: isFunction,
+    isStream: isStream,
+    isURLSearchParams: isURLSearchParams,
+    isStandardBrowserEnv: isStandardBrowserEnv,
+    forEach: forEach,
+    merge: merge,
+    extend: extend,
+    trim: trim,
+    stripBOM: stripBOM
+};
+
+},{"./helpers/bind":"78Fwk"}],"78Fwk":[function(require,module,exports) {
+'use strict';
+module.exports = function bind(fn, thisArg) {
+    return function wrap() {
+        var args = new Array(arguments.length);
+        for(var i = 0; i < args.length; i++)args[i] = arguments[i];
+        return fn.apply(thisArg, args);
+    };
+};
+
+},{}],"26bz2":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+var buildURL = require('../helpers/buildURL');
+var InterceptorManager = require('./InterceptorManager');
+var dispatchRequest = require('./dispatchRequest');
+var mergeConfig = require('./mergeConfig');
+/**
+ * Create a new instance of Axios
+ *
+ * @param {Object} instanceConfig The default config for the instance
+ */ function Axios(instanceConfig) {
+    this.defaults = instanceConfig;
+    this.interceptors = {
+        request: new InterceptorManager(),
+        response: new InterceptorManager()
+    };
+}
+/**
+ * Dispatch a request
+ *
+ * @param {Object} config The config specific for this request (merged with this.defaults)
+ */ Axios.prototype.request = function request(config) {
+    /*eslint no-param-reassign:0*/ // Allow for axios('example/url'[, config]) a la fetch API
+    if (typeof config === 'string') {
+        config = arguments[1] || {
+        };
+        config.url = arguments[0];
+    } else config = config || {
+    };
+    config = mergeConfig(this.defaults, config);
+    // Set config.method
+    if (config.method) config.method = config.method.toLowerCase();
+    else if (this.defaults.method) config.method = this.defaults.method.toLowerCase();
+    else config.method = 'get';
+    // Hook up interceptors middleware
+    var chain = [
+        dispatchRequest,
+        undefined
+    ];
+    var promise = Promise.resolve(config);
+    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+        chain.unshift(interceptor.fulfilled, interceptor.rejected);
+    });
+    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+        chain.push(interceptor.fulfilled, interceptor.rejected);
+    });
+    while(chain.length)promise = promise.then(chain.shift(), chain.shift());
+    return promise;
+};
+Axios.prototype.getUri = function getUri(config) {
+    config = mergeConfig(this.defaults, config);
+    return buildURL(config.url, config.params, config.paramsSerializer).replace(/^\?/, '');
+};
+// Provide aliases for supported request methods
+utils.forEach([
+    'delete',
+    'get',
+    'head',
+    'options'
+], function forEachMethodNoData(method) {
+    /*eslint func-names:0*/ Axios.prototype[method] = function(url, config) {
+        return this.request(mergeConfig(config || {
+        }, {
+            method: method,
+            url: url,
+            data: (config || {
+            }).data
+        }));
+    };
+});
+utils.forEach([
+    'post',
+    'put',
+    'patch'
+], function forEachMethodWithData(method) {
+    /*eslint func-names:0*/ Axios.prototype[method] = function(url, data, config) {
+        return this.request(mergeConfig(config || {
+        }, {
+            method: method,
+            url: url,
+            data: data
+        }));
+    };
+});
+module.exports = Axios;
+
+},{"./../utils":"7J9rV","../helpers/buildURL":"25KfR","./InterceptorManager":"33sRR","./dispatchRequest":"1mCjo","./mergeConfig":"42z1a"}],"25KfR":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+function encode(val) {
+    return encodeURIComponent(val).replace(/%3A/gi, ':').replace(/%24/g, '$').replace(/%2C/gi, ',').replace(/%20/g, '+').replace(/%5B/gi, '[').replace(/%5D/gi, ']');
+}
+/**
+ * Build a URL by appending params to the end
+ *
+ * @param {string} url The base of the url (e.g., http://www.google.com)
+ * @param {object} [params] The params to be appended
+ * @returns {string} The formatted url
+ */ module.exports = function buildURL(url, params, paramsSerializer) {
+    /*eslint no-param-reassign:0*/ if (!params) return url;
+    var serializedParams;
+    if (paramsSerializer) serializedParams = paramsSerializer(params);
+    else if (utils.isURLSearchParams(params)) serializedParams = params.toString();
+    else {
+        var parts = [];
+        utils.forEach(params, function serialize(val, key) {
+            if (val === null || typeof val === 'undefined') return;
+            if (utils.isArray(val)) key = key + '[]';
+            else val = [
+                val
+            ];
+            utils.forEach(val, function parseValue(v) {
+                if (utils.isDate(v)) v = v.toISOString();
+                else if (utils.isObject(v)) v = JSON.stringify(v);
+                parts.push(encode(key) + '=' + encode(v));
+            });
+        });
+        serializedParams = parts.join('&');
+    }
+    if (serializedParams) {
+        var hashmarkIndex = url.indexOf('#');
+        if (hashmarkIndex !== -1) url = url.slice(0, hashmarkIndex);
+        url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+    }
+    return url;
+};
+
+},{"./../utils":"7J9rV"}],"33sRR":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+function InterceptorManager() {
+    this.handlers = [];
+}
+/**
+ * Add a new interceptor to the stack
+ *
+ * @param {Function} fulfilled The function to handle `then` for a `Promise`
+ * @param {Function} rejected The function to handle `reject` for a `Promise`
+ *
+ * @return {Number} An ID used to remove interceptor later
+ */ InterceptorManager.prototype.use = function use(fulfilled, rejected) {
+    this.handlers.push({
+        fulfilled: fulfilled,
+        rejected: rejected
+    });
+    return this.handlers.length - 1;
+};
+/**
+ * Remove an interceptor from the stack
+ *
+ * @param {Number} id The ID that was returned by `use`
+ */ InterceptorManager.prototype.eject = function eject(id) {
+    if (this.handlers[id]) this.handlers[id] = null;
+};
+/**
+ * Iterate over all the registered interceptors
+ *
+ * This method is particularly useful for skipping over any
+ * interceptors that may have become `null` calling `eject`.
+ *
+ * @param {Function} fn The function to call for each interceptor
+ */ InterceptorManager.prototype.forEach = function forEach(fn) {
+    utils.forEach(this.handlers, function forEachHandler(h) {
+        if (h !== null) fn(h);
+    });
+};
+module.exports = InterceptorManager;
+
+},{"./../utils":"7J9rV"}],"1mCjo":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+var transformData = require('./transformData');
+var isCancel = require('../cancel/isCancel');
+var defaults = require('../defaults');
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */ function throwIfCancellationRequested(config) {
+    if (config.cancelToken) config.cancelToken.throwIfRequested();
+}
+/**
+ * Dispatch a request to the server using the configured adapter.
+ *
+ * @param {object} config The config that is to be used for the request
+ * @returns {Promise} The Promise to be fulfilled
+ */ module.exports = function dispatchRequest(config) {
+    throwIfCancellationRequested(config);
+    // Ensure headers exist
+    config.headers = config.headers || {
+    };
+    // Transform request data
+    config.data = transformData(config.data, config.headers, config.transformRequest);
+    // Flatten headers
+    config.headers = utils.merge(config.headers.common || {
+    }, config.headers[config.method] || {
+    }, config.headers);
+    utils.forEach([
+        'delete',
+        'get',
+        'head',
+        'post',
+        'put',
+        'patch',
+        'common'
+    ], function cleanHeaderConfig(method) {
+        delete config.headers[method];
+    });
+    var adapter = config.adapter || defaults.adapter;
+    return adapter(config).then(function onAdapterResolution(response) {
+        throwIfCancellationRequested(config);
+        // Transform response data
+        response.data = transformData(response.data, response.headers, config.transformResponse);
+        return response;
+    }, function onAdapterRejection(reason) {
+        if (!isCancel(reason)) {
+            throwIfCancellationRequested(config);
+            // Transform response data
+            if (reason && reason.response) reason.response.data = transformData(reason.response.data, reason.response.headers, config.transformResponse);
+        }
+        return Promise.reject(reason);
+    });
+};
+
+},{"./../utils":"7J9rV","./transformData":"1ueU6","../cancel/isCancel":"3MAgn","../defaults":"5j10E"}],"1ueU6":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+/**
+ * Transform the data for a request or a response
+ *
+ * @param {Object|String} data The data to be transformed
+ * @param {Array} headers The headers for the request or response
+ * @param {Array|Function} fns A single function or Array of functions
+ * @returns {*} The resulting transformed data
+ */ module.exports = function transformData(data, headers, fns) {
+    /*eslint no-param-reassign:0*/ utils.forEach(fns, function transform(fn) {
+        data = fn(data, headers);
+    });
+    return data;
+};
+
+},{"./../utils":"7J9rV"}],"3MAgn":[function(require,module,exports) {
+'use strict';
+module.exports = function isCancel(value) {
+    return !!(value && value.__CANCEL__);
+};
+
+},{}],"5j10E":[function(require,module,exports) {
+var process = require("process");
+'use strict';
+var utils = require('./utils');
+var normalizeHeaderName = require('./helpers/normalizeHeaderName');
+var DEFAULT_CONTENT_TYPE = {
+    'Content-Type': 'application/x-www-form-urlencoded'
+};
+function setContentTypeIfUnset(headers, value) {
+    if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) headers['Content-Type'] = value;
+}
+function getDefaultAdapter() {
+    var adapter;
+    if (typeof XMLHttpRequest !== 'undefined') // For browsers use XHR adapter
+    adapter = require('./adapters/xhr');
+    else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') // For node use HTTP adapter
+    adapter = require('./adapters/http');
+    return adapter;
+}
+var defaults = {
+    adapter: getDefaultAdapter(),
+    transformRequest: [
+        function transformRequest(data, headers) {
+            normalizeHeaderName(headers, 'Accept');
+            normalizeHeaderName(headers, 'Content-Type');
+            if (utils.isFormData(data) || utils.isArrayBuffer(data) || utils.isBuffer(data) || utils.isStream(data) || utils.isFile(data) || utils.isBlob(data)) return data;
+            if (utils.isArrayBufferView(data)) return data.buffer;
+            if (utils.isURLSearchParams(data)) {
+                setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+                return data.toString();
+            }
+            if (utils.isObject(data)) {
+                setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
+                return JSON.stringify(data);
+            }
+            return data;
+        }
+    ],
+    transformResponse: [
+        function transformResponse(data) {
+            /*eslint no-param-reassign:0*/ if (typeof data === 'string') try {
+                data = JSON.parse(data);
+            } catch (e) {
+            }
+            return data;
+        }
+    ],
+    /**
+   * A timeout in milliseconds to abort a request. If set to 0 (default) a
+   * timeout is not created.
+   */ timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: function validateStatus(status) {
+        return status >= 200 && status < 300;
+    }
+};
+defaults.headers = {
+    common: {
+        'Accept': 'application/json, text/plain, */*'
+    }
+};
+utils.forEach([
+    'delete',
+    'get',
+    'head'
+], function forEachMethodNoData(method) {
+    defaults.headers[method] = {
+    };
+});
+utils.forEach([
+    'post',
+    'put',
+    'patch'
+], function forEachMethodWithData(method) {
+    defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+});
+module.exports = defaults;
+
+},{"process":"7AgFc","./utils":"7J9rV","./helpers/normalizeHeaderName":"5yMqL","./adapters/xhr":"6pJqL","./adapters/http":"6pJqL"}],"7AgFc":[function(require,module,exports) {
+// shim for using process in browser
+var process = module.exports = {
+};
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+var cachedSetTimeout;
+var cachedClearTimeout;
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout() {
+    throw new Error('clearTimeout has not been defined');
+}
+(function() {
+    try {
+        if (typeof setTimeout === 'function') cachedSetTimeout = setTimeout;
+        else cachedSetTimeout = defaultSetTimout;
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') cachedClearTimeout = clearTimeout;
+        else cachedClearTimeout = defaultClearTimeout;
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+})();
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) //normal enviroments in sane situations
+    return setTimeout(fun, 0);
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch (e) {
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch (e1) {
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) //normal enviroments in sane situations
+    return clearTimeout(marker);
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e) {
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e1) {
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) return;
+    draining = false;
+    if (currentQueue.length) queue = currentQueue.concat(queue);
+    else queueIndex = -1;
+    if (queue.length) drainQueue();
+}
+function drainQueue() {
+    if (draining) return;
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+    var len = queue.length;
+    while(len){
+        currentQueue = queue;
+        queue = [];
+        while((++queueIndex) < len)if (currentQueue) currentQueue[queueIndex].run();
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+process.nextTick = function(fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) for(var i = 1; i < arguments.length; i++)args[i - 1] = arguments[i];
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) runTimeout(drainQueue);
+};
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function() {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {
+};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {
+};
+function noop() {
+}
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+process.listeners = function(name) {
+    return [];
+};
+process.binding = function(name) {
+    throw new Error('process.binding is not supported');
+};
+process.cwd = function() {
+    return '/';
+};
+process.chdir = function(dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() {
+    return 0;
+};
+
+},{}],"5yMqL":[function(require,module,exports) {
+'use strict';
+var utils = require('../utils');
+module.exports = function normalizeHeaderName(headers, normalizedName) {
+    utils.forEach(headers, function processHeader(value, name) {
+        if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
+            headers[normalizedName] = value;
+            delete headers[name];
+        }
+    });
+};
+
+},{"../utils":"7J9rV"}],"6pJqL":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+var settle = require('./../core/settle');
+var cookies = require('./../helpers/cookies');
+var buildURL = require('./../helpers/buildURL');
+var buildFullPath = require('../core/buildFullPath');
+var parseHeaders = require('./../helpers/parseHeaders');
+var isURLSameOrigin = require('./../helpers/isURLSameOrigin');
+var createError = require('../core/createError');
+module.exports = function xhrAdapter(config) {
+    return new Promise(function dispatchXhrRequest(resolve, reject) {
+        var requestData = config.data;
+        var requestHeaders = config.headers;
+        if (utils.isFormData(requestData)) delete requestHeaders['Content-Type']; // Let the browser set it
+        var request = new XMLHttpRequest();
+        // HTTP basic authentication
+        if (config.auth) {
+            var username = config.auth.username || '';
+            var password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : '';
+            requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+        }
+        var fullPath = buildFullPath(config.baseURL, config.url);
+        request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
+        // Set the request timeout in MS
+        request.timeout = config.timeout;
+        // Listen for ready state
+        request.onreadystatechange = function handleLoad() {
+            if (!request || request.readyState !== 4) return;
+            // The request errored out and we didn't get a response, this will be
+            // handled by onerror instead
+            // With one exception: request that using file: protocol, most browsers
+            // will return status as 0 even though it's a successful request
+            if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) return;
+            // Prepare the response
+            var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
+            var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
+            var response = {
+                data: responseData,
+                status: request.status,
+                statusText: request.statusText,
+                headers: responseHeaders,
+                config: config,
+                request: request
+            };
+            settle(resolve, reject, response);
+            // Clean up request
+            request = null;
+        };
+        // Handle browser request cancellation (as opposed to a manual cancellation)
+        request.onabort = function handleAbort() {
+            if (!request) return;
+            reject(createError('Request aborted', config, 'ECONNABORTED', request));
+            // Clean up request
+            request = null;
+        };
+        // Handle low level network errors
+        request.onerror = function handleError() {
+            // Real errors are hidden from us by the browser
+            // onerror should only fire if it's a network error
+            reject(createError('Network Error', config, null, request));
+            // Clean up request
+            request = null;
+        };
+        // Handle timeout
+        request.ontimeout = function handleTimeout() {
+            var timeoutErrorMessage = 'timeout of ' + config.timeout + 'ms exceeded';
+            if (config.timeoutErrorMessage) timeoutErrorMessage = config.timeoutErrorMessage;
+            reject(createError(timeoutErrorMessage, config, 'ECONNABORTED', request));
+            // Clean up request
+            request = null;
+        };
+        // Add xsrf header
+        // This is only done if running in a standard browser environment.
+        // Specifically not if we're in a web worker, or react-native.
+        if (utils.isStandardBrowserEnv()) {
+            // Add xsrf header
+            var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ? cookies.read(config.xsrfCookieName) : undefined;
+            if (xsrfValue) requestHeaders[config.xsrfHeaderName] = xsrfValue;
+        }
+        // Add headers to the request
+        if ('setRequestHeader' in request) utils.forEach(requestHeaders, function setRequestHeader(val, key) {
+            if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') // Remove Content-Type if data is undefined
+            delete requestHeaders[key];
+            else // Otherwise add header to the request
+            request.setRequestHeader(key, val);
+        });
+        // Add withCredentials to request if needed
+        if (!utils.isUndefined(config.withCredentials)) request.withCredentials = !!config.withCredentials;
+        // Add responseType to request if needed
+        if (config.responseType) try {
+            request.responseType = config.responseType;
+        } catch (e) {
+            // Expected DOMException thrown by browsers not compatible XMLHttpRequest Level 2.
+            // But, this can be suppressed for 'json' type as it can be parsed by default 'transformResponse' function.
+            if (config.responseType !== 'json') throw e;
+        }
+        // Handle progress if needed
+        if (typeof config.onDownloadProgress === 'function') request.addEventListener('progress', config.onDownloadProgress);
+        // Not all browsers support upload events
+        if (typeof config.onUploadProgress === 'function' && request.upload) request.upload.addEventListener('progress', config.onUploadProgress);
+        if (config.cancelToken) // Handle cancellation
+        config.cancelToken.promise.then(function onCanceled(cancel) {
+            if (!request) return;
+            request.abort();
+            reject(cancel);
+            // Clean up request
+            request = null;
+        });
+        if (!requestData) requestData = null;
+        // Send the request
+        request.send(requestData);
+    });
+};
+
+},{"./../utils":"7J9rV","./../core/settle":"72M6J","./../helpers/cookies":"1m0F1","./../helpers/buildURL":"25KfR","../core/buildFullPath":"5fWja","./../helpers/parseHeaders":"1KizL","./../helpers/isURLSameOrigin":"6Gtz3","../core/createError":"7ETv1"}],"72M6J":[function(require,module,exports) {
+'use strict';
+var createError = require('./createError');
+/**
+ * Resolve or reject a Promise based on response status.
+ *
+ * @param {Function} resolve A function that resolves the promise.
+ * @param {Function} reject A function that rejects the promise.
+ * @param {object} response The response.
+ */ module.exports = function settle(resolve, reject, response) {
+    var validateStatus = response.config.validateStatus;
+    if (!response.status || !validateStatus || validateStatus(response.status)) resolve(response);
+    else reject(createError('Request failed with status code ' + response.status, response.config, null, response.request, response));
+};
+
+},{"./createError":"7ETv1"}],"7ETv1":[function(require,module,exports) {
+'use strict';
+var enhanceError = require('./enhanceError');
+/**
+ * Create an Error with the specified message, config, error code, request and response.
+ *
+ * @param {string} message The error message.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The created error.
+ */ module.exports = function createError(message, config, code, request, response) {
+    var error = new Error(message);
+    return enhanceError(error, config, code, request, response);
+};
+
+},{"./enhanceError":"2O2Ud"}],"2O2Ud":[function(require,module,exports) {
+'use strict';
+/**
+ * Update an Error with the specified config, error code, and response.
+ *
+ * @param {Error} error The error to update.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The error.
+ */ module.exports = function enhanceError(error, config, code, request, response) {
+    error.config = config;
+    if (code) error.code = code;
+    error.request = request;
+    error.response = response;
+    error.isAxiosError = true;
+    error.toJSON = function toJSON() {
+        return {
+            // Standard
+            message: this.message,
+            name: this.name,
+            // Microsoft
+            description: this.description,
+            number: this.number,
+            // Mozilla
+            fileName: this.fileName,
+            lineNumber: this.lineNumber,
+            columnNumber: this.columnNumber,
+            stack: this.stack,
+            // Axios
+            config: this.config,
+            code: this.code
+        };
+    };
+    return error;
+};
+
+},{}],"1m0F1":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+module.exports = utils.isStandardBrowserEnv() ? // Standard browser envs support document.cookie
+(function standardBrowserEnv() {
+    return {
+        write: function write(name, value, expires, path, domain, secure) {
+            var cookie = [];
+            cookie.push(name + '=' + encodeURIComponent(value));
+            if (utils.isNumber(expires)) cookie.push('expires=' + new Date(expires).toGMTString());
+            if (utils.isString(path)) cookie.push('path=' + path);
+            if (utils.isString(domain)) cookie.push('domain=' + domain);
+            if (secure === true) cookie.push('secure');
+            document.cookie = cookie.join('; ');
+        },
+        read: function read(name) {
+            var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+            return match ? decodeURIComponent(match[3]) : null;
+        },
+        remove: function remove(name) {
+            this.write(name, '', Date.now() - 86400000);
+        }
+    };
+})() : // Non standard browser env (web workers, react-native) lack needed support.
+(function nonStandardBrowserEnv() {
+    return {
+        write: function write() {
+        },
+        read: function read() {
+            return null;
+        },
+        remove: function remove() {
+        }
+    };
+})();
+
+},{"./../utils":"7J9rV"}],"5fWja":[function(require,module,exports) {
+'use strict';
+var isAbsoluteURL = require('../helpers/isAbsoluteURL');
+var combineURLs = require('../helpers/combineURLs');
+/**
+ * Creates a new URL by combining the baseURL with the requestedURL,
+ * only when the requestedURL is not already an absolute URL.
+ * If the requestURL is absolute, this function returns the requestedURL untouched.
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} requestedURL Absolute or relative URL to combine
+ * @returns {string} The combined full path
+ */ module.exports = function buildFullPath(baseURL, requestedURL) {
+    if (baseURL && !isAbsoluteURL(requestedURL)) return combineURLs(baseURL, requestedURL);
+    return requestedURL;
+};
+
+},{"../helpers/isAbsoluteURL":"4FcN1","../helpers/combineURLs":"qMap4"}],"4FcN1":[function(require,module,exports) {
+'use strict';
+/**
+ * Determines whether the specified URL is absolute
+ *
+ * @param {string} url The URL to test
+ * @returns {boolean} True if the specified URL is absolute, otherwise false
+ */ module.exports = function isAbsoluteURL(url) {
+    // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+    // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+    // by any combination of letters, digits, plus, period, or hyphen.
+    return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+};
+
+},{}],"qMap4":[function(require,module,exports) {
+'use strict';
+/**
+ * Creates a new URL by combining the specified URLs
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} relativeURL The relative URL
+ * @returns {string} The combined URL
+ */ module.exports = function combineURLs(baseURL, relativeURL) {
+    return relativeURL ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '') : baseURL;
+};
+
+},{}],"1KizL":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+// Headers whose duplicates are ignored by node
+// c.f. https://nodejs.org/api/http.html#http_message_headers
+var ignoreDuplicateOf = [
+    'age',
+    'authorization',
+    'content-length',
+    'content-type',
+    'etag',
+    'expires',
+    'from',
+    'host',
+    'if-modified-since',
+    'if-unmodified-since',
+    'last-modified',
+    'location',
+    'max-forwards',
+    'proxy-authorization',
+    'referer',
+    'retry-after',
+    'user-agent'
+];
+/**
+ * Parse headers into an object
+ *
+ * ```
+ * Date: Wed, 27 Aug 2014 08:58:49 GMT
+ * Content-Type: application/json
+ * Connection: keep-alive
+ * Transfer-Encoding: chunked
+ * ```
+ *
+ * @param {String} headers Headers needing to be parsed
+ * @returns {Object} Headers parsed into an object
+ */ module.exports = function parseHeaders(headers) {
+    var parsed = {
+    };
+    var key;
+    var val;
+    var i;
+    if (!headers) return parsed;
+    utils.forEach(headers.split('\n'), function parser(line) {
+        i = line.indexOf(':');
+        key = utils.trim(line.substr(0, i)).toLowerCase();
+        val = utils.trim(line.substr(i + 1));
+        if (key) {
+            if (parsed[key] && ignoreDuplicateOf.indexOf(key) >= 0) return;
+            if (key === 'set-cookie') parsed[key] = (parsed[key] ? parsed[key] : []).concat([
+                val
+            ]);
+            else parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+        }
+    });
+    return parsed;
+};
+
+},{"./../utils":"7J9rV"}],"6Gtz3":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+module.exports = utils.isStandardBrowserEnv() ? // Standard browser envs have full support of the APIs needed to test
+// whether the request URL is of the same origin as current location.
+(function standardBrowserEnv() {
+    var msie = /(msie|trident)/i.test(navigator.userAgent);
+    var urlParsingNode = document.createElement('a');
+    var originURL;
+    /**
+    * Parse a URL to discover it's components
+    *
+    * @param {String} url The URL to be parsed
+    * @returns {Object}
+    */ function resolveURL(url) {
+        var href = url;
+        if (msie) {
+            // IE needs attribute set twice to normalize properties
+            urlParsingNode.setAttribute('href', href);
+            href = urlParsingNode.href;
+        }
+        urlParsingNode.setAttribute('href', href);
+        // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+        return {
+            href: urlParsingNode.href,
+            protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+            host: urlParsingNode.host,
+            search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+            hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+            hostname: urlParsingNode.hostname,
+            port: urlParsingNode.port,
+            pathname: urlParsingNode.pathname.charAt(0) === '/' ? urlParsingNode.pathname : '/' + urlParsingNode.pathname
+        };
+    }
+    originURL = resolveURL(window.location.href);
+    /**
+    * Determine if a URL shares the same origin as the current location
+    *
+    * @param {String} requestURL The URL to test
+    * @returns {boolean} True if URL shares the same origin, otherwise false
+    */ return function isURLSameOrigin(requestURL) {
+        var parsed = utils.isString(requestURL) ? resolveURL(requestURL) : requestURL;
+        return parsed.protocol === originURL.protocol && parsed.host === originURL.host;
+    };
+})() : // Non standard browser envs (web workers, react-native) lack needed support.
+(function nonStandardBrowserEnv() {
+    return function isURLSameOrigin() {
+        return true;
+    };
+})();
+
+},{"./../utils":"7J9rV"}],"42z1a":[function(require,module,exports) {
+'use strict';
+var utils = require('../utils');
+/**
+ * Config-specific merge-function which creates a new config-object
+ * by merging two configuration objects together.
+ *
+ * @param {Object} config1
+ * @param {Object} config2
+ * @returns {Object} New object resulting from merging config2 to config1
+ */ module.exports = function mergeConfig(config1, config2) {
+    // eslint-disable-next-line no-param-reassign
+    config2 = config2 || {
+    };
+    var config = {
+    };
+    var valueFromConfig2Keys = [
+        'url',
+        'method',
+        'data'
+    ];
+    var mergeDeepPropertiesKeys = [
+        'headers',
+        'auth',
+        'proxy',
+        'params'
+    ];
+    var defaultToConfig2Keys = [
+        'baseURL',
+        'transformRequest',
+        'transformResponse',
+        'paramsSerializer',
+        'timeout',
+        'timeoutMessage',
+        'withCredentials',
+        'adapter',
+        'responseType',
+        'xsrfCookieName',
+        'xsrfHeaderName',
+        'onUploadProgress',
+        'onDownloadProgress',
+        'decompress',
+        'maxContentLength',
+        'maxBodyLength',
+        'maxRedirects',
+        'transport',
+        'httpAgent',
+        'httpsAgent',
+        'cancelToken',
+        'socketPath',
+        'responseEncoding'
+    ];
+    var directMergeKeys = [
+        'validateStatus'
+    ];
+    function getMergedValue(target, source) {
+        if (utils.isPlainObject(target) && utils.isPlainObject(source)) return utils.merge(target, source);
+        else if (utils.isPlainObject(source)) return utils.merge({
+        }, source);
+        else if (utils.isArray(source)) return source.slice();
+        return source;
+    }
+    function mergeDeepProperties(prop) {
+        if (!utils.isUndefined(config2[prop])) config[prop] = getMergedValue(config1[prop], config2[prop]);
+        else if (!utils.isUndefined(config1[prop])) config[prop] = getMergedValue(undefined, config1[prop]);
+    }
+    utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
+        if (!utils.isUndefined(config2[prop])) config[prop] = getMergedValue(undefined, config2[prop]);
+    });
+    utils.forEach(mergeDeepPropertiesKeys, mergeDeepProperties);
+    utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
+        if (!utils.isUndefined(config2[prop])) config[prop] = getMergedValue(undefined, config2[prop]);
+        else if (!utils.isUndefined(config1[prop])) config[prop] = getMergedValue(undefined, config1[prop]);
+    });
+    utils.forEach(directMergeKeys, function merge(prop) {
+        if (prop in config2) config[prop] = getMergedValue(config1[prop], config2[prop]);
+        else if (prop in config1) config[prop] = getMergedValue(undefined, config1[prop]);
+    });
+    var axiosKeys = valueFromConfig2Keys.concat(mergeDeepPropertiesKeys).concat(defaultToConfig2Keys).concat(directMergeKeys);
+    var otherKeys = Object.keys(config1).concat(Object.keys(config2)).filter(function filterAxiosKeys(key) {
+        return axiosKeys.indexOf(key) === -1;
+    });
+    utils.forEach(otherKeys, mergeDeepProperties);
+    return config;
+};
+
+},{"../utils":"7J9rV"}],"1Ql7i":[function(require,module,exports) {
+'use strict';
+/**
+ * A `Cancel` is an object that is thrown when an operation is canceled.
+ *
+ * @class
+ * @param {string=} message The message.
+ */ function Cancel(message) {
+    this.message = message;
+}
+Cancel.prototype.toString = function toString() {
+    return 'Cancel' + (this.message ? ': ' + this.message : '');
+};
+Cancel.prototype.__CANCEL__ = true;
+module.exports = Cancel;
+
+},{}],"hHamf":[function(require,module,exports) {
+'use strict';
+var Cancel = require('./Cancel');
+/**
+ * A `CancelToken` is an object that can be used to request cancellation of an operation.
+ *
+ * @class
+ * @param {Function} executor The executor function.
+ */ function CancelToken(executor) {
+    if (typeof executor !== 'function') throw new TypeError('executor must be a function.');
+    var resolvePromise;
+    this.promise = new Promise(function promiseExecutor(resolve) {
+        resolvePromise = resolve;
+    });
+    var token = this;
+    executor(function cancel(message) {
+        if (token.reason) // Cancellation has already been requested
+        return;
+        token.reason = new Cancel(message);
+        resolvePromise(token.reason);
+    });
+}
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */ CancelToken.prototype.throwIfRequested = function throwIfRequested() {
+    if (this.reason) throw this.reason;
+};
+/**
+ * Returns an object that contains a new `CancelToken` and a function that, when called,
+ * cancels the `CancelToken`.
+ */ CancelToken.source = function source() {
+    var cancel;
+    var token = new CancelToken(function executor(c) {
+        cancel = c;
+    });
+    return {
+        token: token,
+        cancel: cancel
+    };
+};
+module.exports = CancelToken;
+
+},{"./Cancel":"1Ql7i"}],"9FoXt":[function(require,module,exports) {
+'use strict';
+/**
+ * Syntactic sugar for invoking a function and expanding an array for arguments.
+ *
+ * Common use case would be to use `Function.prototype.apply`.
+ *
+ *  ```js
+ *  function f(x, y, z) {}
+ *  var args = [1, 2, 3];
+ *  f.apply(null, args);
+ *  ```
+ *
+ * With `spread` this example can be re-written.
+ *
+ *  ```js
+ *  spread(function(x, y, z) {})([1, 2, 3]);
+ *  ```
+ *
+ * @param {Function} callback
+ * @returns {Function}
+ */ module.exports = function spread(callback) {
+    return function wrap(arr) {
+        return callback.apply(null, arr);
+    };
+};
+
+},{}],"1bzv8":[function(require,module,exports) {
+'use strict';
+/**
+ * Determines whether the payload is an error thrown by Axios
+ *
+ * @param {*} payload The value to test
+ * @returns {boolean} True if the payload is an error thrown by Axios, otherwise false
+ */ module.exports = function isAxiosError(payload) {
+    return typeof payload === 'object' && payload.isAxiosError === true;
+};
+
+},{}],"34yor":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports.default = void 0;
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
+var _classnames = _interopRequireDefault(require("classnames"));
+var _react = _interopRequireDefault(require("react"));
+var _ThemeProvider = require("./ThemeProvider");
+var _excluded = [
+    "bsPrefix",
+    "className",
+    "striped",
+    "bordered",
+    "borderless",
+    "hover",
+    "size",
+    "variant",
+    "responsive"
+];
+var Table = /*#__PURE__*/ _react.default.forwardRef(function(_ref, ref) {
+    var bsPrefix = _ref.bsPrefix, className = _ref.className, striped = _ref.striped, bordered = _ref.bordered, borderless = _ref.borderless, hover = _ref.hover, size = _ref.size, variant = _ref.variant, responsive = _ref.responsive, props = _objectWithoutPropertiesLoose2.default(_ref, _excluded);
+    var decoratedBsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'table');
+    var classes = _classnames.default(className, decoratedBsPrefix, variant && decoratedBsPrefix + "-" + variant, size && decoratedBsPrefix + "-" + size, striped && decoratedBsPrefix + "-striped", bordered && decoratedBsPrefix + "-bordered", borderless && decoratedBsPrefix + "-borderless", hover && decoratedBsPrefix + "-hover");
+    var table = /*#__PURE__*/ _react.default.createElement("table", _extends2.default({
+    }, props, {
+        className: classes,
+        ref: ref
+    }));
+    if (responsive) {
+        var responsiveClass = decoratedBsPrefix + "-responsive";
+        if (typeof responsive === 'string') responsiveClass = responsiveClass + "-" + responsive;
+        return(/*#__PURE__*/ _react.default.createElement("div", {
+            className: responsiveClass
+        }, table));
+    }
+    return table;
+});
+var _default = Table;
+exports.default = _default;
+module.exports = exports["default"];
+
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S"}],"4ttVj":[function(require,module,exports) {
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        "default": obj
+    };
+}
+module.exports = _interopRequireDefault;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+},{}],"3krLJ":[function(require,module,exports) {
+function _extends() {
+    module.exports = _extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    module.exports["default"] = module.exports, module.exports.__esModule = true;
+    return _extends.apply(this, arguments);
+}
+module.exports = _extends;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+},{}],"3Yx9V":[function(require,module,exports) {
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+module.exports = _objectWithoutPropertiesLoose;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+},{}],"5aJRc":[function(require,module,exports) {
+(function() {
+    var hasOwn = {
+    }.hasOwnProperty;
+    function classNames() {
+        var classes = [];
+        for(var i = 0; i < arguments.length; i++){
+            var arg = arguments[i];
+            if (!arg) continue;
+            var argType = typeof arg;
+            if (argType === 'string' || argType === 'number') classes.push(arg);
+            else if (Array.isArray(arg)) {
+                if (arg.length) {
+                    var inner = classNames.apply(null, arg);
+                    if (inner) classes.push(inner);
+                }
+            } else if (argType === 'object') {
+                if (arg.toString === Object.prototype.toString) {
+                    for(var key in arg)if (hasOwn.call(arg, key) && arg[key]) classes.push(key);
+                } else classes.push(arg.toString());
+            }
+        }
+        return classes.join(' ');
+    }
+    if (typeof module !== 'undefined' && module.exports) {
+        classNames.default = classNames;
+        module.exports = classNames;
+    } else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) // register as 'classnames', consistent with npm package name
+    define('classnames', [], function() {
+        return classNames;
+    });
+    else window.classNames = classNames;
+})();
+
+},{}],"4rz1S":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports.useBootstrapPrefix = useBootstrapPrefix;
+exports.createBootstrapComponent = createBootstrapComponent;
+exports.default = exports.ThemeConsumer = void 0;
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+var _react = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache(nodeInterop) {
+    if (typeof WeakMap !== "function") return null;
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+    return (_getRequireWildcardCache = function _getRequireWildcardCache1(nodeInterop1) {
+        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop);
+}
+function _interopRequireWildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
+        default: obj
+    };
+    var cache = _getRequireWildcardCache(nodeInterop);
+    if (cache && cache.has(obj)) return cache.get(obj);
+    var newObj = {
+    };
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+        else newObj[key] = obj[key];
+    }
+    newObj.default = obj;
+    if (cache) cache.set(obj, newObj);
+    return newObj;
+}
+var ThemeContext = /*#__PURE__*/ _react.default.createContext({
+});
+var Consumer = ThemeContext.Consumer, Provider = ThemeContext.Provider;
+exports.ThemeConsumer = Consumer;
+function ThemeProvider(_ref) {
+    var prefixes = _ref.prefixes, children = _ref.children;
+    var copiedPrefixes = _react.useMemo(function() {
+        return _extends2.default({
+        }, prefixes);
+    }, [
+        prefixes
+    ]);
+    return(/*#__PURE__*/ _react.default.createElement(Provider, {
+        value: copiedPrefixes
+    }, children));
+}
+function useBootstrapPrefix(prefix, defaultPrefix) {
+    var prefixes = _react.useContext(ThemeContext);
+    return prefix || prefixes[defaultPrefix] || defaultPrefix;
+}
+function createBootstrapComponent(Component, opts) {
+    if (typeof opts === 'string') opts = {
+        prefix: opts
+    };
+    var isClassy = Component.prototype && Component.prototype.isReactComponent; // If it's a functional component make sure we don't break it with a ref
+    var _opts = opts, prefix = _opts.prefix, _opts$forwardRefAs = _opts.forwardRefAs, forwardRefAs = _opts$forwardRefAs === void 0 ? isClassy ? 'ref' : 'innerRef' : _opts$forwardRefAs;
+    var Wrapped = /*#__PURE__*/ _react.default.forwardRef(function(_ref2, ref) {
+        var props = _extends2.default({
+        }, _ref2);
+        props[forwardRefAs] = ref;
+        var bsPrefix = useBootstrapPrefix(props.bsPrefix, prefix);
+        return(/*#__PURE__*/ _react.default.createElement(Component, _extends2.default({
+        }, props, {
+            bsPrefix: bsPrefix
+        })));
+    });
+    Wrapped.displayName = "Bootstrap(" + (Component.displayName || Component.name) + ")";
+    return Wrapped;
+}
+var _default = ThemeProvider;
+exports.default = _default;
+
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","react":"3b2NM"}],"458Ut":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactToastify = require("react-toastify");
+class MyButton extends _react.Component {
+    constructor(props){
+        super(props);
+        this.buttonActiveHandler = this.buttonActiveHandler.bind(this);
+        this.displayNoti = this.displayNoti.bind(this);
+        this.state = {
+            status: this.props.status,
+            info: this.props.info,
+            updateURL: this.props.updateURL,
+            content: this.props.content,
+            text: "Approve",
+            style: "btn btn-primary"
+        };
+    }
+    displayNoti() {
+        return _reactToastify.toast.success("Notification Sent to  " + this.state.info.user.name);
+    }
+    buttonActiveHandler() {
+        if (this.state.status == false) {
+            this.setState({
+                status: true
+            });
+            this.setState({
+                text: "Approved"
+            });
+            this.setState({
+                style: "btn btn-success"
+            });
+            const Approve = {
+                status: "Approved"
+            };
+            const notification = {
+                content: this.state.content,
+                user: this.state.info.user._id
+            };
+            _axiosDefault.default.patch(this.state.updateURL + this.state.info._id, Approve).then((res)=>console.log(res.data)
+            );
+            _axiosDefault.default.post("http://localhost:5000/api/notification", notification).then((res)=>{
+                console.log(res.data);
+            });
+            this.displayNoti();
+        }
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "button",
+            className: this.state.style,
+            onClick: this.buttonActiveHandler,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
+                lineNumber: 50
+            },
+            __self: this
+        }, this.state.text));
+    }
+}
+exports.default = MyButton;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","axios":"7rA65","react-toastify":"0AT5S","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"2CXlM":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactToastify = require("react-toastify");
+class MyButton extends _react.Component {
+    constructor(props){
+        super(props);
+        this.buttonActiveHandler = this.buttonActiveHandler.bind(this);
+        this.displayNoti = this.displayNoti.bind(this);
+        this.state = {
+            status: this.props.status,
+            info: this.props.info,
+            updateURL: this.props.updateURL,
+            content: this.props.content,
+            text: "Reject",
+            style: "btn btn-warning"
+        };
+    }
+    displayNoti() {
+        return _reactToastify.toast.error("Notification Sent to  " + this.state.info.user.name);
+    }
+    buttonActiveHandler() {
+        if (this.state.status == false) {
+            this.setState({
+                status: true
+            });
+            this.setState({
+                text: "Rejected"
+            });
+            this.setState({
+                style: "btn btn-danger"
+            });
+            const Reject = {
+                status: "Rejected"
+            };
+            const notification = {
+                content: this.state.content,
+                user: this.state.info.user._id
+            };
+            _axiosDefault.default.patch(this.state.updateURL + this.state.info._id, Reject).then((res)=>console.log(res.data)
+            );
+            _axiosDefault.default.post("http://localhost:5000/api/notification", notification).then((res)=>console.log(res.data)
+            );
+        }
+        this.displayNoti();
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "button",
+            className: this.state.style,
+            onClick: this.buttonActiveHandler,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\RejButton.jsx",
+                lineNumber: 46
+            },
+            __self: this
+        }, this.state.text));
+    }
+}
+exports.default = MyButton;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","axios":"7rA65","react-toastify":"0AT5S","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6hGI9":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -25237,13 +28133,13 @@ const NavBar = ()=>{
         href: "/Workshop",
         __source: {
             fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
-            lineNumber: 18
+            lineNumber: 20
         },
         __self: undefined
     }, "View Workshop Details"), /*#__PURE__*/ _reactDefault.default.createElement(_navDropdownDefault.default.Divider, {
         __source: {
             fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\NavBar.jsx",
-            lineNumber: 19
+            lineNumber: 23
         },
         __self: undefined
     })))))));
@@ -25258,7 +28154,7 @@ $RefreshReg$(_c, "NavBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react-bootstrap/Navbar":"3qLFd","react-bootstrap/Nav":"3T3v1","react-bootstrap/NavDropdown":"1qmIy","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","react":"3b2NM","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-bootstrap/Container":"3Mt3t"}],"3qLFd":[function(require,module,exports) {
+},{"react":"3b2NM","react-bootstrap/Navbar":"3qLFd","react-bootstrap/Nav":"3T3v1","react-bootstrap/NavDropdown":"1qmIy","react-bootstrap/Container":"3Mt3t","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3qLFd":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -25379,83 +28275,7 @@ var _default = Navbar;
 exports.default = _default;
 module.exports = exports["default"];
 
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","uncontrollable":"4P7FS","./createWithBsPrefix":"2oVVc","./NavbarBrand":"4flFi","./NavbarCollapse":"6KfIh","./NavbarToggle":"4uQiD","./ThemeProvider":"4rz1S","./NavbarContext":"1Ts0D","./SelectableContext":"3ATFf"}],"4ttVj":[function(require,module,exports) {
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-        "default": obj
-    };
-}
-module.exports = _interopRequireDefault;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-},{}],"3krLJ":[function(require,module,exports) {
-function _extends() {
-    module.exports = _extends = Object.assign || function(target) {
-        for(var i = 1; i < arguments.length; i++){
-            var source = arguments[i];
-            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
-        }
-        return target;
-    };
-    module.exports["default"] = module.exports, module.exports.__esModule = true;
-    return _extends.apply(this, arguments);
-}
-module.exports = _extends;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-},{}],"3Yx9V":[function(require,module,exports) {
-function _objectWithoutPropertiesLoose(source, excluded) {
-    if (source == null) return {
-    };
-    var target = {
-    };
-    var sourceKeys = Object.keys(source);
-    var key, i;
-    for(i = 0; i < sourceKeys.length; i++){
-        key = sourceKeys[i];
-        if (excluded.indexOf(key) >= 0) continue;
-        target[key] = source[key];
-    }
-    return target;
-}
-module.exports = _objectWithoutPropertiesLoose;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-},{}],"5aJRc":[function(require,module,exports) {
-(function() {
-    var hasOwn = {
-    }.hasOwnProperty;
-    function classNames() {
-        var classes = [];
-        for(var i = 0; i < arguments.length; i++){
-            var arg = arguments[i];
-            if (!arg) continue;
-            var argType = typeof arg;
-            if (argType === 'string' || argType === 'number') classes.push(arg);
-            else if (Array.isArray(arg)) {
-                if (arg.length) {
-                    var inner = classNames.apply(null, arg);
-                    if (inner) classes.push(inner);
-                }
-            } else if (argType === 'object') {
-                if (arg.toString === Object.prototype.toString) {
-                    for(var key in arg)if (hasOwn.call(arg, key) && arg[key]) classes.push(key);
-                } else classes.push(arg.toString());
-            }
-        }
-        return classes.join(' ');
-    }
-    if (typeof module !== 'undefined' && module.exports) {
-        classNames.default = classNames;
-        module.exports = classNames;
-    } else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) // register as 'classnames', consistent with npm package name
-    define('classnames', [], function() {
-        return classNames;
-    });
-    else window.classNames = classNames;
-})();
-
-},{}],"4P7FS":[function(require,module,exports) {
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","uncontrollable":"4P7FS","./createWithBsPrefix":"2oVVc","./NavbarBrand":"4flFi","./NavbarCollapse":"6KfIh","./NavbarToggle":"4uQiD","./ThemeProvider":"4rz1S","./NavbarContext":"1Ts0D","./SelectableContext":"3ATFf"}],"4P7FS":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
@@ -25966,85 +28786,7 @@ function camelize(string) {
 }
 module.exports = exports["default"];
 
-},{}],"4rz1S":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.useBootstrapPrefix = useBootstrapPrefix;
-exports.createBootstrapComponent = createBootstrapComponent;
-exports.default = exports.ThemeConsumer = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-var _react = _interopRequireWildcard(require("react"));
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function _getRequireWildcardCache1(nodeInterop1) {
-        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {
-    };
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-        else newObj[key] = obj[key];
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-var ThemeContext = /*#__PURE__*/ _react.default.createContext({
-});
-var Consumer = ThemeContext.Consumer, Provider = ThemeContext.Provider;
-exports.ThemeConsumer = Consumer;
-function ThemeProvider(_ref) {
-    var prefixes = _ref.prefixes, children = _ref.children;
-    var copiedPrefixes = _react.useMemo(function() {
-        return _extends2.default({
-        }, prefixes);
-    }, [
-        prefixes
-    ]);
-    return(/*#__PURE__*/ _react.default.createElement(Provider, {
-        value: copiedPrefixes
-    }, children));
-}
-function useBootstrapPrefix(prefix, defaultPrefix) {
-    var prefixes = _react.useContext(ThemeContext);
-    return prefix || prefixes[defaultPrefix] || defaultPrefix;
-}
-function createBootstrapComponent(Component, opts) {
-    if (typeof opts === 'string') opts = {
-        prefix: opts
-    };
-    var isClassy = Component.prototype && Component.prototype.isReactComponent; // If it's a functional component make sure we don't break it with a ref
-    var _opts = opts, prefix = _opts.prefix, _opts$forwardRefAs = _opts.forwardRefAs, forwardRefAs = _opts$forwardRefAs === void 0 ? isClassy ? 'ref' : 'innerRef' : _opts$forwardRefAs;
-    var Wrapped = /*#__PURE__*/ _react.default.forwardRef(function(_ref2, ref) {
-        var props = _extends2.default({
-        }, _ref2);
-        props[forwardRefAs] = ref;
-        var bsPrefix = useBootstrapPrefix(props.bsPrefix, prefix);
-        return(/*#__PURE__*/ _react.default.createElement(Component, _extends2.default({
-        }, props, {
-            bsPrefix: bsPrefix
-        })));
-    });
-    Wrapped.displayName = "Bootstrap(" + (Component.displayName || Component.name) + ")";
-    return Wrapped;
-}
-var _default = ThemeProvider;
-exports.default = _default;
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","react":"3b2NM"}],"4flFi":[function(require,module,exports) {
+},{}],"4flFi":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -31265,2184 +34007,7 @@ var _default = Container;
 exports.default = _default;
 module.exports = exports["default"];
 
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S"}],"4Qfwm":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _table = require("react-bootstrap/Table");
-var _tableDefault = parcelHelpers.interopDefault(_table);
-var _button = require("./Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _rejButton = require("./RejButton");
-var _rejButtonDefault = parcelHelpers.interopDefault(_rejButton);
-class Research extends _react.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            details: [],
-            isClicked: false
-        };
-        this.getAll = this.getAll.bind(this);
-    }
-    componentDidMount() {
-        _axiosDefault.default.get("http://localhost:5000/api/getSingleFiles").then((res)=>{
-            console.log(res.data.data);
-            this.setState({
-                details: res.data.data
-            });
-        });
-    }
-    getAll() {
-        return this.state.details.map((info, index)=>{
-            return(/*#__PURE__*/ _reactDefault.default.createElement("tr", {
-                key: info._id,
-                __source: {
-                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 25
-                },
-                __self: this
-            }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
-                __source: {
-                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 26
-                },
-                __self: this
-            }, index + 1), /*#__PURE__*/ _reactDefault.default.createElement("td", {
-                __source: {
-                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 27
-                },
-                __self: this
-            }, info.rtitle), /*#__PURE__*/ _reactDefault.default.createElement("td", {
-                __source: {
-                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 28
-                },
-                __self: this
-            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
-                href: "http://localhost:5000/" + info.filePath,
-                target: "_blank",
-                __source: {
-                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 28
-                },
-                __self: this
-            }, info.fileName)), /*#__PURE__*/ _reactDefault.default.createElement("td", {
-                __source: {
-                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 29
-                },
-                __self: this
-            }, info.user.name), /*#__PURE__*/ _reactDefault.default.createElement("td", {
-                __source: {
-                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 30
-                },
-                __self: this
-            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
-                status: this.state.isClicked,
-                info: info,
-                __source: {
-                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 30
-                },
-                __self: this
-            })), /*#__PURE__*/ _reactDefault.default.createElement("td", {
-                __source: {
-                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 31
-                },
-                __self: this
-            }, /*#__PURE__*/ _reactDefault.default.createElement(_rejButtonDefault.default, {
-                status: this.state.isClicked,
-                info: info,
-                __source: {
-                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 31
-                },
-                __self: this
-            }))));
-        });
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement(_tableDefault.default, {
-            striped: true,
-            bordered: true,
-            hover: true,
-            className: "container-md",
-            style: {
-                marginTop: 100
-            },
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 40
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 41
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 42
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 43
-            },
-            __self: this
-        }, "#"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 44
-            },
-            __self: this
-        }, "Topic"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 45
-            },
-            __self: this
-        }, "FileName"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 46
-            },
-            __self: this
-        }, "Research Conductor"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 47
-            },
-            __self: this
-        }, "Approve"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 48
-            },
-            __self: this
-        }, "Decline"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 51
-            },
-            __self: this
-        }, this.getAll())));
-    }
-}
-exports.default = Research;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","axios":"7rA65","react-bootstrap/Table":"34yor","./Button":"458Ut","./RejButton":"2CXlM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"7rA65":[function(require,module,exports) {
-module.exports = require('./lib/axios');
-
-},{"./lib/axios":"4qfhW"}],"4qfhW":[function(require,module,exports) {
-'use strict';
-var utils = require('./utils');
-var bind = require('./helpers/bind');
-var Axios = require('./core/Axios');
-var mergeConfig = require('./core/mergeConfig');
-var defaults = require('./defaults');
-/**
- * Create an instance of Axios
- *
- * @param {Object} defaultConfig The default config for the instance
- * @return {Axios} A new instance of Axios
- */ function createInstance(defaultConfig) {
-    var context = new Axios(defaultConfig);
-    var instance = bind(Axios.prototype.request, context);
-    // Copy axios.prototype to instance
-    utils.extend(instance, Axios.prototype, context);
-    // Copy context to instance
-    utils.extend(instance, context);
-    return instance;
-}
-// Create the default instance to be exported
-var axios = createInstance(defaults);
-// Expose Axios class to allow class inheritance
-axios.Axios = Axios;
-// Factory for creating new instances
-axios.create = function create(instanceConfig) {
-    return createInstance(mergeConfig(axios.defaults, instanceConfig));
-};
-// Expose Cancel & CancelToken
-axios.Cancel = require('./cancel/Cancel');
-axios.CancelToken = require('./cancel/CancelToken');
-axios.isCancel = require('./cancel/isCancel');
-// Expose all/spread
-axios.all = function all(promises) {
-    return Promise.all(promises);
-};
-axios.spread = require('./helpers/spread');
-// Expose isAxiosError
-axios.isAxiosError = require('./helpers/isAxiosError');
-module.exports = axios;
-// Allow use of default import syntax in TypeScript
-module.exports.default = axios;
-
-},{"./utils":"7J9rV","./helpers/bind":"78Fwk","./core/Axios":"26bz2","./core/mergeConfig":"42z1a","./defaults":"5j10E","./cancel/Cancel":"1Ql7i","./cancel/CancelToken":"hHamf","./cancel/isCancel":"3MAgn","./helpers/spread":"9FoXt","./helpers/isAxiosError":"1bzv8"}],"7J9rV":[function(require,module,exports) {
-'use strict';
-var bind = require('./helpers/bind');
-/*global toString:true*/ // utils is a library of generic helper functions non-specific to axios
-var toString = Object.prototype.toString;
-/**
- * Determine if a value is an Array
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is an Array, otherwise false
- */ function isArray(val) {
-    return toString.call(val) === '[object Array]';
-}
-/**
- * Determine if a value is undefined
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if the value is undefined, otherwise false
- */ function isUndefined(val) {
-    return typeof val === 'undefined';
-}
-/**
- * Determine if a value is a Buffer
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Buffer, otherwise false
- */ function isBuffer(val) {
-    return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor) && typeof val.constructor.isBuffer === 'function' && val.constructor.isBuffer(val);
-}
-/**
- * Determine if a value is an ArrayBuffer
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is an ArrayBuffer, otherwise false
- */ function isArrayBuffer(val) {
-    return toString.call(val) === '[object ArrayBuffer]';
-}
-/**
- * Determine if a value is a FormData
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is an FormData, otherwise false
- */ function isFormData(val) {
-    return typeof FormData !== 'undefined' && val instanceof FormData;
-}
-/**
- * Determine if a value is a view on an ArrayBuffer
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
- */ function isArrayBufferView(val) {
-    var result;
-    if (typeof ArrayBuffer !== 'undefined' && ArrayBuffer.isView) result = ArrayBuffer.isView(val);
-    else result = val && val.buffer && val.buffer instanceof ArrayBuffer;
-    return result;
-}
-/**
- * Determine if a value is a String
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a String, otherwise false
- */ function isString(val) {
-    return typeof val === 'string';
-}
-/**
- * Determine if a value is a Number
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Number, otherwise false
- */ function isNumber(val) {
-    return typeof val === 'number';
-}
-/**
- * Determine if a value is an Object
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is an Object, otherwise false
- */ function isObject(val) {
-    return val !== null && typeof val === 'object';
-}
-/**
- * Determine if a value is a plain Object
- *
- * @param {Object} val The value to test
- * @return {boolean} True if value is a plain Object, otherwise false
- */ function isPlainObject(val) {
-    if (toString.call(val) !== '[object Object]') return false;
-    var prototype = Object.getPrototypeOf(val);
-    return prototype === null || prototype === Object.prototype;
-}
-/**
- * Determine if a value is a Date
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Date, otherwise false
- */ function isDate(val) {
-    return toString.call(val) === '[object Date]';
-}
-/**
- * Determine if a value is a File
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a File, otherwise false
- */ function isFile(val) {
-    return toString.call(val) === '[object File]';
-}
-/**
- * Determine if a value is a Blob
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Blob, otherwise false
- */ function isBlob(val) {
-    return toString.call(val) === '[object Blob]';
-}
-/**
- * Determine if a value is a Function
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Function, otherwise false
- */ function isFunction(val) {
-    return toString.call(val) === '[object Function]';
-}
-/**
- * Determine if a value is a Stream
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Stream, otherwise false
- */ function isStream(val) {
-    return isObject(val) && isFunction(val.pipe);
-}
-/**
- * Determine if a value is a URLSearchParams object
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a URLSearchParams object, otherwise false
- */ function isURLSearchParams(val) {
-    return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
-}
-/**
- * Trim excess whitespace off the beginning and end of a string
- *
- * @param {String} str The String to trim
- * @returns {String} The String freed of excess whitespace
- */ function trim(str) {
-    return str.replace(/^\s*/, '').replace(/\s*$/, '');
-}
-/**
- * Determine if we're running in a standard browser environment
- *
- * This allows axios to run in a web worker, and react-native.
- * Both environments support XMLHttpRequest, but not fully standard globals.
- *
- * web workers:
- *  typeof window -> undefined
- *  typeof document -> undefined
- *
- * react-native:
- *  navigator.product -> 'ReactNative'
- * nativescript
- *  navigator.product -> 'NativeScript' or 'NS'
- */ function isStandardBrowserEnv() {
-    if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' || navigator.product === 'NativeScript' || navigator.product === 'NS')) return false;
-    return typeof window !== 'undefined' && typeof document !== 'undefined';
-}
-/**
- * Iterate over an Array or an Object invoking a function for each item.
- *
- * If `obj` is an Array callback will be called passing
- * the value, index, and complete array for each item.
- *
- * If 'obj' is an Object callback will be called passing
- * the value, key, and complete object for each property.
- *
- * @param {Object|Array} obj The object to iterate
- * @param {Function} fn The callback to invoke for each item
- */ function forEach(obj, fn) {
-    // Don't bother if no value provided
-    if (obj === null || typeof obj === 'undefined') return;
-    // Force an array if not already something iterable
-    if (typeof obj !== 'object') /*eslint no-param-reassign:0*/ obj = [
-        obj
-    ];
-    if (isArray(obj)) // Iterate over array values
-    for(var i = 0, l = obj.length; i < l; i++)fn.call(null, obj[i], i, obj);
-    else {
-        // Iterate over object keys
-        for(var key in obj)if (Object.prototype.hasOwnProperty.call(obj, key)) fn.call(null, obj[key], key, obj);
-    }
-}
-/**
- * Accepts varargs expecting each argument to be an object, then
- * immutably merges the properties of each object and returns result.
- *
- * When multiple objects contain the same key the later object in
- * the arguments list will take precedence.
- *
- * Example:
- *
- * ```js
- * var result = merge({foo: 123}, {foo: 456});
- * console.log(result.foo); // outputs 456
- * ```
- *
- * @param {Object} obj1 Object to merge
- * @returns {Object} Result of all merge properties
- */ function merge() {
-    var result = {
-    };
-    function assignValue(val, key) {
-        if (isPlainObject(result[key]) && isPlainObject(val)) result[key] = merge(result[key], val);
-        else if (isPlainObject(val)) result[key] = merge({
-        }, val);
-        else if (isArray(val)) result[key] = val.slice();
-        else result[key] = val;
-    }
-    for(var i = 0, l = arguments.length; i < l; i++)forEach(arguments[i], assignValue);
-    return result;
-}
-/**
- * Extends object a by mutably adding to it the properties of object b.
- *
- * @param {Object} a The object to be extended
- * @param {Object} b The object to copy properties from
- * @param {Object} thisArg The object to bind function to
- * @return {Object} The resulting value of object a
- */ function extend(a, b, thisArg) {
-    forEach(b, function assignValue(val, key) {
-        if (thisArg && typeof val === 'function') a[key] = bind(val, thisArg);
-        else a[key] = val;
-    });
-    return a;
-}
-/**
- * Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
- *
- * @param {string} content with BOM
- * @return {string} content value without BOM
- */ function stripBOM(content) {
-    if (content.charCodeAt(0) === 65279) content = content.slice(1);
-    return content;
-}
-module.exports = {
-    isArray: isArray,
-    isArrayBuffer: isArrayBuffer,
-    isBuffer: isBuffer,
-    isFormData: isFormData,
-    isArrayBufferView: isArrayBufferView,
-    isString: isString,
-    isNumber: isNumber,
-    isObject: isObject,
-    isPlainObject: isPlainObject,
-    isUndefined: isUndefined,
-    isDate: isDate,
-    isFile: isFile,
-    isBlob: isBlob,
-    isFunction: isFunction,
-    isStream: isStream,
-    isURLSearchParams: isURLSearchParams,
-    isStandardBrowserEnv: isStandardBrowserEnv,
-    forEach: forEach,
-    merge: merge,
-    extend: extend,
-    trim: trim,
-    stripBOM: stripBOM
-};
-
-},{"./helpers/bind":"78Fwk"}],"78Fwk":[function(require,module,exports) {
-'use strict';
-module.exports = function bind(fn, thisArg) {
-    return function wrap() {
-        var args = new Array(arguments.length);
-        for(var i = 0; i < args.length; i++)args[i] = arguments[i];
-        return fn.apply(thisArg, args);
-    };
-};
-
-},{}],"26bz2":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-var buildURL = require('../helpers/buildURL');
-var InterceptorManager = require('./InterceptorManager');
-var dispatchRequest = require('./dispatchRequest');
-var mergeConfig = require('./mergeConfig');
-/**
- * Create a new instance of Axios
- *
- * @param {Object} instanceConfig The default config for the instance
- */ function Axios(instanceConfig) {
-    this.defaults = instanceConfig;
-    this.interceptors = {
-        request: new InterceptorManager(),
-        response: new InterceptorManager()
-    };
-}
-/**
- * Dispatch a request
- *
- * @param {Object} config The config specific for this request (merged with this.defaults)
- */ Axios.prototype.request = function request(config) {
-    /*eslint no-param-reassign:0*/ // Allow for axios('example/url'[, config]) a la fetch API
-    if (typeof config === 'string') {
-        config = arguments[1] || {
-        };
-        config.url = arguments[0];
-    } else config = config || {
-    };
-    config = mergeConfig(this.defaults, config);
-    // Set config.method
-    if (config.method) config.method = config.method.toLowerCase();
-    else if (this.defaults.method) config.method = this.defaults.method.toLowerCase();
-    else config.method = 'get';
-    // Hook up interceptors middleware
-    var chain = [
-        dispatchRequest,
-        undefined
-    ];
-    var promise = Promise.resolve(config);
-    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
-        chain.unshift(interceptor.fulfilled, interceptor.rejected);
-    });
-    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
-        chain.push(interceptor.fulfilled, interceptor.rejected);
-    });
-    while(chain.length)promise = promise.then(chain.shift(), chain.shift());
-    return promise;
-};
-Axios.prototype.getUri = function getUri(config) {
-    config = mergeConfig(this.defaults, config);
-    return buildURL(config.url, config.params, config.paramsSerializer).replace(/^\?/, '');
-};
-// Provide aliases for supported request methods
-utils.forEach([
-    'delete',
-    'get',
-    'head',
-    'options'
-], function forEachMethodNoData(method) {
-    /*eslint func-names:0*/ Axios.prototype[method] = function(url, config) {
-        return this.request(mergeConfig(config || {
-        }, {
-            method: method,
-            url: url,
-            data: (config || {
-            }).data
-        }));
-    };
-});
-utils.forEach([
-    'post',
-    'put',
-    'patch'
-], function forEachMethodWithData(method) {
-    /*eslint func-names:0*/ Axios.prototype[method] = function(url, data, config) {
-        return this.request(mergeConfig(config || {
-        }, {
-            method: method,
-            url: url,
-            data: data
-        }));
-    };
-});
-module.exports = Axios;
-
-},{"./../utils":"7J9rV","../helpers/buildURL":"25KfR","./InterceptorManager":"33sRR","./dispatchRequest":"1mCjo","./mergeConfig":"42z1a"}],"25KfR":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-function encode(val) {
-    return encodeURIComponent(val).replace(/%3A/gi, ':').replace(/%24/g, '$').replace(/%2C/gi, ',').replace(/%20/g, '+').replace(/%5B/gi, '[').replace(/%5D/gi, ']');
-}
-/**
- * Build a URL by appending params to the end
- *
- * @param {string} url The base of the url (e.g., http://www.google.com)
- * @param {object} [params] The params to be appended
- * @returns {string} The formatted url
- */ module.exports = function buildURL(url, params, paramsSerializer) {
-    /*eslint no-param-reassign:0*/ if (!params) return url;
-    var serializedParams;
-    if (paramsSerializer) serializedParams = paramsSerializer(params);
-    else if (utils.isURLSearchParams(params)) serializedParams = params.toString();
-    else {
-        var parts = [];
-        utils.forEach(params, function serialize(val, key) {
-            if (val === null || typeof val === 'undefined') return;
-            if (utils.isArray(val)) key = key + '[]';
-            else val = [
-                val
-            ];
-            utils.forEach(val, function parseValue(v) {
-                if (utils.isDate(v)) v = v.toISOString();
-                else if (utils.isObject(v)) v = JSON.stringify(v);
-                parts.push(encode(key) + '=' + encode(v));
-            });
-        });
-        serializedParams = parts.join('&');
-    }
-    if (serializedParams) {
-        var hashmarkIndex = url.indexOf('#');
-        if (hashmarkIndex !== -1) url = url.slice(0, hashmarkIndex);
-        url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
-    }
-    return url;
-};
-
-},{"./../utils":"7J9rV"}],"33sRR":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-function InterceptorManager() {
-    this.handlers = [];
-}
-/**
- * Add a new interceptor to the stack
- *
- * @param {Function} fulfilled The function to handle `then` for a `Promise`
- * @param {Function} rejected The function to handle `reject` for a `Promise`
- *
- * @return {Number} An ID used to remove interceptor later
- */ InterceptorManager.prototype.use = function use(fulfilled, rejected) {
-    this.handlers.push({
-        fulfilled: fulfilled,
-        rejected: rejected
-    });
-    return this.handlers.length - 1;
-};
-/**
- * Remove an interceptor from the stack
- *
- * @param {Number} id The ID that was returned by `use`
- */ InterceptorManager.prototype.eject = function eject(id) {
-    if (this.handlers[id]) this.handlers[id] = null;
-};
-/**
- * Iterate over all the registered interceptors
- *
- * This method is particularly useful for skipping over any
- * interceptors that may have become `null` calling `eject`.
- *
- * @param {Function} fn The function to call for each interceptor
- */ InterceptorManager.prototype.forEach = function forEach(fn) {
-    utils.forEach(this.handlers, function forEachHandler(h) {
-        if (h !== null) fn(h);
-    });
-};
-module.exports = InterceptorManager;
-
-},{"./../utils":"7J9rV"}],"1mCjo":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-var transformData = require('./transformData');
-var isCancel = require('../cancel/isCancel');
-var defaults = require('../defaults');
-/**
- * Throws a `Cancel` if cancellation has been requested.
- */ function throwIfCancellationRequested(config) {
-    if (config.cancelToken) config.cancelToken.throwIfRequested();
-}
-/**
- * Dispatch a request to the server using the configured adapter.
- *
- * @param {object} config The config that is to be used for the request
- * @returns {Promise} The Promise to be fulfilled
- */ module.exports = function dispatchRequest(config) {
-    throwIfCancellationRequested(config);
-    // Ensure headers exist
-    config.headers = config.headers || {
-    };
-    // Transform request data
-    config.data = transformData(config.data, config.headers, config.transformRequest);
-    // Flatten headers
-    config.headers = utils.merge(config.headers.common || {
-    }, config.headers[config.method] || {
-    }, config.headers);
-    utils.forEach([
-        'delete',
-        'get',
-        'head',
-        'post',
-        'put',
-        'patch',
-        'common'
-    ], function cleanHeaderConfig(method) {
-        delete config.headers[method];
-    });
-    var adapter = config.adapter || defaults.adapter;
-    return adapter(config).then(function onAdapterResolution(response) {
-        throwIfCancellationRequested(config);
-        // Transform response data
-        response.data = transformData(response.data, response.headers, config.transformResponse);
-        return response;
-    }, function onAdapterRejection(reason) {
-        if (!isCancel(reason)) {
-            throwIfCancellationRequested(config);
-            // Transform response data
-            if (reason && reason.response) reason.response.data = transformData(reason.response.data, reason.response.headers, config.transformResponse);
-        }
-        return Promise.reject(reason);
-    });
-};
-
-},{"./../utils":"7J9rV","./transformData":"1ueU6","../cancel/isCancel":"3MAgn","../defaults":"5j10E"}],"1ueU6":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-/**
- * Transform the data for a request or a response
- *
- * @param {Object|String} data The data to be transformed
- * @param {Array} headers The headers for the request or response
- * @param {Array|Function} fns A single function or Array of functions
- * @returns {*} The resulting transformed data
- */ module.exports = function transformData(data, headers, fns) {
-    /*eslint no-param-reassign:0*/ utils.forEach(fns, function transform(fn) {
-        data = fn(data, headers);
-    });
-    return data;
-};
-
-},{"./../utils":"7J9rV"}],"3MAgn":[function(require,module,exports) {
-'use strict';
-module.exports = function isCancel(value) {
-    return !!(value && value.__CANCEL__);
-};
-
-},{}],"5j10E":[function(require,module,exports) {
-var process = require("process");
-'use strict';
-var utils = require('./utils');
-var normalizeHeaderName = require('./helpers/normalizeHeaderName');
-var DEFAULT_CONTENT_TYPE = {
-    'Content-Type': 'application/x-www-form-urlencoded'
-};
-function setContentTypeIfUnset(headers, value) {
-    if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) headers['Content-Type'] = value;
-}
-function getDefaultAdapter() {
-    var adapter;
-    if (typeof XMLHttpRequest !== 'undefined') // For browsers use XHR adapter
-    adapter = require('./adapters/xhr');
-    else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') // For node use HTTP adapter
-    adapter = require('./adapters/http');
-    return adapter;
-}
-var defaults = {
-    adapter: getDefaultAdapter(),
-    transformRequest: [
-        function transformRequest(data, headers) {
-            normalizeHeaderName(headers, 'Accept');
-            normalizeHeaderName(headers, 'Content-Type');
-            if (utils.isFormData(data) || utils.isArrayBuffer(data) || utils.isBuffer(data) || utils.isStream(data) || utils.isFile(data) || utils.isBlob(data)) return data;
-            if (utils.isArrayBufferView(data)) return data.buffer;
-            if (utils.isURLSearchParams(data)) {
-                setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
-                return data.toString();
-            }
-            if (utils.isObject(data)) {
-                setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
-                return JSON.stringify(data);
-            }
-            return data;
-        }
-    ],
-    transformResponse: [
-        function transformResponse(data) {
-            /*eslint no-param-reassign:0*/ if (typeof data === 'string') try {
-                data = JSON.parse(data);
-            } catch (e) {
-            }
-            return data;
-        }
-    ],
-    /**
-   * A timeout in milliseconds to abort a request. If set to 0 (default) a
-   * timeout is not created.
-   */ timeout: 0,
-    xsrfCookieName: 'XSRF-TOKEN',
-    xsrfHeaderName: 'X-XSRF-TOKEN',
-    maxContentLength: -1,
-    maxBodyLength: -1,
-    validateStatus: function validateStatus(status) {
-        return status >= 200 && status < 300;
-    }
-};
-defaults.headers = {
-    common: {
-        'Accept': 'application/json, text/plain, */*'
-    }
-};
-utils.forEach([
-    'delete',
-    'get',
-    'head'
-], function forEachMethodNoData(method) {
-    defaults.headers[method] = {
-    };
-});
-utils.forEach([
-    'post',
-    'put',
-    'patch'
-], function forEachMethodWithData(method) {
-    defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
-});
-module.exports = defaults;
-
-},{"process":"7AgFc","./utils":"7J9rV","./helpers/normalizeHeaderName":"5yMqL","./adapters/xhr":"6pJqL","./adapters/http":"6pJqL"}],"7AgFc":[function(require,module,exports) {
-// shim for using process in browser
-var process = module.exports = {
-};
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-var cachedSetTimeout;
-var cachedClearTimeout;
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout() {
-    throw new Error('clearTimeout has not been defined');
-}
-(function() {
-    try {
-        if (typeof setTimeout === 'function') cachedSetTimeout = setTimeout;
-        else cachedSetTimeout = defaultSetTimout;
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') cachedClearTimeout = clearTimeout;
-        else cachedClearTimeout = defaultClearTimeout;
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-})();
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) //normal enviroments in sane situations
-    return setTimeout(fun, 0);
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch (e) {
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch (e1) {
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) //normal enviroments in sane situations
-    return clearTimeout(marker);
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e) {
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e1) {
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) return;
-    draining = false;
-    if (currentQueue.length) queue = currentQueue.concat(queue);
-    else queueIndex = -1;
-    if (queue.length) drainQueue();
-}
-function drainQueue() {
-    if (draining) return;
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-    var len = queue.length;
-    while(len){
-        currentQueue = queue;
-        queue = [];
-        while((++queueIndex) < len)if (currentQueue) currentQueue[queueIndex].run();
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-process.nextTick = function(fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) for(var i = 1; i < arguments.length; i++)args[i - 1] = arguments[i];
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) runTimeout(drainQueue);
-};
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function() {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {
-};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {
-};
-function noop() {
-}
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-process.listeners = function(name) {
-    return [];
-};
-process.binding = function(name) {
-    throw new Error('process.binding is not supported');
-};
-process.cwd = function() {
-    return '/';
-};
-process.chdir = function(dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() {
-    return 0;
-};
-
-},{}],"5yMqL":[function(require,module,exports) {
-'use strict';
-var utils = require('../utils');
-module.exports = function normalizeHeaderName(headers, normalizedName) {
-    utils.forEach(headers, function processHeader(value, name) {
-        if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
-            headers[normalizedName] = value;
-            delete headers[name];
-        }
-    });
-};
-
-},{"../utils":"7J9rV"}],"6pJqL":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-var settle = require('./../core/settle');
-var cookies = require('./../helpers/cookies');
-var buildURL = require('./../helpers/buildURL');
-var buildFullPath = require('../core/buildFullPath');
-var parseHeaders = require('./../helpers/parseHeaders');
-var isURLSameOrigin = require('./../helpers/isURLSameOrigin');
-var createError = require('../core/createError');
-module.exports = function xhrAdapter(config) {
-    return new Promise(function dispatchXhrRequest(resolve, reject) {
-        var requestData = config.data;
-        var requestHeaders = config.headers;
-        if (utils.isFormData(requestData)) delete requestHeaders['Content-Type']; // Let the browser set it
-        var request = new XMLHttpRequest();
-        // HTTP basic authentication
-        if (config.auth) {
-            var username = config.auth.username || '';
-            var password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : '';
-            requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
-        }
-        var fullPath = buildFullPath(config.baseURL, config.url);
-        request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
-        // Set the request timeout in MS
-        request.timeout = config.timeout;
-        // Listen for ready state
-        request.onreadystatechange = function handleLoad() {
-            if (!request || request.readyState !== 4) return;
-            // The request errored out and we didn't get a response, this will be
-            // handled by onerror instead
-            // With one exception: request that using file: protocol, most browsers
-            // will return status as 0 even though it's a successful request
-            if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) return;
-            // Prepare the response
-            var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
-            var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
-            var response = {
-                data: responseData,
-                status: request.status,
-                statusText: request.statusText,
-                headers: responseHeaders,
-                config: config,
-                request: request
-            };
-            settle(resolve, reject, response);
-            // Clean up request
-            request = null;
-        };
-        // Handle browser request cancellation (as opposed to a manual cancellation)
-        request.onabort = function handleAbort() {
-            if (!request) return;
-            reject(createError('Request aborted', config, 'ECONNABORTED', request));
-            // Clean up request
-            request = null;
-        };
-        // Handle low level network errors
-        request.onerror = function handleError() {
-            // Real errors are hidden from us by the browser
-            // onerror should only fire if it's a network error
-            reject(createError('Network Error', config, null, request));
-            // Clean up request
-            request = null;
-        };
-        // Handle timeout
-        request.ontimeout = function handleTimeout() {
-            var timeoutErrorMessage = 'timeout of ' + config.timeout + 'ms exceeded';
-            if (config.timeoutErrorMessage) timeoutErrorMessage = config.timeoutErrorMessage;
-            reject(createError(timeoutErrorMessage, config, 'ECONNABORTED', request));
-            // Clean up request
-            request = null;
-        };
-        // Add xsrf header
-        // This is only done if running in a standard browser environment.
-        // Specifically not if we're in a web worker, or react-native.
-        if (utils.isStandardBrowserEnv()) {
-            // Add xsrf header
-            var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ? cookies.read(config.xsrfCookieName) : undefined;
-            if (xsrfValue) requestHeaders[config.xsrfHeaderName] = xsrfValue;
-        }
-        // Add headers to the request
-        if ('setRequestHeader' in request) utils.forEach(requestHeaders, function setRequestHeader(val, key) {
-            if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') // Remove Content-Type if data is undefined
-            delete requestHeaders[key];
-            else // Otherwise add header to the request
-            request.setRequestHeader(key, val);
-        });
-        // Add withCredentials to request if needed
-        if (!utils.isUndefined(config.withCredentials)) request.withCredentials = !!config.withCredentials;
-        // Add responseType to request if needed
-        if (config.responseType) try {
-            request.responseType = config.responseType;
-        } catch (e) {
-            // Expected DOMException thrown by browsers not compatible XMLHttpRequest Level 2.
-            // But, this can be suppressed for 'json' type as it can be parsed by default 'transformResponse' function.
-            if (config.responseType !== 'json') throw e;
-        }
-        // Handle progress if needed
-        if (typeof config.onDownloadProgress === 'function') request.addEventListener('progress', config.onDownloadProgress);
-        // Not all browsers support upload events
-        if (typeof config.onUploadProgress === 'function' && request.upload) request.upload.addEventListener('progress', config.onUploadProgress);
-        if (config.cancelToken) // Handle cancellation
-        config.cancelToken.promise.then(function onCanceled(cancel) {
-            if (!request) return;
-            request.abort();
-            reject(cancel);
-            // Clean up request
-            request = null;
-        });
-        if (!requestData) requestData = null;
-        // Send the request
-        request.send(requestData);
-    });
-};
-
-},{"./../utils":"7J9rV","./../core/settle":"72M6J","./../helpers/cookies":"1m0F1","./../helpers/buildURL":"25KfR","../core/buildFullPath":"5fWja","./../helpers/parseHeaders":"1KizL","./../helpers/isURLSameOrigin":"6Gtz3","../core/createError":"7ETv1"}],"72M6J":[function(require,module,exports) {
-'use strict';
-var createError = require('./createError');
-/**
- * Resolve or reject a Promise based on response status.
- *
- * @param {Function} resolve A function that resolves the promise.
- * @param {Function} reject A function that rejects the promise.
- * @param {object} response The response.
- */ module.exports = function settle(resolve, reject, response) {
-    var validateStatus = response.config.validateStatus;
-    if (!response.status || !validateStatus || validateStatus(response.status)) resolve(response);
-    else reject(createError('Request failed with status code ' + response.status, response.config, null, response.request, response));
-};
-
-},{"./createError":"7ETv1"}],"7ETv1":[function(require,module,exports) {
-'use strict';
-var enhanceError = require('./enhanceError');
-/**
- * Create an Error with the specified message, config, error code, request and response.
- *
- * @param {string} message The error message.
- * @param {Object} config The config.
- * @param {string} [code] The error code (for example, 'ECONNABORTED').
- * @param {Object} [request] The request.
- * @param {Object} [response] The response.
- * @returns {Error} The created error.
- */ module.exports = function createError(message, config, code, request, response) {
-    var error = new Error(message);
-    return enhanceError(error, config, code, request, response);
-};
-
-},{"./enhanceError":"2O2Ud"}],"2O2Ud":[function(require,module,exports) {
-'use strict';
-/**
- * Update an Error with the specified config, error code, and response.
- *
- * @param {Error} error The error to update.
- * @param {Object} config The config.
- * @param {string} [code] The error code (for example, 'ECONNABORTED').
- * @param {Object} [request] The request.
- * @param {Object} [response] The response.
- * @returns {Error} The error.
- */ module.exports = function enhanceError(error, config, code, request, response) {
-    error.config = config;
-    if (code) error.code = code;
-    error.request = request;
-    error.response = response;
-    error.isAxiosError = true;
-    error.toJSON = function toJSON() {
-        return {
-            // Standard
-            message: this.message,
-            name: this.name,
-            // Microsoft
-            description: this.description,
-            number: this.number,
-            // Mozilla
-            fileName: this.fileName,
-            lineNumber: this.lineNumber,
-            columnNumber: this.columnNumber,
-            stack: this.stack,
-            // Axios
-            config: this.config,
-            code: this.code
-        };
-    };
-    return error;
-};
-
-},{}],"1m0F1":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-module.exports = utils.isStandardBrowserEnv() ? // Standard browser envs support document.cookie
-(function standardBrowserEnv() {
-    return {
-        write: function write(name, value, expires, path, domain, secure) {
-            var cookie = [];
-            cookie.push(name + '=' + encodeURIComponent(value));
-            if (utils.isNumber(expires)) cookie.push('expires=' + new Date(expires).toGMTString());
-            if (utils.isString(path)) cookie.push('path=' + path);
-            if (utils.isString(domain)) cookie.push('domain=' + domain);
-            if (secure === true) cookie.push('secure');
-            document.cookie = cookie.join('; ');
-        },
-        read: function read(name) {
-            var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
-            return match ? decodeURIComponent(match[3]) : null;
-        },
-        remove: function remove(name) {
-            this.write(name, '', Date.now() - 86400000);
-        }
-    };
-})() : // Non standard browser env (web workers, react-native) lack needed support.
-(function nonStandardBrowserEnv() {
-    return {
-        write: function write() {
-        },
-        read: function read() {
-            return null;
-        },
-        remove: function remove() {
-        }
-    };
-})();
-
-},{"./../utils":"7J9rV"}],"5fWja":[function(require,module,exports) {
-'use strict';
-var isAbsoluteURL = require('../helpers/isAbsoluteURL');
-var combineURLs = require('../helpers/combineURLs');
-/**
- * Creates a new URL by combining the baseURL with the requestedURL,
- * only when the requestedURL is not already an absolute URL.
- * If the requestURL is absolute, this function returns the requestedURL untouched.
- *
- * @param {string} baseURL The base URL
- * @param {string} requestedURL Absolute or relative URL to combine
- * @returns {string} The combined full path
- */ module.exports = function buildFullPath(baseURL, requestedURL) {
-    if (baseURL && !isAbsoluteURL(requestedURL)) return combineURLs(baseURL, requestedURL);
-    return requestedURL;
-};
-
-},{"../helpers/isAbsoluteURL":"4FcN1","../helpers/combineURLs":"qMap4"}],"4FcN1":[function(require,module,exports) {
-'use strict';
-/**
- * Determines whether the specified URL is absolute
- *
- * @param {string} url The URL to test
- * @returns {boolean} True if the specified URL is absolute, otherwise false
- */ module.exports = function isAbsoluteURL(url) {
-    // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
-    // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
-    // by any combination of letters, digits, plus, period, or hyphen.
-    return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
-};
-
-},{}],"qMap4":[function(require,module,exports) {
-'use strict';
-/**
- * Creates a new URL by combining the specified URLs
- *
- * @param {string} baseURL The base URL
- * @param {string} relativeURL The relative URL
- * @returns {string} The combined URL
- */ module.exports = function combineURLs(baseURL, relativeURL) {
-    return relativeURL ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '') : baseURL;
-};
-
-},{}],"1KizL":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-// Headers whose duplicates are ignored by node
-// c.f. https://nodejs.org/api/http.html#http_message_headers
-var ignoreDuplicateOf = [
-    'age',
-    'authorization',
-    'content-length',
-    'content-type',
-    'etag',
-    'expires',
-    'from',
-    'host',
-    'if-modified-since',
-    'if-unmodified-since',
-    'last-modified',
-    'location',
-    'max-forwards',
-    'proxy-authorization',
-    'referer',
-    'retry-after',
-    'user-agent'
-];
-/**
- * Parse headers into an object
- *
- * ```
- * Date: Wed, 27 Aug 2014 08:58:49 GMT
- * Content-Type: application/json
- * Connection: keep-alive
- * Transfer-Encoding: chunked
- * ```
- *
- * @param {String} headers Headers needing to be parsed
- * @returns {Object} Headers parsed into an object
- */ module.exports = function parseHeaders(headers) {
-    var parsed = {
-    };
-    var key;
-    var val;
-    var i;
-    if (!headers) return parsed;
-    utils.forEach(headers.split('\n'), function parser(line) {
-        i = line.indexOf(':');
-        key = utils.trim(line.substr(0, i)).toLowerCase();
-        val = utils.trim(line.substr(i + 1));
-        if (key) {
-            if (parsed[key] && ignoreDuplicateOf.indexOf(key) >= 0) return;
-            if (key === 'set-cookie') parsed[key] = (parsed[key] ? parsed[key] : []).concat([
-                val
-            ]);
-            else parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
-        }
-    });
-    return parsed;
-};
-
-},{"./../utils":"7J9rV"}],"6Gtz3":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-module.exports = utils.isStandardBrowserEnv() ? // Standard browser envs have full support of the APIs needed to test
-// whether the request URL is of the same origin as current location.
-(function standardBrowserEnv() {
-    var msie = /(msie|trident)/i.test(navigator.userAgent);
-    var urlParsingNode = document.createElement('a');
-    var originURL;
-    /**
-    * Parse a URL to discover it's components
-    *
-    * @param {String} url The URL to be parsed
-    * @returns {Object}
-    */ function resolveURL(url) {
-        var href = url;
-        if (msie) {
-            // IE needs attribute set twice to normalize properties
-            urlParsingNode.setAttribute('href', href);
-            href = urlParsingNode.href;
-        }
-        urlParsingNode.setAttribute('href', href);
-        // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
-        return {
-            href: urlParsingNode.href,
-            protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
-            host: urlParsingNode.host,
-            search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
-            hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
-            hostname: urlParsingNode.hostname,
-            port: urlParsingNode.port,
-            pathname: urlParsingNode.pathname.charAt(0) === '/' ? urlParsingNode.pathname : '/' + urlParsingNode.pathname
-        };
-    }
-    originURL = resolveURL(window.location.href);
-    /**
-    * Determine if a URL shares the same origin as the current location
-    *
-    * @param {String} requestURL The URL to test
-    * @returns {boolean} True if URL shares the same origin, otherwise false
-    */ return function isURLSameOrigin(requestURL) {
-        var parsed = utils.isString(requestURL) ? resolveURL(requestURL) : requestURL;
-        return parsed.protocol === originURL.protocol && parsed.host === originURL.host;
-    };
-})() : // Non standard browser envs (web workers, react-native) lack needed support.
-(function nonStandardBrowserEnv() {
-    return function isURLSameOrigin() {
-        return true;
-    };
-})();
-
-},{"./../utils":"7J9rV"}],"42z1a":[function(require,module,exports) {
-'use strict';
-var utils = require('../utils');
-/**
- * Config-specific merge-function which creates a new config-object
- * by merging two configuration objects together.
- *
- * @param {Object} config1
- * @param {Object} config2
- * @returns {Object} New object resulting from merging config2 to config1
- */ module.exports = function mergeConfig(config1, config2) {
-    // eslint-disable-next-line no-param-reassign
-    config2 = config2 || {
-    };
-    var config = {
-    };
-    var valueFromConfig2Keys = [
-        'url',
-        'method',
-        'data'
-    ];
-    var mergeDeepPropertiesKeys = [
-        'headers',
-        'auth',
-        'proxy',
-        'params'
-    ];
-    var defaultToConfig2Keys = [
-        'baseURL',
-        'transformRequest',
-        'transformResponse',
-        'paramsSerializer',
-        'timeout',
-        'timeoutMessage',
-        'withCredentials',
-        'adapter',
-        'responseType',
-        'xsrfCookieName',
-        'xsrfHeaderName',
-        'onUploadProgress',
-        'onDownloadProgress',
-        'decompress',
-        'maxContentLength',
-        'maxBodyLength',
-        'maxRedirects',
-        'transport',
-        'httpAgent',
-        'httpsAgent',
-        'cancelToken',
-        'socketPath',
-        'responseEncoding'
-    ];
-    var directMergeKeys = [
-        'validateStatus'
-    ];
-    function getMergedValue(target, source) {
-        if (utils.isPlainObject(target) && utils.isPlainObject(source)) return utils.merge(target, source);
-        else if (utils.isPlainObject(source)) return utils.merge({
-        }, source);
-        else if (utils.isArray(source)) return source.slice();
-        return source;
-    }
-    function mergeDeepProperties(prop) {
-        if (!utils.isUndefined(config2[prop])) config[prop] = getMergedValue(config1[prop], config2[prop]);
-        else if (!utils.isUndefined(config1[prop])) config[prop] = getMergedValue(undefined, config1[prop]);
-    }
-    utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
-        if (!utils.isUndefined(config2[prop])) config[prop] = getMergedValue(undefined, config2[prop]);
-    });
-    utils.forEach(mergeDeepPropertiesKeys, mergeDeepProperties);
-    utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
-        if (!utils.isUndefined(config2[prop])) config[prop] = getMergedValue(undefined, config2[prop]);
-        else if (!utils.isUndefined(config1[prop])) config[prop] = getMergedValue(undefined, config1[prop]);
-    });
-    utils.forEach(directMergeKeys, function merge(prop) {
-        if (prop in config2) config[prop] = getMergedValue(config1[prop], config2[prop]);
-        else if (prop in config1) config[prop] = getMergedValue(undefined, config1[prop]);
-    });
-    var axiosKeys = valueFromConfig2Keys.concat(mergeDeepPropertiesKeys).concat(defaultToConfig2Keys).concat(directMergeKeys);
-    var otherKeys = Object.keys(config1).concat(Object.keys(config2)).filter(function filterAxiosKeys(key) {
-        return axiosKeys.indexOf(key) === -1;
-    });
-    utils.forEach(otherKeys, mergeDeepProperties);
-    return config;
-};
-
-},{"../utils":"7J9rV"}],"1Ql7i":[function(require,module,exports) {
-'use strict';
-/**
- * A `Cancel` is an object that is thrown when an operation is canceled.
- *
- * @class
- * @param {string=} message The message.
- */ function Cancel(message) {
-    this.message = message;
-}
-Cancel.prototype.toString = function toString() {
-    return 'Cancel' + (this.message ? ': ' + this.message : '');
-};
-Cancel.prototype.__CANCEL__ = true;
-module.exports = Cancel;
-
-},{}],"hHamf":[function(require,module,exports) {
-'use strict';
-var Cancel = require('./Cancel');
-/**
- * A `CancelToken` is an object that can be used to request cancellation of an operation.
- *
- * @class
- * @param {Function} executor The executor function.
- */ function CancelToken(executor) {
-    if (typeof executor !== 'function') throw new TypeError('executor must be a function.');
-    var resolvePromise;
-    this.promise = new Promise(function promiseExecutor(resolve) {
-        resolvePromise = resolve;
-    });
-    var token = this;
-    executor(function cancel(message) {
-        if (token.reason) // Cancellation has already been requested
-        return;
-        token.reason = new Cancel(message);
-        resolvePromise(token.reason);
-    });
-}
-/**
- * Throws a `Cancel` if cancellation has been requested.
- */ CancelToken.prototype.throwIfRequested = function throwIfRequested() {
-    if (this.reason) throw this.reason;
-};
-/**
- * Returns an object that contains a new `CancelToken` and a function that, when called,
- * cancels the `CancelToken`.
- */ CancelToken.source = function source() {
-    var cancel;
-    var token = new CancelToken(function executor(c) {
-        cancel = c;
-    });
-    return {
-        token: token,
-        cancel: cancel
-    };
-};
-module.exports = CancelToken;
-
-},{"./Cancel":"1Ql7i"}],"9FoXt":[function(require,module,exports) {
-'use strict';
-/**
- * Syntactic sugar for invoking a function and expanding an array for arguments.
- *
- * Common use case would be to use `Function.prototype.apply`.
- *
- *  ```js
- *  function f(x, y, z) {}
- *  var args = [1, 2, 3];
- *  f.apply(null, args);
- *  ```
- *
- * With `spread` this example can be re-written.
- *
- *  ```js
- *  spread(function(x, y, z) {})([1, 2, 3]);
- *  ```
- *
- * @param {Function} callback
- * @returns {Function}
- */ module.exports = function spread(callback) {
-    return function wrap(arr) {
-        return callback.apply(null, arr);
-    };
-};
-
-},{}],"1bzv8":[function(require,module,exports) {
-'use strict';
-/**
- * Determines whether the payload is an error thrown by Axios
- *
- * @param {*} payload The value to test
- * @returns {boolean} True if the payload is an error thrown by Axios, otherwise false
- */ module.exports = function isAxiosError(payload) {
-    return typeof payload === 'object' && payload.isAxiosError === true;
-};
-
-},{}],"34yor":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-var _classnames = _interopRequireDefault(require("classnames"));
-var _react = _interopRequireDefault(require("react"));
-var _ThemeProvider = require("./ThemeProvider");
-var _excluded = [
-    "bsPrefix",
-    "className",
-    "striped",
-    "bordered",
-    "borderless",
-    "hover",
-    "size",
-    "variant",
-    "responsive"
-];
-var Table = /*#__PURE__*/ _react.default.forwardRef(function(_ref, ref) {
-    var bsPrefix = _ref.bsPrefix, className = _ref.className, striped = _ref.striped, bordered = _ref.bordered, borderless = _ref.borderless, hover = _ref.hover, size = _ref.size, variant = _ref.variant, responsive = _ref.responsive, props = _objectWithoutPropertiesLoose2.default(_ref, _excluded);
-    var decoratedBsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'table');
-    var classes = _classnames.default(className, decoratedBsPrefix, variant && decoratedBsPrefix + "-" + variant, size && decoratedBsPrefix + "-" + size, striped && decoratedBsPrefix + "-striped", bordered && decoratedBsPrefix + "-bordered", borderless && decoratedBsPrefix + "-borderless", hover && decoratedBsPrefix + "-hover");
-    var table = /*#__PURE__*/ _react.default.createElement("table", _extends2.default({
-    }, props, {
-        className: classes,
-        ref: ref
-    }));
-    if (responsive) {
-        var responsiveClass = decoratedBsPrefix + "-responsive";
-        if (typeof responsive === 'string') responsiveClass = responsiveClass + "-" + responsive;
-        return(/*#__PURE__*/ _react.default.createElement("div", {
-            className: responsiveClass
-        }, table));
-    }
-    return table;
-});
-var _default = Table;
-exports.default = _default;
-module.exports = exports["default"];
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S"}],"458Ut":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _toast = require("react-bootstrap/Toast");
-var _toastDefault = parcelHelpers.interopDefault(_toast);
-class MyButton extends _react.Component {
-    constructor(props){
-        super(props);
-        this.buttonActiveHandler = this.buttonActiveHandler.bind(this);
-        this.state = {
-            status: this.props.status,
-            info: this.props.info,
-            text: 'Approve',
-            style: 'btn btn-primary'
-        };
-    }
-    buttonActiveHandler() {
-        if (this.state.status == false) {
-            this.setState({
-                status: true
-            });
-            this.setState({
-                text: "Approved"
-            });
-            this.setState({
-                style: "btn btn-success"
-            });
-            const Approve = {
-                status: 'Approved'
-            };
-            const notification = {
-                content: 'Hi ' + this.state.info.user.name + ' your Research paper have got Approved By the Reviewer!!',
-                user: this.state.info.user._id
-            };
-            console.log(notification);
-            _axiosDefault.default.patch("http://localhost:5000/api/update/" + this.state.info._id, Approve).then((res)=>console.log(res.data)
-            );
-            _axiosDefault.default.post('http://localhost:5000/api/notification', notification).then((res)=>console.log(res.data)
-            );
-        }
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("button", {
-            type: "button",
-            className: this.state.style,
-            onClick: this.buttonActiveHandler,
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
-                lineNumber: 43
-            },
-            __self: this
-        }, this.state.text));
-    }
-}
-exports.default = MyButton;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","axios":"7rA65","react-bootstrap/Toast":"o9l9n","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"o9l9n":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-var _react = _interopRequireWildcard(require("react"));
-var _classnames = _interopRequireDefault(require("classnames"));
-var _useTimeout = _interopRequireDefault(require("@restart/hooks/useTimeout"));
-var _Fade = _interopRequireDefault(require("./Fade"));
-var _ToastHeader = _interopRequireDefault(require("./ToastHeader"));
-var _ToastBody = _interopRequireDefault(require("./ToastBody"));
-var _ThemeProvider = require("./ThemeProvider");
-var _ToastContext = _interopRequireDefault(require("./ToastContext"));
-var _excluded = [
-    "bsPrefix",
-    "className",
-    "children",
-    "transition",
-    "show",
-    "animation",
-    "delay",
-    "autohide",
-    "onClose"
-];
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function _getRequireWildcardCache1(nodeInterop1) {
-        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {
-    };
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-        else newObj[key] = obj[key];
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-var Toast = /*#__PURE__*/ _react.default.forwardRef(function(_ref, ref) {
-    var bsPrefix = _ref.bsPrefix, className = _ref.className, children = _ref.children, _ref$transition = _ref.transition, Transition = _ref$transition === void 0 ? _Fade.default : _ref$transition, _ref$show = _ref.show, show = _ref$show === void 0 ? true : _ref$show, _ref$animation = _ref.animation, animation = _ref$animation === void 0 ? true : _ref$animation, _ref$delay = _ref.delay, delay = _ref$delay === void 0 ? 3000 : _ref$delay, _ref$autohide = _ref.autohide, autohide = _ref$autohide === void 0 ? false : _ref$autohide, onClose = _ref.onClose, props = _objectWithoutPropertiesLoose2.default(_ref, _excluded);
-    bsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'toast'); // We use refs for these, because we don't want to restart the autohide
-    // timer in case these values change.
-    var delayRef = _react.useRef(delay);
-    var onCloseRef = _react.useRef(onClose);
-    _react.useEffect(function() {
-        delayRef.current = delay;
-        onCloseRef.current = onClose;
-    }, [
-        delay,
-        onClose
-    ]);
-    var autohideTimeout = _useTimeout.default();
-    var autohideToast = !!(autohide && show);
-    var autohideFunc = _react.useCallback(function() {
-        if (autohideToast) onCloseRef.current == null || onCloseRef.current();
-    }, [
-        autohideToast
-    ]);
-    _react.useEffect(function() {
-        // Only reset timer if show or autohide changes.
-        autohideTimeout.set(autohideFunc, delayRef.current);
-    }, [
-        autohideTimeout,
-        autohideFunc
-    ]);
-    var toastContext = _react.useMemo(function() {
-        return {
-            onClose: onClose
-        };
-    }, [
-        onClose
-    ]);
-    var hasAnimation = !!(Transition && animation);
-    var toast = /*#__PURE__*/ _react.default.createElement("div", _extends2.default({
-    }, props, {
-        ref: ref,
-        className: _classnames.default(bsPrefix, className, !hasAnimation && (show ? 'show' : 'hide')),
-        role: "alert",
-        "aria-live": "assertive",
-        "aria-atomic": "true"
-    }), children);
-    return(/*#__PURE__*/ _react.default.createElement(_ToastContext.default.Provider, {
-        value: toastContext
-    }, hasAnimation && Transition ? /*#__PURE__*/ _react.default.createElement(Transition, {
-        in: show,
-        unmountOnExit: true
-    }, toast) : toast));
-});
-Toast.displayName = 'Toast';
-var _default = Object.assign(Toast, {
-    Body: _ToastBody.default,
-    Header: _ToastHeader.default
-});
-exports.default = _default;
-module.exports = exports["default"];
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","react":"3b2NM","classnames":"5aJRc","@restart/hooks/useTimeout":"6lsvv","./Fade":"2CU5C","./ToastHeader":"3bTJs","./ToastBody":"4qMwS","./ThemeProvider":"4rz1S","./ToastContext":"49Lf9"}],"6lsvv":[function(require,module,exports) {
-"use strict";
-exports.__esModule = true;
-exports.default = useTimeout;
-var _react = require("react");
-var _useMounted = _interopRequireDefault(require("./useMounted"));
-var _useWillUnmount = _interopRequireDefault(require("./useWillUnmount"));
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-        default: obj
-    };
-}
-/*
- * Browsers including Internet Explorer, Chrome, Safari, and Firefox store the
- * delay as a 32-bit signed integer internally. This causes an integer overflow
- * when using delays larger than 2,147,483,647 ms (about 24.8 days),
- * resulting in the timeout being executed immediately.
- *
- * via: https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
- */ var MAX_DELAY_MS = Math.pow(2, 31) - 1;
-function setChainedTimeout(handleRef, fn, timeoutAtMs) {
-    var delayMs = timeoutAtMs - Date.now();
-    handleRef.current = delayMs <= MAX_DELAY_MS ? setTimeout(fn, delayMs) : setTimeout(function() {
-        return setChainedTimeout(handleRef, fn, timeoutAtMs);
-    }, MAX_DELAY_MS);
-}
-/**
- * Returns a controller object for setting a timeout that is properly cleaned up
- * once the component unmounts. New timeouts cancel and replace existing ones.
- *
- *
- *
- * ```tsx
- * const { set, clear } = useTimeout();
- * const [hello, showHello] = useState(false);
- * //Display hello after 5 seconds
- * set(() => showHello(true), 5000);
- * return (
- *   <div className="App">
- *     {hello ? <h3>Hello</h3> : null}
- *   </div>
- * );
- * ```
- */ function useTimeout() {
-    var isMounted = _useMounted.default(); // types are confused between node and web here IDK
-    var handleRef = _react.useRef();
-    _useWillUnmount.default(function() {
-        return clearTimeout(handleRef.current);
-    });
-    return _react.useMemo(function() {
-        var clear = function clear1() {
-            return clearTimeout(handleRef.current);
-        };
-        function set(fn, delayMs) {
-            if (delayMs === void 0) delayMs = 0;
-            if (!isMounted()) return;
-            clear();
-            if (delayMs <= MAX_DELAY_MS) // For simplicity, if the timeout is short, just set a normal timeout.
-            handleRef.current = setTimeout(fn, delayMs);
-            else setChainedTimeout(handleRef, fn, Date.now() + delayMs);
-        }
-        return {
-            set: set,
-            clear: clear
-        };
-    }, []);
-}
-
-},{"react":"3b2NM","./useMounted":"zBXH6","./useWillUnmount":"7ETty"}],"7ETty":[function(require,module,exports) {
-"use strict";
-exports.__esModule = true;
-exports.default = useWillUnmount;
-var _useUpdatedRef = _interopRequireDefault(require("./useUpdatedRef"));
-var _react = require("react");
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-        default: obj
-    };
-}
-/**
- * Attach a callback that fires when a component unmounts
- *
- * @param fn Handler to run when the component unmounts
- * @category effects
- */ function useWillUnmount(fn) {
-    var onUnmount = _useUpdatedRef.default(fn);
-    _react.useEffect(function() {
-        return function() {
-            return onUnmount.current();
-        };
-    }, []);
-}
-
-},{"./useUpdatedRef":"4QfzV","react":"3b2NM"}],"4QfzV":[function(require,module,exports) {
-"use strict";
-exports.__esModule = true;
-exports.default = useUpdatedRef;
-var _react = require("react");
-/**
- * Returns a ref that is immediately updated with the new value
- *
- * @param value The Ref value
- * @category refs
- */ function useUpdatedRef(value) {
-    var valueRef = _react.useRef(value);
-    valueRef.current = value;
-    return valueRef;
-}
-
-},{"react":"3b2NM"}],"2CU5C":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-var _classnames = _interopRequireDefault(require("classnames"));
-var _react = _interopRequireWildcard(require("react"));
-var _Transition = _interopRequireWildcard(require("react-transition-group/Transition"));
-var _transitionEndListener = _interopRequireDefault(require("./transitionEndListener"));
-var _triggerBrowserReflow = _interopRequireDefault(require("./triggerBrowserReflow"));
-var _excluded = [
-    "className",
-    "children"
-];
-var _fadeStyles;
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function _getRequireWildcardCache1(nodeInterop1) {
-        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {
-    };
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-        else newObj[key] = obj[key];
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-var defaultProps = {
-    in: false,
-    timeout: 300,
-    mountOnEnter: false,
-    unmountOnExit: false,
-    appear: false
-};
-var fadeStyles = (_fadeStyles = {
-}, _fadeStyles[_Transition.ENTERING] = 'show', _fadeStyles[_Transition.ENTERED] = 'show', _fadeStyles);
-var Fade = /*#__PURE__*/ _react.default.forwardRef(function(_ref, ref) {
-    var className = _ref.className, children = _ref.children, props = _objectWithoutPropertiesLoose2.default(_ref, _excluded);
-    var handleEnter = _react.useCallback(function(node) {
-        _triggerBrowserReflow.default(node);
-        if (props.onEnter) props.onEnter(node);
-    }, [
-        props
-    ]);
-    return(/*#__PURE__*/ _react.default.createElement(_Transition.default, _extends2.default({
-        ref: ref,
-        addEndListener: _transitionEndListener.default
-    }, props, {
-        onEnter: handleEnter
-    }), function(status, innerProps) {
-        return(/*#__PURE__*/ _react.default.cloneElement(children, _extends2.default({
-        }, innerProps, {
-            className: _classnames.default('fade', className, children.props.className, fadeStyles[status])
-        })));
-    }));
-});
-Fade.defaultProps = defaultProps;
-Fade.displayName = 'Fade';
-var _default = Fade;
-exports.default = _default;
-module.exports = exports["default"];
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","react-transition-group/Transition":"Z6Vyq","./transitionEndListener":"7vbS0","./triggerBrowserReflow":"dj3Zh"}],"3bTJs":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-var _classnames = _interopRequireDefault(require("classnames"));
-var _react = _interopRequireWildcard(require("react"));
-var _useEventCallback = _interopRequireDefault(require("@restart/hooks/useEventCallback"));
-var _ThemeProvider = require("./ThemeProvider");
-var _CloseButton = _interopRequireDefault(require("./CloseButton"));
-var _ToastContext = _interopRequireDefault(require("./ToastContext"));
-var _excluded = [
-    "bsPrefix",
-    "closeLabel",
-    "closeButton",
-    "className",
-    "children"
-];
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function _getRequireWildcardCache1(nodeInterop1) {
-        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {
-    };
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-        else newObj[key] = obj[key];
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-var defaultProps = {
-    closeLabel: 'Close',
-    closeButton: true
-};
-var ToastHeader = /*#__PURE__*/ _react.default.forwardRef(function(_ref, ref) {
-    var bsPrefix = _ref.bsPrefix, closeLabel = _ref.closeLabel, closeButton = _ref.closeButton, className = _ref.className, children = _ref.children, props = _objectWithoutPropertiesLoose2.default(_ref, _excluded);
-    bsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'toast-header');
-    var context = _react.useContext(_ToastContext.default);
-    var handleClick = _useEventCallback.default(function(e) {
-        if (context && context.onClose) context.onClose(e);
-    });
-    return(/*#__PURE__*/ _react.default.createElement("div", _extends2.default({
-        ref: ref
-    }, props, {
-        className: _classnames.default(bsPrefix, className)
-    }), children, closeButton && /*#__PURE__*/ _react.default.createElement(_CloseButton.default, {
-        label: closeLabel,
-        onClick: handleClick,
-        className: "ml-2 mb-1",
-        "data-dismiss": "toast"
-    })));
-});
-ToastHeader.displayName = 'ToastHeader';
-ToastHeader.defaultProps = defaultProps;
-var _default = ToastHeader;
-exports.default = _default;
-module.exports = exports["default"];
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","@restart/hooks/useEventCallback":"3v8B9","./ThemeProvider":"4rz1S","./CloseButton":"yWShL","./ToastContext":"49Lf9"}],"yWShL":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-var _propTypes = _interopRequireDefault(require("prop-types"));
-var _react = _interopRequireDefault(require("react"));
-var _classnames = _interopRequireDefault(require("classnames"));
-var _excluded = [
-    "label",
-    "onClick",
-    "className"
-];
-var propTypes = {
-    label: _propTypes.default.string.isRequired,
-    onClick: _propTypes.default.func
-};
-var defaultProps = {
-    label: 'Close'
-};
-var CloseButton = /*#__PURE__*/ _react.default.forwardRef(function(_ref, ref) {
-    var label = _ref.label, onClick = _ref.onClick, className = _ref.className, props = _objectWithoutPropertiesLoose2.default(_ref, _excluded);
-    return(/*#__PURE__*/ _react.default.createElement("button", _extends2.default({
-        ref: ref,
-        type: "button",
-        className: _classnames.default('close', className),
-        onClick: onClick
-    }, props), /*#__PURE__*/ _react.default.createElement("span", {
-        "aria-hidden": "true"
-    }, "\xD7"), /*#__PURE__*/ _react.default.createElement("span", {
-        className: "sr-only"
-    }, label)));
-});
-CloseButton.displayName = 'CloseButton';
-CloseButton.propTypes = propTypes;
-CloseButton.defaultProps = defaultProps;
-var _default = CloseButton;
-exports.default = _default;
-module.exports = exports["default"];
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","prop-types":"4dfy5","react":"3b2NM","classnames":"5aJRc"}],"49Lf9":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-var ToastContext = /*#__PURE__*/ _react.default.createContext({
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    onClose: function onClose() {
-    }
-});
-var _default = ToastContext;
-exports.default = _default;
-module.exports = exports["default"];
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","react":"3b2NM"}],"4qMwS":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _createWithBsPrefix = _interopRequireDefault(require("./createWithBsPrefix"));
-var _default = _createWithBsPrefix.default('toast-body');
-exports.default = _default;
-module.exports = exports["default"];
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","./createWithBsPrefix":"2oVVc"}],"2CXlM":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-class MyButton extends _react.Component {
-    constructor(props){
-        super(props);
-        this.buttonActiveHandler = this.buttonActiveHandler.bind(this);
-        this.state = {
-            status: this.props.status,
-            info: this.props.info,
-            text: 'Reject',
-            style: 'btn btn-warning'
-        };
-    }
-    buttonActiveHandler() {
-        if (this.state.status == false) {
-            this.setState({
-                status: true
-            });
-            this.setState({
-                text: "Rejected"
-            });
-            this.setState({
-                style: "btn btn-danger"
-            });
-            console.log(this.state.info._id);
-            const Reject = {
-                status: 'Rejected'
-            };
-            const notification = {
-                content: 'Sorry ' + this.state.info.user.name + ' your Research paper have got Rejected By the Reviewer !!',
-                user: this.state.info.user._id
-            };
-            console.log(notification);
-            _axiosDefault.default.patch("http://localhost:5000/api/update/" + this.state.info._id, Reject).then((res)=>console.log(res.data)
-            );
-            _axiosDefault.default.post('http://localhost:5000/api/notification', notification).then((res)=>console.log(res.data)
-            );
-        }
-    }
-    render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("button", {
-            type: "button",
-            className: this.state.style,
-            onClick: this.buttonActiveHandler,
-            __source: {
-                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\RejButton.jsx",
-                lineNumber: 38
-            },
-            __self: this
-        }, this.state.text));
-    }
-}
-exports.default = MyButton;
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6rhq6":[function(require,module,exports) {
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S"}],"6rhq6":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33457,17 +34022,149 @@ var _card = require("react-bootstrap/Card");
 var _cardDefault = parcelHelpers.interopDefault(_card);
 var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
 class DashBoard extends _react.Component {
-    state = {
-    };
+    constructor(props){
+        super(props);
+        this.process = this.process.bind(this);
+        this.process2 = this.process2.bind(this);
+        this.state = {
+            research: [],
+            workshop: []
+        };
+    }
+    componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/api/getSingleFiles").then((res)=>{
+            this.setState({
+                research: res.data.data
+            });
+            console.log(res.data.data);
+        });
+        _axiosDefault.default.get("http://localhost:5000/api/getworkshop").then((res)=>{
+            this.setState({
+                workshop: res.data.data
+            });
+            console.log(res.data.data);
+        });
+    }
+    process() {
+        let count = 0;
+        this.state.research.map((item)=>{
+            if (item.status === "Pending") count++;
+        });
+        return count;
+    }
+    process2() {
+        let count = 0;
+        this.state.workshop.map((item)=>{
+            if (item.status === "Approved") count++;
+        });
+        return count;
+    }
     render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("h1", {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default, {
+            variant: "success",
+            style: {
+                marginTop: "100px",
+                width: "500px",
+                marginLeft: "390px"
+            },
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
-                lineNumber: 7
+                lineNumber: 49
             },
             __self: this
-        }, "hf"));
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Header, {
+            as: "h5",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 53
+            },
+            __self: this
+        }, "Review Papers"), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Body, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 54
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Title, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 55
+            },
+            __self: this
+        }, "Total Research Requests : ", this.state.research.length), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 58
+            },
+            __self: this
+        }, "Approved Requests : ", this.state.research.length - this.process()), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 61
+            },
+            __self: this
+        }, "Pending Requests : ", this.process()), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+            variant: "primary",
+            href: "/Research",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 62
+            },
+            __self: this
+        }, "Go to Research Page"))), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default, {
+            style: {
+                marginTop: "100px",
+                width: "500px",
+                marginLeft: "390px"
+            },
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 67
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Header, {
+            as: "h5",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 70
+            },
+            __self: this
+        }, "Workshops"), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Body, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 71
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Title, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 72
+            },
+            __self: this
+        }, "Total Workshop Documents : ", this.state.workshop.length), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 75
+            },
+            __self: this
+        }, "Approved Requests : ", this.process2()), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 76
+            },
+            __self: this
+        }, "Pending Requests : ", this.state.workshop.length - this.process2()), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+            variant: "primary",
+            href: "/Workshop",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 79
+            },
+            __self: this
+        }, " ", "Go to Workshop Page")))));
     }
 }
 exports.default = DashBoard;
@@ -33477,7 +34174,7 @@ exports.default = DashBoard;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-bootstrap/Card":"1CZWQ","react-bootstrap/Button":"1ru0l"}],"1CZWQ":[function(require,module,exports) {
+},{"react":"3b2NM","react-bootstrap/Card":"1CZWQ","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-bootstrap/Button":"1ru0l","axios":"7rA65"}],"1CZWQ":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -33647,17 +34344,213 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _table = require("react-bootstrap/Table");
+var _tableDefault = parcelHelpers.interopDefault(_table);
+var _button = require("./Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _rejButton = require("./RejButton");
+var _rejButtonDefault = parcelHelpers.interopDefault(_rejButton);
 class WorkShop extends _react.Component {
-    state = {
-    };
+    constructor(props){
+        super(props);
+        this.state = {
+            details: [],
+            isClicked: false,
+            updateURL: "http://localhost:5000/api/updateStatus/"
+        };
+        this.getAll = this.getAll.bind(this);
+    }
+    componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/api/getworkshop").then((res)=>{
+            console.log(res.data);
+            this.setState({
+                details: res.data.data
+            });
+        });
+    }
+    getAll() {
+        return this.state.details.map((info, index)=>{
+            return(/*#__PURE__*/ _reactDefault.default.createElement("tr", {
+                key: info._id,
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 25
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 26
+                },
+                __self: this
+            }, index + 1), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 27
+                },
+                __self: this
+            }, info.wtitle), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 28
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: "http://localhost:5000/" + info.filePath,
+                target: "_blank",
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 29
+                },
+                __self: this
+            }, info.fileName)), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 33
+                },
+                __self: this
+            }, info.user.name), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 34
+                },
+                __self: this
+            }, info.venue), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 35
+                },
+                __self: this
+            }, info.date), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 36
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+                status: this.state.isClicked,
+                updateURL: this.state.updateURL,
+                info: info,
+                content: "Hi " + info.user.name + " your Workshop has been Approved By the Reviewer!!",
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 37
+                },
+                __self: this
+            })), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 48
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_rejButtonDefault.default, {
+                status: this.state.isClicked,
+                info: info,
+                updateURL: this.state.updateURL,
+                content: "Sorry " + info.user.name + " your Workshop has been Rejected By the Reviewer!!",
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 49
+                },
+                __self: this
+            })), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 60
+                },
+                __self: this
+            }, info.status)));
+        });
+    }
     render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("h1", {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_tableDefault.default, {
+            striped: true,
+            bordered: true,
+            hover: true,
+            className: "container-md",
+            style: {
+                marginTop: 100
+            },
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
-                lineNumber: 6
+                lineNumber: 68
             },
             __self: this
-        }, "Workshop"));
+        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 75
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 76
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 77
+            },
+            __self: this
+        }, "#"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 78
+            },
+            __self: this
+        }, "Title"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 79
+            },
+            __self: this
+        }, "FileName"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 80
+            },
+            __self: this
+        }, "WorkShop Conductor"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 81
+            },
+            __self: this
+        }, "Venue"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 82
+            },
+            __self: this
+        }, "DateTime"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 83
+            },
+            __self: this
+        }, "Approve"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 84
+            },
+            __self: this
+        }, "Decline"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 85
+            },
+            __self: this
+        }, "Status"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 88
+            },
+            __self: this
+        }, this.getAll())));
     }
 }
 exports.default = WorkShop;
@@ -33667,6 +34560,6 @@ exports.default = WorkShop;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5UXJH":[function() {},{}]},["1j6wU","3bcJH","249SU"], "249SU", "parcelRequire0de8")
+},{"react":"3b2NM","axios":"7rA65","react-bootstrap/Table":"34yor","./Button":"458Ut","./RejButton":"2CXlM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5UXJH":[function() {},{}]},["1j6wU","3bcJH","249SU"], "249SU", "parcelRequire0de8")
 
 //# sourceMappingURL=index.711b527e.js.map

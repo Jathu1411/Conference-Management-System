@@ -10,6 +10,8 @@ const workshopFileUpload = async (req, res, next) => {
       fileType: req.file.mimetype,
       fileSize: fileSizeFormatter(req.file.size, 2), // 0.00
       user: req.body.user,
+      venue: req.body.venue,
+      date: req.body.date,
     });
     await file.save();
     res.status(201).send("work File Uploaded Successfully");
@@ -20,8 +22,8 @@ const workshopFileUpload = async (req, res, next) => {
 
 const getallWorkshopFiles = async (req, res, next) => {
   try {
-    const files = await WorkshopPres.find({}).populate("user", "name age");
-    res.status(200).send({ files });
+    const data = await WorkshopPres.find({}).populate("user", "name age");
+    res.status(200).send({ data });
   } catch (error) {
     res.status(400).send(error.message);
   }
@@ -38,8 +40,15 @@ const fileSizeFormatter = (bytes, decimal) => {
     parseFloat((bytes / Math.pow(1000, index)).toFixed(dm)) + " " + sizes[index]
   );
 };
+const updateStatus = async (req, res) => {
+  const oldStatus = await WorkshopPres.findById(req.params.id);
+  oldStatus.status = req.body.status;
+  const newStatus = await oldStatus.save();
+  res.json(newStatus);
+};
 
 module.exports = {
   workshopFileUpload,
   getallWorkshopFiles,
+  updateStatus,
 };
