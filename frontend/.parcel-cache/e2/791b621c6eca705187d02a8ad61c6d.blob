@@ -1,0 +1,116 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _card = require("react-bootstrap/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _button = require("react-bootstrap/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+class DashBoard extends _react.Component {
+    constructor(props){
+        super(props);
+        this.onFileChange = this.onFileChange.bind(this);
+        this.onFileUpload = this.onFileUpload.bind(this);
+    }
+    state = {
+        // Initially, no file is selected
+        title: "title1",
+        selectedFile: null
+    };
+    // On file select (from the pop up)
+    onFileChange = (event)=>{
+        // Update the state
+        this.setState({
+            selectedFile: event.target.files[0]
+        });
+    };
+    // On file upload (click the upload button)
+    onFileUpload = ()=>{
+        const formdata = new FormData();
+        formdata.append("file", this.state.selectedFile);
+        formdata.append("rtitle", this.state.title);
+        _axiosDefault.default.post("http://localhost5000/api/singleFile").then((res)=>console.log(res)
+        );
+    };
+    // File content to be displayed after
+    // file upload is complete
+    // fileData = () => {
+    //   if (this.state.selectedFile) {
+    //     return (
+    //       <div>
+    //         <h2>File Details:</h2>
+    //         <p>File Name: {this.state.selectedFile.name}</p>
+    //         <p>File Type: {this.state.selectedFile.type}</p>
+    //         <p>
+    //           Last Modified:{" "}
+    //           {this.state.selectedFile.lastModifiedDate.toDateString()}
+    //         </p>
+    //       </div>
+    //     );
+    //   } else {
+    //     return (
+    //       <div>
+    //         <br />
+    //         <h4>Choose before Pressing the Upload button</h4>
+    //       </div>
+    //     );
+    //   }
+    // };
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 64
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 65
+            },
+            __self: this
+        }, "GeeksforGeeks"), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 66
+            },
+            __self: this
+        }, "File Upload using React!"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 67
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "file",
+            onChange: this.onFileChange,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 68
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            onClick: this.onFileUpload,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 69
+            },
+            __self: this
+        }, "Upload!"))));
+    }
+}
+exports.default = DashBoard;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,151 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _card = require("react-bootstrap/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _button = require("react-bootstrap/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+class DashBoard extends _react.Component {
+    constructor(props){
+        super(props);
+        this.process = this.process.bind(this);
+        this.state = {
+            research: [],
+            workshop: []
+        };
+    }
+    componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/api/getSingleFiles").then((res)=>{
+            this.setState({
+                research: res.data.data
+            });
+            console.log(res.data.data);
+        });
+        _axiosDefault.default.get("http://localhost:5000/api/getworkshop").then((res)=>{
+            this.setState({
+                workshop: res.data.data
+            });
+            console.log(res.data.data);
+        });
+    }
+    process(array) {
+        let count = 0;
+        array.map((item)=>{
+            if (item.status === "false") count++;
+        });
+        return count;
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default, {
+            variant: "success",
+            style: {
+                marginTop: "100px",
+                width: "500px",
+                marginLeft: "390px"
+            },
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 39
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Header, {
+            as: "h5",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 43
+            },
+            __self: this
+        }, "Review Papers"), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Body, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 44
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Title, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 45
+            },
+            __self: this
+        }, "Total Research Requests : ", this.state.research.length), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 48
+            },
+            __self: this
+        }, "Approved Requests : ", this.state.research.length - this.process()), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 51
+            },
+            __self: this
+        }, "Pending Requests : ", this.process(this.state.research)), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+            variant: "primary",
+            href: "/Research",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 54
+            },
+            __self: this
+        }, "Get List"))), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default, {
+            style: {
+                marginTop: "100px",
+                width: "500px",
+                marginLeft: "390px"
+            },
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 59
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Header, {
+            as: "h5",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 62
+            },
+            __self: this
+        }, "Workshops"), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Body, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 63
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Title, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 64
+            },
+            __self: this
+        }, "Total Workshop Documents : ", this.state.workshop.length), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 67
+            },
+            __self: this
+        }, "With supporting text below as a natural lead-in to additional content."), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+            variant: "primary",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 71
+            },
+            __self: this
+        }, "Go somewhere"))), this.process()));
+    }
+}
+exports.default = DashBoard;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

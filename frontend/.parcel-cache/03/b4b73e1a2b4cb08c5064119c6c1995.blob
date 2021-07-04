@@ -1,0 +1,75 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactToastify = require("react-toastify");
+class MyButton extends _react.Component {
+    constructor(props){
+        super(props);
+        this.buttonActiveHandler = this.buttonActiveHandler.bind(this);
+        this.displayNoti = this.displayNoti.bind(this);
+        this.state = {
+            status: this.props.status,
+            info: this.props.info,
+            updateURL: this.props.updateURL,
+            content: this.props.content,
+            text: "Reject",
+            style: "btn btn-warning"
+        };
+    }
+    displayNoti() {
+        return _reactToastify.toast.danger("Notification Sent to the " + this.state.info.user.name);
+    }
+    buttonActiveHandler() {
+        if (this.state.status == false) {
+            this.setState({
+                status: true
+            });
+            this.setState({
+                text: "Rejected"
+            });
+            this.setState({
+                style: "btn btn-danger"
+            });
+            const Reject = {
+                status: "Rejected"
+            };
+            const notification = {
+                content: this.state.content,
+                user: this.state.info.user._id
+            };
+            _axiosDefault.default.patch(this.state.updateURL + this.state.info._id, Reject).then((res)=>console.log(res.data)
+            );
+            _axiosDefault.default.post("http://localhost:5000/api/notification", notification).then((res)=>console.log(res.data)
+            );
+        }
+        this.displayNoti();
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "button",
+            className: this.state.style,
+            onClick: this.buttonActiveHandler,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\RejButton.jsx",
+                lineNumber: 48
+            },
+            __self: this
+        }, this.state.text));
+    }
+}
+exports.default = MyButton;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

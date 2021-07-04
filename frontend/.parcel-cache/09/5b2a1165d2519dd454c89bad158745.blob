@@ -1,0 +1,144 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _card = require("react-bootstrap/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _button = require("react-bootstrap/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+class DashBoard extends _react.Component {
+    state = {
+        // Initially, no file is selected
+        selectedFile: null
+    };
+    // On file select (from the pop up)
+    onFileChange = (event)=>{
+        // Update the state
+        this.setState({
+            selectedFile: event.target.files[0]
+        });
+    };
+    // On file upload (click the upload button)
+    onFileUpload = ()=>{
+        // Create an object of formData
+        const formData = new FormData();
+        // Update the formData object
+        formData.append("myFile", this.state.selectedFile, this.state.selectedFile.name);
+        // Details of the uploaded file
+        console.log(this.state.selectedFile);
+        // Request made to the backend api
+        // Send formData object
+        _axiosDefault.default.post("api/uploadfile", formData);
+    };
+    // File content to be displayed after
+    // file upload is complete
+    fileData = ()=>{
+        if (this.state.selectedFile) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 43
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h2", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 44
+            },
+            __self: this
+        }, "File Details:"), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 46
+            },
+            __self: this
+        }, "File Name: ", this.state.selectedFile.name), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 48
+            },
+            __self: this
+        }, "File Type: ", this.state.selectedFile.type), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 50
+            },
+            __self: this
+        }, "Last Modified:", " ", this.state.selectedFile.lastModifiedDate.toDateString())));
+        else return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 58
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 59
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 60
+            },
+            __self: this
+        }, "Choose before Pressing the Upload button")));
+    };
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 68
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 69
+            },
+            __self: this
+        }, "GeeksforGeeks"), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 70
+            },
+            __self: this
+        }, "File Upload using React!"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 71
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "file",
+            onChange: this.onFileChange,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 72
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            onClick: this.onFileUpload,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 73
+            },
+            __self: this
+        }, "Upload!")), this.fileData()));
+    }
+}
+exports.default = DashBoard;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

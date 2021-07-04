@@ -1,0 +1,190 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _table = require("react-bootstrap/Table");
+var _tableDefault = parcelHelpers.interopDefault(_table);
+var _button = require("./Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _rejButton = require("./RejButton");
+var _rejButtonDefault = parcelHelpers.interopDefault(_rejButton);
+class WorkShop extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            details: [],
+            isClicked: false,
+            updateURL: "http://localhost:5000/api/updateStatus/"
+        };
+        this.getAll = this.getAll.bind(this);
+    }
+    componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/api/getworkshop").then((res)=>{
+            console.log(res.data);
+            this.setState({
+                details: res.data.data
+            });
+        });
+    }
+    getAll() {
+        return this.state.details.map((info, index)=>{
+            return(/*#__PURE__*/ _reactDefault.default.createElement("tr", {
+                key: info._id,
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 25
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 26
+                },
+                __self: this
+            }, index + 1), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 27
+                },
+                __self: this
+            }, info.date), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 28
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: "http://localhost:5000/" + info.filePath,
+                target: "_blank",
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 29
+                },
+                __self: this
+            }, info.fileName)), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 33
+                },
+                __self: this
+            }, info.user.name), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 34
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+                status: this.state.isClicked,
+                updateURL: this.state.updateURL,
+                info: info,
+                content: "Hi " + info.user.name + " your Workshop has been Approved By the Reviewer!!",
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 35
+                },
+                __self: this
+            })), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 46
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_rejButtonDefault.default, {
+                status: this.state.isClicked,
+                info: info,
+                updateURL: this.state.updateURL,
+                content: "Sorry " + info.user.name + " your Workshop has been Rejected By the Reviewer!!",
+                __source: {
+                    fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                    lineNumber: 47
+                },
+                __self: this
+            }))));
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_tableDefault.default, {
+            striped: true,
+            bordered: true,
+            hover: true,
+            className: "container-md",
+            style: {
+                marginTop: 100
+            },
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 65
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 72
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 73
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 74
+            },
+            __self: this
+        }, "#"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 75
+            },
+            __self: this
+        }, "Title"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 76
+            },
+            __self: this
+        }, "FileName"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 77
+            },
+            __self: this
+        }, "Research Conductor"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 78
+            },
+            __self: this
+        }, "Approve"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 79
+            },
+            __self: this
+        }, "Decline"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Workshop.jsx",
+                lineNumber: 82
+            },
+            __self: this
+        }, this.getAll())));
+    }
+}
+exports.default = WorkShop;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,117 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _toast = require("react-bootstrap/Toast");
+var _toastDefault = parcelHelpers.interopDefault(_toast);
+class MyButton extends _react.Component {
+    constructor(props){
+        super(props);
+        this.buttonActiveHandler = this.buttonActiveHandler.bind(this);
+        this.displayNoti = this.displayNoti.bind(this);
+        this.state = {
+            status: this.props.status,
+            info: this.props.info,
+            updateURL: this.props.updateURL,
+            content: this.props.content,
+            text: "Approve",
+            style: "btn btn-primary"
+        };
+    }
+    displayNoti() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_toastDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
+                lineNumber: 21
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_toastDefault.default.Header, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
+                lineNumber: 22
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+            src: "holder.js/20x20?text=%20",
+            className: "rounded me-2",
+            alt: "",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
+                lineNumber: 23
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("strong", {
+            className: "me-auto",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
+                lineNumber: 24
+            },
+            __self: this
+        }, "Bootstrap"), /*#__PURE__*/ _reactDefault.default.createElement("small", {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
+                lineNumber: 25
+            },
+            __self: this
+        }, "11 mins ago")), /*#__PURE__*/ _reactDefault.default.createElement(_toastDefault.default.Body, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
+                lineNumber: 27
+            },
+            __self: this
+        }, "Hello, world! This is a toast message.")));
+    }
+    buttonActiveHandler() {
+        if (this.state.status == false) {
+            this.setState({
+                status: true
+            });
+            this.setState({
+                text: "Approved"
+            });
+            this.setState({
+                style: "btn btn-success"
+            });
+            const Approve = {
+                status: "Approved"
+            };
+            const notification = {
+                content: this.state.content,
+                user: this.state.info.user._id
+            };
+            _axiosDefault.default.patch(this.state.updateURL + this.state.info._id, Approve).then((res)=>console.log(res.data)
+            );
+            _axiosDefault.default.post("http://localhost:5000/api/notification", notification).then((res)=>{
+                console.log(res.data);
+                this.displayNoti();
+            });
+        }
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "button",
+            className: this.state.style,
+            onClick: this.buttonActiveHandler,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Button.jsx",
+                lineNumber: 59
+            },
+            __self: this
+        }, this.state.text));
+    }
+}
+exports.default = MyButton;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

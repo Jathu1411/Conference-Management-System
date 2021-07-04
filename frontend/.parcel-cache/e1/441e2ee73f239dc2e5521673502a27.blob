@@ -1,0 +1,81 @@
+var helpers = require("./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
+// components - Jathu
+var _research = require("./Components/Jathusanan/Research"); // Reviewer DashBoard
+var _researchDefault = parcelHelpers.interopDefault(_research);
+var _navBar = require("./Components/Jathusanan/NavBar");
+var _navBarDefault = parcelHelpers.interopDefault(_navBar);
+var _dashBoard = require("./Components/Jathusanan/DashBoard");
+var _dashBoardDefault = parcelHelpers.interopDefault(_dashBoard);
+var _workshop = require("./Components/Jathusanan/Workshop");
+var _workshopDefault = parcelHelpers.interopDefault(_workshop);
+class App extends _reactDefault.default.Component {
+    constructor(props){
+        super(props);
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
+                lineNumber: 18
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_navBarDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
+                lineNumber: 19
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Switch, {
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
+                lineNumber: 20
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/",
+            exact: true,
+            component: _dashBoardDefault.default,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
+                lineNumber: 21
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/Research",
+            exact: true,
+            component: _researchDefault.default,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
+                lineNumber: 22
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/Workshop",
+            exact: true,
+            component: _workshopDefault.default,
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\App.jsx",
+                lineNumber: 23
+            },
+            __self: this
+        }))));
+    }
+}
+exports.default = App;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

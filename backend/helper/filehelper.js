@@ -15,8 +15,7 @@ const storage = multer.diskStorage({
 const filefilter = (req, file, cb) => {
   if (
     file.mimetype === "application/pdf" ||
-    file.mimetype ===
-      "application/vnd.openxmlformats-officedocument.presentationml.presentation" ||
+    file.mimetype ===  "application/vnd.openxmlformats-officedocument.presentationml.presentation" ||
     file.mimetype === "application/vnd.ms-powerpoint"
   ) {
     cb(null, true);
