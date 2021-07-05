@@ -34063,7 +34063,14 @@ class DashBoard extends _react.Component {
         return count;
     }
     render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default, {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            "data-testid": "dashboard-1",
+            __source: {
+                fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\DashBoard.jsx",
+                lineNumber: 48
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default, {
             variant: "success",
             style: {
                 marginTop: "100px",

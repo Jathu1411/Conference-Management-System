@@ -6,7 +6,6 @@ const research = require("./routes/research");
 const bodyParser = require("body-parser");
 const notification = require("./routes/notification");
 const workshop = require("./routes/workshop");
-
 require("dotenv").config();
 
 const app = express();
