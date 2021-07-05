@@ -6,10 +6,12 @@ const research = require("./routes/research");
 const bodyParser = require("body-parser");
 const notification = require("./routes/notification");
 const workshop = require("./routes/workshop");
+const userRouter = require("./routes/user");
 require("dotenv").config();
+// const app = require('./tests/AppTest')
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,7 +32,6 @@ connection.once("open", () => {
 });
 console.log("Check 1");
 //import created routes here
-const userRouter = require("./routes/user");
 
 //assign routes to use
 app.use("/api/user", userRouter);
@@ -55,3 +56,5 @@ app.use((error, req, res, next) => {
 app.listen(port, () => {
   console.log(`Server running on port: ${port}`);
 });
+
+module.exports = app;
