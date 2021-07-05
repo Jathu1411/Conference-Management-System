@@ -19,6 +19,7 @@ class Research extends Component {
       this.setState({ details: res.data.data });
     });
   }
+  
   getAll() {
     return this.state.details.map((info, index) => {
       return (

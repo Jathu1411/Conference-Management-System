@@ -26142,6 +26142,7 @@ class Research extends _react.Component {
             updateURL: "http://localhost:5000/api/update/"
         };
         this.getAll = this.getAll.bind(this);
+    // this.filter = this.filter.bind(this);
     }
     componentDidMount() {
         _axiosDefault.default.get("http://localhost:5000/api/getSingleFiles").then((res)=>{
@@ -26151,31 +26152,34 @@ class Research extends _react.Component {
             });
         });
     }
+    // filter(){
+    //   this.setState({details : this.state.details.filter(detail => detail.status === "Pending")})
+    // }
     getAll() {
         return this.state.details.map((info, index)=>{
             return(/*#__PURE__*/ _reactDefault.default.createElement("tr", {
                 key: info._id,
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 26
+                    lineNumber: 29
                 },
                 __self: this
             }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 27
+                    lineNumber: 30
                 },
                 __self: this
             }, index + 1), /*#__PURE__*/ _reactDefault.default.createElement("td", {
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 28
+                    lineNumber: 31
                 },
                 __self: this
             }, info.rtitle), /*#__PURE__*/ _reactDefault.default.createElement("td", {
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 29
+                    lineNumber: 32
                 },
                 __self: this
             }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
@@ -26183,19 +26187,19 @@ class Research extends _react.Component {
                 target: "_blank",
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 30
+                    lineNumber: 33
                 },
                 __self: this
             }, info.fileName)), /*#__PURE__*/ _reactDefault.default.createElement("td", {
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 34
+                    lineNumber: 37
                 },
                 __self: this
             }, info.user.name), /*#__PURE__*/ _reactDefault.default.createElement("td", {
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 35
+                    lineNumber: 38
                 },
                 __self: this
             }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
@@ -26205,13 +26209,13 @@ class Research extends _react.Component {
                 content: "Hi " + info.user.name + " your Research paper have got Approved By the Reviewer!!",
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 36
+                    lineNumber: 39
                 },
                 __self: this
             })), /*#__PURE__*/ _reactDefault.default.createElement("td", {
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 47
+                    lineNumber: 50
                 },
                 __self: this
             }, /*#__PURE__*/ _reactDefault.default.createElement(_rejButtonDefault.default, {
@@ -26221,13 +26225,13 @@ class Research extends _react.Component {
                 content: "Sorry " + info.user.name + " your Research paper have got Rejected By the Reviewer!!",
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 48
+                    lineNumber: 51
                 },
                 __self: this
             })), /*#__PURE__*/ _reactDefault.default.createElement("td", {
                 __source: {
                     fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                    lineNumber: 59
+                    lineNumber: 62
                 },
                 __self: this
             }, info.status)));
@@ -26242,7 +26246,7 @@ class Research extends _react.Component {
             className: "container",
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 68
+                lineNumber: 71
             },
             __self: this
         }, "Review Research Paper"), /*#__PURE__*/ _reactDefault.default.createElement(_tableDefault.default, {
@@ -26255,67 +26259,67 @@ class Research extends _react.Component {
             },
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 74
+                lineNumber: 77
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 81
+                lineNumber: 84
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 82
+                lineNumber: 85
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 83
+                lineNumber: 86
             },
             __self: this
         }, "#"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 84
+                lineNumber: 87
             },
             __self: this
         }, "Topic"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 85
+                lineNumber: 88
             },
             __self: this
         }, "FileName"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 86
+                lineNumber: 89
             },
             __self: this
         }, "Research Conductor"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 87
+                lineNumber: 90
             },
             __self: this
         }, "Approve"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 88
+                lineNumber: 91
             },
             __self: this
         }, "Decline"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 89
+                lineNumber: 92
             },
             __self: this
         }, "Status"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
             __source: {
                 fileName: "C:\\Users\\JATHU\\Desktop\\working directory\\frontend\\Components\\Jathusanan\\Research.jsx",
-                lineNumber: 92
+                lineNumber: 95
             },
             __self: this
         }, this.getAll()))));
@@ -34580,4 +34584,4 @@ exports.default = WorkShop;
 }
 },{"react":"3b2NM","axios":"7rA65","react-bootstrap/Table":"34yor","./Button":"458Ut","./RejButton":"2CXlM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5UXJH":[function() {},{}]},["1j6wU","3bcJH","249SU"], "249SU", "parcelRequire0de8")
 
-//# sourceMappingURL=index.711b527e.js.map
+//# sourceMappingURL=index.HASH_REF_d35bf5c27be5a9ed503e90b2711b527e.js.map
